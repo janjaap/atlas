@@ -9,10 +9,7 @@ const initialState = {};
 export default function MapClickLocationReducer(state = initialState, action) {
   switch (action.type) {
     case SET_MAP_CLICK_LOCATION:
-      return {
-        ...state,
-        mapClickLocation: action.location
-      };
+      return action.location;
 
     default:
       return state;

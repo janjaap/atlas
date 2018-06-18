@@ -58,10 +58,7 @@ export default {
     id: MAP_REMOVE_PANO_OVERLAY,
     ignore: true
   },
-  MAP_CLICK: {
-    id: 'MAP_CLICK',
-    ignore: true
-  },
+  MAP_CLICK: 'MAP_CLICK',
   SET_MAP_CLICK_LOCATION: {
     id: 'SET_MAP_CLICK_LOCATION',
     ignore: true

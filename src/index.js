@@ -235,3 +235,5 @@ import '../modules/straatbeeld/services/orientation/orientation.factory';
 import '../modules/straatbeeld/services/straatbeeld-api/straatbeeld-api.factory';
 import '../modules/straatbeeld/straatbeeld-config.constant';
 import '../modules/straatbeeld/straatbeeld.vendor';
+
+import './app';
