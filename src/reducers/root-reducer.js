@@ -9,6 +9,7 @@ import MapDetailReducer from '../map/ducks/detail/map-detail';
 import PreviewPanelReducer from '../map/ducks/preview-panel/map-preview-panel';
 import userReducer from './user';
 import uiReducer from '../shared/ducks/ui/ui';
+import AutoSuggestReducer from '../header/ducks/auto-suggest/auto-suggest';
 
 const mapLayers = combineReducers({
   layers: MapLayersReducer,
@@ -22,7 +23,8 @@ const rootReducer = combineReducers({
   ui: uiReducer,
   mapDetail: MapDetailReducer,
   user: userReducer,
-  mapClickLocation: MapClickLocationReducer
+  mapClickLocation: MapClickLocationReducer,
+  autoSuggest: AutoSuggestReducer
 });
 
 export default rootReducer;

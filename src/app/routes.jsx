@@ -4,9 +4,12 @@ import Nav from './Nav';
 import Home from './pages/Home';
 import Map from './pages/Map';
 
+import HeaderWrapper from '../header/wrappers/Header';
+
 
 const routes = (
   <div className="page-container">
+    <HeaderWrapper />
     <Nav />
     <Switch>
       <Route exact path="/" component={Home} />

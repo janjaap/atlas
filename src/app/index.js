@@ -26,6 +26,8 @@ const store = createStore(
   ),
 );
 
+window.reduxStore = store;
+
 sagaMiddleware.run(rootSaga);
 
 const render = () => {
