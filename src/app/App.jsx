@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { ConnectedRouter } from 'connected-react-router';
 import routes from './routes';
 import './_app.scss';
+import './angular/panel/panel.component';
 
 const App = ({ history }) => (
   <ConnectedRouter history={history}>

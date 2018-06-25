@@ -74,6 +74,7 @@ function commonConfig({ nodeEnv }) {
         {
           test: /\.html$/,
           include: [
+            src,
             legacy
           ],
           use: 'html-loader'

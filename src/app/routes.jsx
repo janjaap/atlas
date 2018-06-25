@@ -4,7 +4,7 @@ import Nav from './Nav';
 import Home from './pages/Home';
 import Map from './pages/Map';
 
-import HeaderWrapper from '../header/wrappers/Header';
+import HeaderWrapper from './Header';
 
 
 const routes = (
