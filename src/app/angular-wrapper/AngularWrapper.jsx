@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import angular from 'angular';
-import AngularTemplate, { reactAngularModule } from 'react-angular';
+import AngularTemplate, { reactAngularModule, ensureScopeAvailable } from 'react-angular';
 
 class AngularWrapper extends React.Component {
   constructor(props) {
@@ -12,9 +12,6 @@ class AngularWrapper extends React.Component {
     this.setAngularApp = (angularApp) => {
       if (angularApp) {
         this.angularApp = angularApp;
-        setTimeout(() => {
-          this.setState({ angularActive: true });
-        }, 100);
       }
     };
 
@@ -27,8 +24,15 @@ class AngularWrapper extends React.Component {
   }
 
   componentDidMount() {
-    angular.bootstrap(this.angularApp, ['dpAtlas', reactAngularModule(false).name]);
-    // this.$rootScope = test.get('$rootScope');
+    angular.module(`${this.props.moduleName}`, ['dpAtlas', reactAngularModule(false).name])
+      .directive('exposeScope', () => ensureScopeAvailable())
+      .run((reactAngularProductionReady) => {
+        reactAngularProductionReady();
+        setTimeout(() => {
+          this.setState({ angularActive: true });
+        });
+      });
+    angular.bootstrap(this.angularApp, [this.props.moduleName]);
   }
 
   componentDidUpdate() {
@@ -70,8 +74,13 @@ class AngularWrapper extends React.Component {
     );
   }
 }
+
+AngularWrapper.defaultProps = {
+  angularJsAppId: 'DpAngularWrapper'
+};
 AngularWrapper.propTypes = {
-  children: PropTypes.element.isRequired
+  children: PropTypes.element.isRequired,
+  moduleName: PropTypes.string
 };
 
 export default AngularWrapper;

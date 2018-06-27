@@ -1,7 +1,4 @@
 import angular from 'angular';
-import { reactAngularModule } from 'react-angular';
-
-angular.module('dpAtlas', []);
 angular
     .module('dpAtlas')
     .component('dpPanel', {
@@ -30,7 +27,6 @@ angular
 
 function DpPanelController() {
     var vm = this;
-
     vm.sizeClass = vm.size ? `c-panel--${vm.size}` : '';
     vm.typeClass = vm.type ? `c-panel--${vm.type}` : '';
 

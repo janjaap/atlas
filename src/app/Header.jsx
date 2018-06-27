@@ -39,6 +39,7 @@ class HeaderWrapper extends React.Component {
             <AngularWrapper
               isPanelVisible={this.state.isPanelVisible}
               canClose
+              moduleName={'dpHeaderPanel'}
             >
               <dp-panel is-panel-visible="isPanelVisible" can-close="canClose" />
             </AngularWrapper>
