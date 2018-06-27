@@ -10,25 +10,24 @@ class AngularWrapper extends React.Component {
       angularActive: false
     };
     this.setAngularApp = (angularApp) => {
-      this.setState({});
-      this.angularApp = angularApp;
+      if (angularApp) {
+        this.angularApp = angularApp;
+        setTimeout(() => {
+          this.setState({ angularActive: true });
+        }, 100);
+      }
     };
 
     this.setComponent = (component) => {
-      this.angularComponent = component;
+      if (component) {
+        this.angularComponent = component;
+        this.$rootScope = this.angularComponent.$scope.$root;
+      }
     };
   }
 
   componentDidMount() {
     angular.bootstrap(this.angularApp, ['dpAtlas', reactAngularModule(false).name]);
-    setTimeout(() => {
-      const test = this.angularApp.get('$rootScope');
-      console.log(test);
-      debugger;
-      this.setState({ angularActive: true });
-    }, 1000);
-    console.log(test);
-    debugger;
     // this.$rootScope = test.get('$rootScope');
   }
 
@@ -46,7 +45,10 @@ class AngularWrapper extends React.Component {
   }
 
   componentWillUnmount() {
-    // this.$rootScope.$destroy();
+    if (this.$rootScope) {
+      this.setState({ angularActive: false });
+      this.$rootScope.$destroy();
+    }
   }
 
   render() {
@@ -55,7 +57,7 @@ class AngularWrapper extends React.Component {
         ref={this.setAngularApp}
       >
         {
-         this.state.angularActive === true && (
+         this.state.angularActive && (
            <AngularTemplate
              scope={{ ...this.props }}
              ref={this.setComponent}
