@@ -72,6 +72,44 @@ window.reducers.detailReducer = (state = {}, action) => {
   }
 };
 
+export const detailReducer = (state = null, action) => {
+  switch (action.type) {
+    case FETCH_DETAIL:
+
+      // If preview panel is available use that, otherwise show detail page aside.
+      const leaveMapFullscreen = action.payload && Object
+        .keys(endpointTypes)
+        .some((typeKey) => action.payload.includes(endpointTypes[typeKey]));
+
+      return {
+        ...state,
+        endpoint: action.payload,
+        reload: Boolean(state && state.endpoint === action.payload),
+        isLoading: true,
+        isFullscreen: action.payload && action.payload.includes('dcatd/datasets'),
+        skippedSearchResults: Boolean(action.skippedSearchResults)
+      };
+
+    case 'SHOW_DETAIL':
+      return {
+          ...state,
+          display: action.payload.display,
+          geometry: action.payload.geometry,
+          isLoading: false,
+          reload: false
+      };
+
+    case 'DETAIL_FULLSCREEN':
+      return {
+        ...state,
+        isFullscreen: action.payload
+      };
+
+    default:
+      return state;
+  }
+};
+
 export const fetchDetail = (endpoint) => ({
   type: FETCH_DETAIL,
   payload: endpoint

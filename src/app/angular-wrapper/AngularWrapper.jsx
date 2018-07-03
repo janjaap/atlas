@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import angular from 'angular';
 import AngularTemplate, { reactAngularModule, ensureScopeAvailable } from 'react-angular';
 
+const templates = require.context('../../../modules', true, /\.html$/);
+
 class AngularWrapper extends React.Component {
   constructor(props) {
     super(props);
@@ -24,9 +26,15 @@ class AngularWrapper extends React.Component {
   }
 
   componentDidMount() {
-    angular.module(`${this.props.moduleName}`, ['dpAtlas', reactAngularModule(false).name])
+    angular.module(`${this.props.moduleName}`, ['dpHeader', reactAngularModule(false).name])
       .directive('exposeScope', () => ensureScopeAvailable())
-      .run((reactAngularProductionReady) => {
+      .run(($templateCache, reactAngularProductionReady) => {
+        templates.keys().forEach((key) => {
+          // Remove the dot from './dir/template.html' and prepend with
+          // 'modules' to get 'modules/dir/template.html'.
+          const templateId = `modules${key.substr(1)}`;
+          $templateCache.put(templateId, templates(key));
+        });
         reactAngularProductionReady();
         setTimeout(() => {
           this.setState({ angularActive: true });

@@ -50,7 +50,9 @@
             if (ACTIONS[type] && ACTIONS[type].isButton) {
                 return BUTTON;
             } else {
-                vm.href = getHref(type, payload);
+                vm.href = '/' || getHref(type, payload);
+
+                store.dispatch({type: 'TEST'});
                 // Do not catch a click event and handle the state change
                 // internally, this prevents users from CTRL/CMD clicking!
                 return LINK;

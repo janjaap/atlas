@@ -9,6 +9,9 @@ module.exports = function(env) {
 
   return merge(commonConfig({ nodeEnv, buildId }), {
     devtool: 'source-map',
+    output: {
+      publicPath: '/'
+    },
     devServer: {
       disableHostCheck: true,
       contentBase: dist,
@@ -19,15 +22,16 @@ module.exports = function(env) {
           target: 'http://localhost:3000',
           secure: false,
           "changeOrigin": true,
-          "logLevel": "debug"
+          "logLevel": "debug",
         },
         '/grondexploitatie': {
           target: 'http://localhost:8000',
           secure: false,
           "changeOrigin": true,
-          "logLevel": "debug"
+          "logLevel": "debug",
         }
-      }
+      },
+      historyApiFallback: true
     },
     plugins: [
       new webpack.DefinePlugin({

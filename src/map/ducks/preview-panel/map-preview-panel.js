@@ -2,31 +2,18 @@ const MAXIMIZE_MAP_PREVIEW_PANEL = 'MAXIMIZE_MAP_PREVIEW_PANEL';
 const OPEN_MAP_PREVIEW_PANEL = 'OPEN_MAP_PREVIEW_PANEL';
 const CLOSE_MAP_PREVIEW_PANEL = 'CLOSE_MAP_PREVIEW_PANEL';
 
-const initialState = {};
+const initialState = false;
 
 export default function MapPreviewPanelReducer(state = initialState, action) {
   switch (action.type) {
     case OPEN_MAP_PREVIEW_PANEL:
-      return {
-        ...state,
-        isMapPreviewPanelVisible: true
-      };
+      return true;
 
     case CLOSE_MAP_PREVIEW_PANEL:
-      return {
-        ...state,
-        isMapPreviewPanelVisible: false
-      };
+      return false;
 
     case MAXIMIZE_MAP_PREVIEW_PANEL:
-      return {
-        ...state,
-        isMapPreviewPanelVisible: false,
-        ui: {
-          ...state.ui,
-          isMapFullscreen: false
-        }
-      };
+      return false;
 
     default:
       return state;

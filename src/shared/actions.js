@@ -89,11 +89,7 @@ export default {
     isButton: true
   },
 
-  FETCH_DETAIL: {
-    id: 'FETCH_DETAIL',
-    ignore: true,
-    isButton: false
-  },
+  FETCH_DETAIL: 'FETCH_DETAIL',
   SHOW_DETAIL: {
     id: 'SHOW_DETAIL'
   },

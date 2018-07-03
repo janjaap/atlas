@@ -1,13 +1,30 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
 import AngularWrapper from './angular-wrapper/AngularWrapper';
+
+const mapStateToProps = (state) => ({
+  user: state.user
+});
+
+const searchAction = {
+  id: 'FETCH_SEARCH_RESULTS_BY_QUERY',
+  ignore: true
+};
+
+const toggleMapFullscreen = () => (
+  { type: 'TEST' });
+const mapDispatchToProps = (dispatch) => bindActionCreators({
+  onToggleFullscreen: toggleMapFullscreen
+}, dispatch);
 
 class HeaderWrapper extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       isPanelVisible: true,
-      isAngularAppActive: false
+      isAngularAppActive: true
     };
     this.onClickHandler = this.onClickHandler.bind(this);
     this.onClickHandler2 = this.onClickHandler2.bind(this);
@@ -27,21 +44,25 @@ class HeaderWrapper extends React.Component {
 
   render() {
     return (
-      <div>
-        <button className="dp-link" onClick={this.onClickHandler2}>
-          Toggle angular dp-panel
-        </button>
-        <button className="dp-link" onClick={this.onClickHandler}>
-          Toggle isPanelVisible
-        </button>
+      <div className="c-dashboard__heading">
         {
           this.state.isAngularAppActive && (
             <AngularWrapper
-              isPanelVisible={this.state.isPanelVisible}
-              canClose
+              size={'short'}
+              user={this.props.user}
+              has-print-button
+              search-action={searchAction}
+              query={''}
               moduleName={'dpHeaderPanel'}
             >
-              <dp-panel is-panel-visible="isPanelVisible" can-close="canClose" />
+              <dp-site-header
+                size="size"
+                user="user"
+                has-print-button="hasPrintButton"
+                has-embed-button="hasEmbedButton"
+                search-action="searchAction"
+                query="query"
+              />
             </AngularWrapper>
           )
         }
@@ -50,4 +71,4 @@ class HeaderWrapper extends React.Component {
   }
 }
 
-export default HeaderWrapper;
+export default connect(mapStateToProps, mapDispatchToProps)(HeaderWrapper);

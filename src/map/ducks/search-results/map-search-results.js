@@ -21,31 +21,23 @@ export const selectLatestMapSearchResults = createSelector([getSearch, getMapRes
     geoSearch && geoSearch.location && mapResultsByLocation[geoSearch.location]
   ));
 
-const initialState = {
-  mapSearchResultsByLocation: {},
-  isLoading: false,
-  mapSearchResultsError: null
-};
+const initialState = null;
 
 export default function MapSearchResultsReducer(state = initialState, action) {
   switch (action.type) {
     case FETCH_MAP_SEARCH_RESULTS_REQUEST:
-      return { ...state, isLoading: true, mapSearchResultsError: null };
+      return null;
 
     case FETCH_MAP_SEARCH_RESULTS_SUCCESS: {
       const locationId = Object.values(action.location).toString();
       return {
-        ...state,
-        isLoading: false,
-        mapSearchResultsByLocation: {
-          ...state.mapSearchResultsByLocation,
-          [locationId]: action.mapSearchResults
-        }
+        ...state.mapSearchResultsByLocation,
+        [locationId]: action.mapSearchResults
       };
     }
 
     case FETCH_MAP_SEARCH_RESULTS_FAILURE:
-      return { ...state, isLoading: false };
+      return null;
 
     default:
       return state;

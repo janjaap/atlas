@@ -4,7 +4,7 @@
  * https://developer.matomo.org/guides/tracking-javascript-guide#manually-trigger-events
  */
 export default function piwikTracker(data) {
-  window._paq.push(data);
+  // window._paq.push(data);
 }
 
 export function trackPageNavigation() {
