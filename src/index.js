@@ -183,8 +183,6 @@ import '../modules/shared/services/crs/crs-converter.factory';
 import '../modules/shared/services/embed/embed.factory';
 import '../modules/shared/services/environment/environment.factory';
 import '../modules/shared/services/geojson/geojson.factory';
-import '../modules/shared/services/google-sheet/google-sheet.constants';
-import '../modules/shared/services/google-sheet/google-sheet.factory';
 import '../modules/shared/services/window-error-handler/window-error-handler.factory';
 import '../modules/shared/services/window-error-handler/window-error-handler.run';
 import '../modules/shared/services/http-error-registrar/http-error-registrar.factory';
