@@ -36,23 +36,10 @@ function getStaticSheet(key, index) {
 }
 
 function getDynamicSheet(key, index) {
-  // The 'dynamic' version of the sheet is accessed by calling a Google script from the head
-  // of the document. The script accepts a callback method to receive the contents in json format
-  const promise = new Promise((resolve) => {
-    const callbackId = key.replace('-', '_');
-    const callbackName = `googleScriptCallback_${callbackId}_${index}`;
-
-    // istanbul ignore next
-    window[callbackName] = (contents) => resolve(contents);
-
-    // Create the script
-    const script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = `https://spreadsheets.google.com/feeds/list/${key}/${index}/public/basic?alt=json-in-script&callback=${callbackName}`;
-    document.head.appendChild(script);
-  });
-
-  return promise;
+  const target = `https://spreadsheets.google.com/feeds/list/${key}/${index}/public/basic?alt=json`;
+  return fetch(target).then(
+    (response) => response.json()
+  );
 }
 
 function uppercaseFirst(string) {
