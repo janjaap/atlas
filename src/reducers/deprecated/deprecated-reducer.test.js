@@ -15,7 +15,7 @@ import * as deepFreeze from '../../shared/services/freeze/freeze';
 const ACTION_NO_REDUCER = 'ACTION_NO_REDUCER';
 const FREEZE = 'FREEZE';
 
-describe.only('The deprecated reducer', () => {
+describe('The deprecated reducer', () => {
   beforeEach(() => {
     deepFreeze.default = jest.fn((value) => value); // identity function
     environment.isDevelopment = () => false;
