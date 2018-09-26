@@ -1,10 +1,10 @@
 import reducer from './deprecated-reducer';
 import * as environment from '../../shared/environment';
-import * as homeReducer from '../home-reducers';
-import * as DetailsReducer from '../details';
-import * as DataSelectionReducer from '../data-selection-reducers';
+import * as homeReducer from './home-reducers';
+import * as DetailsReducer from './details';
+import * as DataSelectionReducer from './data-selection-reducers';
 import * as MapPreviewPanelReducer from '../../map/ducks/preview-panel/map-preview-panel';
-import * as PageReducer from '../page-reducers';
+import * as PageReducer from './page-reducers';
 import * as filtersReducers from './filters-reducers';
 import * as straatbeeldReducers from './straatbeeld-reducers';
 import * as MapSearchResultsReducer from '../../map/ducks/search-results/map-search-results';
