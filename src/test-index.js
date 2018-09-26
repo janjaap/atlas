@@ -1,5 +1,5 @@
- /* eslint-disable */
- import "babel-polyfill";
+/* eslint-disable */
+import "babel-polyfill";
 
  // Import the templates and inject them into angular
 const templates = require.context('../modules', true, /\.html$/);
