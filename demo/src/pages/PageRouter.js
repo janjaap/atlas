@@ -8,6 +8,9 @@ import MapPanoramaPage from './MapPanoramaPage';
 
 const PageRouter = ({ page }) => {
   const Page = pages[page];
+
+  document.title = page;
+
   return (
     <div className="page">
       <h2 className="hide">Page router</h2>
