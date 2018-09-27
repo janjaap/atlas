@@ -4,7 +4,7 @@ import Map from '../component/Map';
 export default () => {
   return (
     <div>
-      <h1>Map page</h1>
+      <h1 className="hide">Map page</h1>
       <Map></Map>
     </div>
   )

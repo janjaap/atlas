@@ -11,8 +11,8 @@ const PageRouter = ({ page }) => {
   console.log(page);
   console.log(Page);
   return (
-    <div>
-      <h2>Page router</h2>
+    <div className="page">
+      <h2 className="hide">Page router</h2>
       { Page ? <Page /> : null }
     </div>
   )

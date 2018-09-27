@@ -9,20 +9,50 @@
 
 .App-header {
   background-color: #222;
-  height: 150px;
   padding: 20px;
   color: white;
+}
+.App-header a {
+  color:white;
+}
+
+.App-header ul {
+  list-style-type: none;
+}
+
+.App-header li {
+  display: inline-block;
+}
+
+.App-header li:not(:first-child) {
+  margin-left: 5em;
 }
 
 .App-title {
   font-size: 1.5em;
 }
 
-.App-intro {
-  font-size: large;
+.hide {
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.page {
+  margin: 0 2em;
+}
+
+.map {
+  background-color: green;
+  width: 100%;
+  height: 300px;
+}
+
+.panorama {
+  background-color: #00b7cd;
+  width: 100%;
+  height: 300px;
+}
+
+.block-half-page {
+  float: left;
+  width: 50%;
 }

@@ -11,10 +11,10 @@ class App extends Component {
         <div className="App">
           <header className="App-header">
             <h1 className="App-title">Redux-first-router + query params demo</h1>
+            <LinksBlock />
           </header>
 
           <PageRouter/>
-          <LinksBlock />
         </div>
       </Provider>
     );
