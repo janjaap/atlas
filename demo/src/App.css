@@ -1,5 +1,4 @@
 .App {
-  text-align: center;
 }
 
 .App-logo {
@@ -8,6 +7,7 @@
 }
 
 .App-header {
+  text-align: center;
   background-color: #222;
   padding: 20px;
   color: white;
@@ -55,4 +55,10 @@
 .block-half-page {
   float: left;
   width: 50%;
+}
+
+.leaflet-container {
+  height: 250px;
+  width: 100%;
+  background-color: yellow;
 }
