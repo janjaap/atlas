@@ -1,16 +1,40 @@
 import React from 'react';
-import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
+import { Map, TileLayer } from 'react-leaflet';
+import { connect } from 'react-redux';
 
-export default () => {
+const LeafletWrapper = ({position, zoom, onPan, onZoom}) => {
+  const onViewportChanged = (viewport) => {
+    console.log(viewport)
+    if(viewport.zoom != zoom) {
+      onZoom(viewport.zoom);
+    }
+    if(viewport.center[0] != position[0] || viewport.center[1] != position[1]) {
+      onPan(viewport.center);
+    }
+  };
 
-  const position = [51.505, 4.9]
   return(
-    <Map center={position} zoom={13} >
+    <Map center={position} zoom={zoom}
+         onViewportChanged={onViewportChanged}>
       <TileLayer
         attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
     </Map>
   );
-}
+};
 
+const stateToProps = (state) => ({
+  position: [
+    state.map.center.lat,
+    state.map.center.lng
+  ],
+  zoom: state.map.zoom
+});
+const dispatchToProps = (dispatch) => ({
+  onZoom: (level) => dispatch({ type: 'ZOOM', payload: level }),
+  onPan: (center) => dispatch({ type: 'PAN', payload: center })
+});
+
+
+export default connect(stateToProps, dispatchToProps)(LeafletWrapper);

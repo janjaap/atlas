@@ -1,5 +1,4 @@
 import React from 'react';
-import Map from '../component/Map';
 import Panorama from '../component/Panorama';
 import MapContainer from '../component/MapContainer';
 
