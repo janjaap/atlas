@@ -14,6 +14,7 @@ export default (state = {
           lng: action.payload[1],
         }
       };
+    case 'ZOOM_QUERY':
     case 'ZOOM':
       return {
         ...state,

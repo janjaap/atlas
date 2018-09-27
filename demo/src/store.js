@@ -1,5 +1,6 @@
 import { connectRoutes } from 'redux-first-router'
 import { combineReducers, createStore, applyMiddleware, compose } from 'redux'
+import queryString from 'query-string'
 import pageReducer from './reducers/page';
 import mapReducer from './reducers/map';
 
@@ -8,7 +9,13 @@ import routesMap from './routes-map';
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 export default (history) => {
-  const { reducer, middleware, enhancer } = connectRoutes(history, routesMap); // yes, 3 redux aspects
+  const { reducer, middleware, enhancer } = connectRoutes(
+    history,
+    routesMap,
+    {
+      querySerializer: queryString
+    }
+  ); // yes, 3 redux aspects
 
   const rootReducer = combineReducers({
     location: reducer,

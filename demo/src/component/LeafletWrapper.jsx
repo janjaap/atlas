@@ -5,10 +5,10 @@ import { connect } from 'react-redux';
 const LeafletWrapper = ({position, zoom, onPan, onZoom}) => {
   const onViewportChanged = (viewport) => {
     console.log(viewport)
-    if(viewport.zoom != zoom) {
+    if(viewport.zoom !== zoom) {
       onZoom(viewport.zoom);
     }
-    if(viewport.center[0] != position[0] || viewport.center[1] != position[1]) {
+    if(viewport.center[0] !== position[0] || viewport.center[1] !== position[1]) {
       onPan(viewport.center);
     }
   };

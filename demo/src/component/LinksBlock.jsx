@@ -9,7 +9,7 @@ export default () => {
     <div>
       <ul>
         { keys.map((key) => (
-          <li key={key}><Link to={{ type: key}}>{key}</Link></li>
+          <li key={key}><Link to={{ type: key, query: key === 'HOME' ? { foo: 'bar' } : undefined }}>{key}</Link></li>
         ))}
       </ul>
     </div>
