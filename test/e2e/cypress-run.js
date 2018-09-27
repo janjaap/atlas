@@ -11,7 +11,7 @@ const glob = Promise.promisify(require('glob'))
 const started = new Date()
 let numFailed = 0
 
-const SCRIPTS_FOLDER =  process.env.SCRIPTS_FOLDER || 'test/cypress/integration';
+const SCRIPTS_FOLDER =  process.env.SCRIPTS_FOLDER || 'cypress/integration';
 
 return glob(SCRIPTS_FOLDER + '/**/*', {
   nodir: true,

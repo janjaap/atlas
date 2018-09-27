@@ -1,4 +1,4 @@
-import stateTokenGenerator from '../../../src/shared/services/state-token-generator/state-token-generator';
+import stateTokenGenerator from '../../src/state-token-generator';
 
 const checkEnvironmentVariablesSet = () => {
   const variables = [
