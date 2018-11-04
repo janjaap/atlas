@@ -39,6 +39,7 @@ exports[`LeafletContainer LeafletContainer snapshot should render 1`] = `
   getLeafletInstance={[Function]}
   isZoomControlVisible={true}
   layers={Array []}
+  loading={false}
   mapOptions={
     Object {
       "attributionControl": false,
@@ -321,6 +322,7 @@ exports[`LeafletContainer LeafletContainer snapshot should render different base
   getLeafletInstance={[Function]}
   isZoomControlVisible={true}
   layers={Array []}
+  loading={false}
   mapOptions={
     Object {
       "attributionControl": false,

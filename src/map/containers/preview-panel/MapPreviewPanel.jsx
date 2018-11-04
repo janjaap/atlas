@@ -13,6 +13,8 @@ import { getMapDetail } from '../../ducks/detail/map-detail';
 import { getPanoPreview } from '../../../pano/ducks/preview/pano-preview';
 import { getMapSearchResults } from '../../ducks/search-results/map-search-results';
 
+import piwikTracker from '../../../shared/services/piwik-tracker/piwik-tracker';
+
 const previewPanelSearchResultLimit = 3;
 
 const isUpdated = (props, prevProps, paths) => {
@@ -44,6 +46,7 @@ class MapPreviewPanel extends React.Component {
   constructor() {
     super();
     this.onPanoPreviewClick = this.onPanoPreviewClick.bind(this);
+    this.onDisplayAllResults = this.onDisplayAllResults.bind(this);
   }
 
   componentDidMount() {
@@ -54,6 +57,20 @@ class MapPreviewPanel extends React.Component {
   componentDidUpdate(prevProps) {
     // Don't just copy this. It's an anti-pattern.
     update(this.context.store.dispatch, this.props, prevProps);
+  }
+
+  // TODO DP-6031: Create Redux Middelware, map Piwik events to ACTIONS
+  onDisplayAllResults(mapClickLocation) {
+    const piwik = {
+      TRACK_EVENT: 'trackEvent',
+      SHOW_ALL_RESULTS: 'show-all-results',
+      NAVIGATION: 'navigation'
+    };
+
+    piwikTracker([piwik.TRACK_EVENT, piwik.NAVIGATION,
+      piwik.SHOW_ALL_RESULTS, window.document.title]);
+
+    return this.props.onSearch(mapClickLocation);
   }
 
   onPanoPreviewClick() {
@@ -91,7 +108,7 @@ class MapPreviewPanel extends React.Component {
             {showDisplayAllResultsButton && (
               <button
                 className="map-preview-panel__button map-preview-panel__button--show-all"
-                onClick={() => props.onSearch(props.mapClickLocation)}
+                onClick={() => this.onDisplayAllResults(props.mapClickLocation)}
                 title="Alle resultaten tonen"
               >
                 <PlusIcon className="map-preview-panel__button-icon" />
@@ -180,6 +197,7 @@ MapPreviewPanel.propTypes = {
   onMapPreviewPanelMaximize: PropTypes.func.isRequired,
   onMapSearchResultsItemClick: PropTypes.func.isRequired,
   onOpenPanoById: PropTypes.func.isRequired,
+  onSearch: PropTypes.func.isRequired,
   pano: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   results: PropTypes.array, // eslint-disable-line react/forbid-prop-types
   search: PropTypes.object, // eslint-disable-line react/forbid-prop-types

@@ -1,7 +1,7 @@
 const mockApiData = {
   components: {
     schemas: {
-      'dcat-doc': {
+      'dcat-dataset': {
         properties: {
           'ams:license': {
             default: 'unspec',
@@ -2009,7 +2009,7 @@ const mockApiData = {
           'dct:identifier'
         ]
       },
-      'dcat-doc-list': {
+      'dcat-dataset-list': {
         items: {
           type: 'string'
         },
@@ -2096,7 +2096,7 @@ const mockApiData = {
             content: {
               'application/json': {
                 schema: {
-                  $ref: '#/components/schemas/dcat-doc-list'
+                  $ref: '#/components/schemas/dcat-dataset-list'
                 }
               }
             },
@@ -2110,7 +2110,7 @@ const mockApiData = {
           content: {
             'application/json': {
               schema: {
-                $ref: '#/components/schemas/dcat-doc'
+                $ref: '#/components/schemas/dcat-dataset'
               }
             }
           },
@@ -2207,7 +2207,7 @@ const mockApiData = {
             content: {
               'application/json': {
                 schema: {
-                  $ref: '#/components/schemas/dcat-doc'
+                  $ref: '#/components/schemas/dcat-dataset'
                 }
               }
             },
@@ -2270,7 +2270,7 @@ const mockApiData = {
           content: {
             'application/json': {
               schema: {
-                $ref: '#/components/schemas/dcat-doc'
+                $ref: '#/components/schemas/dcat-dataset'
               }
             }
           },

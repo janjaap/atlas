@@ -1,14 +1,5 @@
 import { createSelector } from 'reselect';
 
-import { detailPointType } from '../../components/leaflet/services/icons.constant';
-
-const generateMarkers = (markers) => (
-  markers.map((markerLocation, index) => ({
-    position: markerLocation,
-    type: detailPointType,
-    index
-  })));
-
 export const getDataSelection = (state) => state.dataSelection;
 
 export const getMapData = createSelector([getDataSelection],
@@ -17,7 +8,7 @@ export const getMapData = createSelector([getDataSelection],
 export const getClusterMarkers = createSelector([getMapData],
   (markers) => (
     markers && markers.clusterMarkers && markers.clusterMarkers.length ?
-      generateMarkers(markers.clusterMarkers) : []
+      markers.clusterMarkers : []
   ));
 
 export const getGeoJsons = createSelector([getMapData],

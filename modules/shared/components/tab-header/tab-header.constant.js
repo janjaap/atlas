@@ -17,9 +17,8 @@
                     getPayload: (query) => {
                         return {dataset: 'dcatd', view: 'CATALOG', query, page: 1};
                     },
-                    tip: 'in datasets kun je momenteel alleen zoeken op hele woorden (dus zoek niet op \'zonne\' ' +
-                        'maar op \'zonnepanelen\' of \'zonnepaneel\'). Alternatief is de optie \'Alle datasets ' +
-                        'tonen\' en filteren op thema.'
+                    tip: `maak de zoekcriteria minder specifiek. Of probeer in plaats van zoeken eens de
+                          optie 'Alle datasets tonen' en filter vervolgens op thema.`
                 }
             }
         });

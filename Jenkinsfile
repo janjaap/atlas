@@ -28,17 +28,15 @@ pipeline {
 
     stage('Check API\'s health') {
       options {
-        timeout(time: 30, unit: 'MINUTES')
+        timeout(time: 2, unit: 'MINUTES')
       }
       environment {
         PROJECT                = "${PROJECT_PREFIX}e2e-api-health"
-        USERNAME_EMPLOYEE      = 'atlas.employee@amsterdam.nl'
         USERNAME_EMPLOYEE_PLUS = 'atlas.employee.plus@amsterdam.nl'
-        PASSWORD_EMPLOYEE      = credentials('PASSWORD_EMPLOYEE')
         PASSWORD_EMPLOYEE_PLUS = credentials('PASSWORD_EMPLOYEE_PLUS')
       }
       steps {
-        sh "docker-compose -p ${PROJECT} up --build --exit-code-from test-e2e-api-health test-e2e-api-health"
+        sh "docker-compose -p ${PROJECT} up --build --exit-code-from test-health-checks test-health-checks"
       }
       post {
         always {
@@ -51,7 +49,7 @@ pipeline {
       parallel {
         stage('Unit tests') {
           options {
-            timeout(time: 10, unit: 'MINUTES')
+            timeout(time: 30, unit: 'MINUTES')
           }
           environment {
             PROJECT = "${PROJECT_PREFIX}unit"
@@ -66,9 +64,26 @@ pipeline {
           }
         }
 
+        // stage('Linting') {
+        //   options {
+        //     timeout(time: 30, unit: 'MINUTES')
+        //   }
+        //   environment {
+        //     PROJECT = "${PROJECT_PREFIX}linting"
+        //   }
+        //   steps {
+        //     sh "docker-compose -p ${PROJECT} up --build --exit-code-from test-lint test-lint"
+        //   }
+        //   post {
+        //     always {
+        //       sh "docker-compose -p ${PROJECT} down -v || true"
+        //     }
+        //   }
+        // }
+
         stage('E2E tests') {
           options {
-            timeout(time: 30, unit: 'MINUTES')
+            timeout(time: 60, unit: 'MINUTES')
           }
           environment {
             PROJECT                = "${PROJECT_PREFIX}e2e"
@@ -89,7 +104,7 @@ pipeline {
 
         stage('E2E tests (Aria)') {
           options {
-            timeout(time: 20, unit: 'MINUTES')
+            timeout(time: 30, unit: 'MINUTES')
           }
           environment {
             PROJECT = "${PROJECT_PREFIX}e2e-aria"

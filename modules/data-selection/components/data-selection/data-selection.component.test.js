@@ -98,7 +98,11 @@ describe('The dp-data-selection component', function () {
             },
             page: 2,
             isLoading: false,
-            catalogFilters: {}
+            catalogFilters: {
+                formatTypes: [],
+                serviceTypes: [],
+                distributionTypes: []
+            }
         };
 
         mockedFilters = {

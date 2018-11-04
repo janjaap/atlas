@@ -74,7 +74,7 @@
         function getFacetOptions (facet, filterCatalog, namespace) {
             return Object.keys(facet).map(option => {
                 const id = namespace ? option.replace(`${namespace}:`, '') : option;
-                const catalogOption = filterCatalog.filter(item => item.id === id)[0];
+                const catalogOption = filterCatalog && filterCatalog.filter(item => item.id === id)[0];
                 return {
                     id: id,
                     label: catalogOption ? catalogOption.label : id,

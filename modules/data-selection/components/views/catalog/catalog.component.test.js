@@ -70,7 +70,9 @@ describe('The catalog component', function () {
     it('can load a detail page for a catalog', function () {
         spyOn(store, 'getState').and.returnValue({
             catalogFilters: {
-
+                formatTypes: [{}],
+                serviceTypes: [{}],
+                distributionTypes: [{}]
             }
         });
 

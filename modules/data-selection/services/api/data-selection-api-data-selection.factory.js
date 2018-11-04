@@ -94,7 +94,7 @@
                     clusterMarkers: data.object_list
                         .map(object => object._source.centroid)
                         .filter(angular.identity)
-                        .map(([lon, lat]) => [lat, lon])
+                        .map(([lon, lat]) => ({position: [lat, lon]}))
                 }));
         }
     }

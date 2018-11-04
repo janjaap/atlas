@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
 import MarkerClusterGroup from 'react-leaflet-markercluster';
+import detailIcon from '../../services/detail-icon';
 
 class ClusterGroup extends MarkerClusterGroup {
   componentDidMount() {
@@ -22,7 +23,12 @@ class ClusterGroup extends MarkerClusterGroup {
 
 ClusterGroup.propTypes = {
   ...MarkerClusterGroup.propTypes,
-  getMarkerGroupBounds: PropTypes.func
+  getMarkerGroupBounds: PropTypes.func,
+  markerOptions: PropTypes.shape({}).isRequired
+};
+
+ClusterGroup.defaultProps = {
+  markerOptions: { icon: detailIcon() }
 };
 
 export default ClusterGroup;

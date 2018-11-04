@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AutoSuggestCategory should render ellipsis when there are more then 3 results 1`] = `
+<div
+  className="auto-suggest__dropdown-category"
+>
+  <h4
+    className="auto-suggest__dropdown-category__heading qa-auto-suggest-header"
+  >
+    Straatnamen
+  </h4>
+  <ul>
+    <AutoSuggestItem
+      content="Dam"
+      isActive={false}
+      key="Dam0"
+      onSuggestionSelection={[Function]}
+      query="dam"
+    />
+    <AutoSuggestItem
+      content="Damloperspad"
+      isActive={false}
+      key="Damloperspad1"
+      onSuggestionSelection={[Function]}
+      query="dam"
+    />
+    <AutoSuggestItem
+      content="Damrak"
+      isActive={false}
+      key="Damrak2"
+      onSuggestionSelection={[Function]}
+      query="dam"
+    />
+    <AutoSuggestItem
+      content="..."
+      isActive={false}
+      key="Straatnamen..."
+      onSuggestionSelection={[Function]}
+      query="dam"
+    />
+  </ul>
+</div>
+`;
+
+exports[`AutoSuggestCategory should render no ellipsis when there are 3 or less results 1`] = `
+<div
+  className="auto-suggest__dropdown-category"
+>
+  <h4
+    className="auto-suggest__dropdown-category__heading qa-auto-suggest-header"
+  >
+    Straatnamen
+  </h4>
+  <ul>
+    <AutoSuggestItem
+      content="Dam"
+      isActive={false}
+      key="Dam0"
+      onSuggestionSelection={[Function]}
+      query="dam"
+    />
+    <AutoSuggestItem
+      content="Damloperspad"
+      isActive={false}
+      key="Damloperspad1"
+      onSuggestionSelection={[Function]}
+      query="dam"
+    />
+    <AutoSuggestItem
+      content="Damrak"
+      isActive={false}
+      key="Damrak2"
+      onSuggestionSelection={[Function]}
+      query="dam"
+    />
+  </ul>
+</div>
+`;

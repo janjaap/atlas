@@ -9,26 +9,35 @@ const AutoSuggestItem = (props) => {
     new RegExp(`(${escapeStringRegexp(query.trim())})`, 'gi'),
     '<span class="auto-suggest__dropdown__highlight">$1</span>'
   );
+  const ellipsis = content === '...';
+
+  const listItem = ellipsis ?
+    (<div>{content}</div>) :
+    (<div>
+      <span className="icon" >
+        <ArrowRightIcon />
+      </span>
+      <span
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{
+          __html: highlightedSuggestion
+        }}
+      />
+    </div>);
 
   return (
-    <li>
+    <li
+      className={!ellipsis ? '' : 'auto-suggest__dropdown-item--row-height'}
+    >
       <button
         type="button"
-        className={`
-          auto-suggest__dropdown-item
+        className={ellipsis ? 'auto-suggest__dropdown-item-button' : `
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--${isActive ? 'active' : 'inactive'}
         `}
         onClick={onSuggestionSelection}
       >
-        <span className="icon">
-          <ArrowRightIcon />
-        </span>
-        <span
-          // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{
-            __html: highlightedSuggestion
-          }}
-        />
+        {listItem}
       </button>
     </li>
   );

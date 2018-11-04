@@ -98,7 +98,7 @@ module.exports = function (config) {
       reports: ['html', 'text-summary'],
       dir: path.join(__dirname, 'coverage-legacy'),
       thresholds: {
-        emitWarning: true,
+        emitWarning: false,
         global: {
           statements: 100,
           lines: 100,

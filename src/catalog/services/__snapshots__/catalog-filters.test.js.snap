@@ -93,7 +93,7 @@ Object {
   "formatTypes": Array [
     Object {
       "id": "n/a",
-      "label": "",
+      "label": "Anders",
     },
     Object {
       "id": "text/csv",

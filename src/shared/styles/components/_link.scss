@@ -41,8 +41,28 @@
 
 .c-link--inline {
   @extend %link--inline;
- }
+}
 
 .c-link__wrapper--inine-block {
   display: inline-block;
+
+  a {
+    color: $primary-contrast-blue;
+    text-decoration: underline;
+
+    &:hover {
+      color: $primary-contrast;
+      text-decoration: underline;
+    }
+  }
+}
+
+.c-panel--warning .c-link__wrapper--inine-block { // sass-lint:disable-line force-element-nesting
+  a {
+    color: $primary-light;
+
+    &:hover {
+      color: $primary-contrast;
+    }
+  }
 }

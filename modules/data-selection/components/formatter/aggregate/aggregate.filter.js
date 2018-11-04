@@ -6,6 +6,7 @@
         .filter('aggregate', aggregateFilter);
 
     function aggregateFilter () {
+        /** Creates an array with distinct values and its count */
         return function (input) {
             const result = input.reduce((aggregation, value) => {
                 const counter = aggregation.find(item => item.name === value);

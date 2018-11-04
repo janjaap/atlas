@@ -10,7 +10,7 @@ describe('The modification-date filter', function () {
             modDateFilter = $filter('modificationDate');
         });
 
-        var baseTime = new Date('2016-12-15T12:00:00');
+        var baseTime = new Date('2018-10-05');
         jasmine.clock().mockDate(baseTime);
     });
 
@@ -18,33 +18,19 @@ describe('The modification-date filter', function () {
         expect(modDateFilter()).toBeUndefined();
     });
 
-    it('shows the time as since created: 5 days', function () {
-        expect(modDateFilter({
-            metadata_created: '2016-12-10T12:00:00'
-        })).toBe('5 dagen geleden gemaakt');
+    it('shows the time as since created: today / 0 days', function () {
+        expect(modDateFilter('2018-10-05')).toBe('vandaag gewijzigd');
     });
 
-    it('shows the time as since created: 4 hours', function () {
-        expect(modDateFilter({
-            metadata_created: '2016-12-15T08:14:10'
-        })).toBe('4 uren geleden gemaakt');
+    it('shows the time as since created: yesterday / 1 days', function () {
+        expect(modDateFilter('2018-10-04')).toBe('gisteren gewijzigd');
     });
 
-    it('shows the time as since created: 3 minutes', function () {
-        expect(modDateFilter({
-            metadata_created: '2016-12-15T11:57:04'
-        })).toBe('3 minuten geleden gemaakt');
-    });
-
-    it('shows the time as since created: 6 seconds', function () {
-        expect(modDateFilter({
-            metadata_created: '2016-12-15T11:59:54'
-        })).toBe('6 seconden geleden gemaakt');
+    it('shows the time as since created: 4 days', function () {
+        expect(modDateFilter('2018-10-01')).toBe('4 dagen geleden gewijzigd');
     });
 
     it('shows the time as since created: future time', function () {
-        expect(modDateFilter({
-            metadata_created: '2017-12-15T11:59:54'
-        })).toBe('is in de toekomst gemaakt');
+        expect(modDateFilter('2018-11-04')).toBe('in de toekomst gewijzigd');
     });
 });

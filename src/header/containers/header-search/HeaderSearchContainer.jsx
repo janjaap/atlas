@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import {
-  getSuggestions,
-  setActiveSuggestion
+  getSuggestionsAction,
+  setActiveSuggestionAction
 } from '../../ducks/auto-suggest/auto-suggest';
 import { fetchDetail } from '../../../reducers/details';
 import {
@@ -34,18 +34,16 @@ const mapDispatchToProps = (dispatch) => bindActionCreators({
   onCleanDatasetOverview: emptyFilters,
   onDatasetSearch: fetchDataSelection,
   onDetailLoad: fetchDetail,
-  onGetSuggestions: getSuggestions,
+  onGetSuggestions: getSuggestionsAction,
   onSearch: fetchSearchResultsByQuery,
-  onSuggestionActivate: setActiveSuggestion
+  onSuggestionActivate: setActiveSuggestionAction
 }, dispatch);
 
 class HeaderSearchContainer extends React.Component {
   constructor(props) {
     super(props);
     this.onFormSubmit = this.onFormSubmit.bind(this);
-    this.onSuggestionActivate = this.onSuggestionActivate.bind(this);
     this.onSuggestionSelection = this.onSuggestionSelection.bind(this);
-    this.onUserInput = this.onUserInput.bind(this);
 
     if (window.opener && window.suggestionToLoadUri) {
       // if user is sent here with a ctrl+click action
@@ -55,10 +53,7 @@ class HeaderSearchContainer extends React.Component {
   }
 
   componentDidMount() {
-    const {
-      onGetSuggestions,
-      prefillQuery
-    } = this.props;
+    const { onGetSuggestions, prefillQuery } = this.props;
 
     if (prefillQuery) {
       onGetSuggestions(prefillQuery);
@@ -80,25 +75,10 @@ class HeaderSearchContainer extends React.Component {
     // on navigation, clear auto-suggest
     if (doResetQuery && !prefillQuery) {
       onGetSuggestions();
-    } else if (prevProps.prefillQuery !== prefillQuery) {
-      // if the user ends up on a search page, set prefillQuery
-      onGetSuggestions(prefillQuery);
     }
   }
 
-  onSuggestionActivate(suggestion) {
-    const {
-      onSuggestionActivate,
-      onGetSuggestions,
-      typedQuery
-    } = this.props;
-
-    if (suggestion && suggestion.index === -1) {
-      onGetSuggestions(typedQuery);
-    }
-    onSuggestionActivate(suggestion);
-  }
-
+  // Opens suggestion on mouseclick or enter
   onSuggestionSelection(suggestion, shouldOpenInNewWindow) {
     const {
       onDetailLoad,
@@ -141,20 +121,9 @@ class HeaderSearchContainer extends React.Component {
     }
   }
 
-  onUserInput(query) {
-    const {
-      onGetSuggestions
-    } = this.props;
-
-    onGetSuggestions(query);
-  }
-
   openDetailOnLoad() {
-    const {
-      onDetailLoad
-    } = this.props;
-    // if user is sent here with a ctrl+click action
-    // open the detail page
+    const { onDetailLoad } = this.props;
+    // if user is sent here with a ctrl+click action open the detail page
     const suggestionUri = window.suggestionToLoadUri;
     onDetailLoad(`${SHARED_CONFIG.API_ROOT}${suggestionUri}`);
     window.suggestionToLoadUri = undefined;
@@ -165,6 +134,8 @@ class HeaderSearchContainer extends React.Component {
       activeSuggestion,
       displayQuery,
       numberOfSuggestions,
+      onGetSuggestions,
+      onSuggestionActivate,
       suggestions,
       typedQuery
     } = this.props;
@@ -176,9 +147,9 @@ class HeaderSearchContainer extends React.Component {
         legendTitle={'Data zoeken'}
         numberOfSuggestions={numberOfSuggestions}
         onSubmit={this.onFormSubmit}
-        onSuggestionActivate={this.onSuggestionActivate}
+        onSuggestionActivate={onSuggestionActivate}
         onSuggestionSelection={this.onSuggestionSelection}
-        onTextInput={this.onUserInput}
+        onTextInput={onGetSuggestions}
         placeHolder={'Zoek data op adres, postcode, kadastrale aanduiding, etc. Of datasets op trefwoord.'}
         query={displayQuery || typedQuery}
         suggestions={suggestions}

@@ -53,7 +53,8 @@ $contact-height: 60px;
 
   .c-site-header__search {
     margin: ($site-header-height - $site-header-search-form-height) / 2
-      $base-whitespace * 2;
+      ($site-header-height - $site-header-search-form-height) / 2
+        $base-whitespace * 2;
   }
 
   .c-site-header__menu {

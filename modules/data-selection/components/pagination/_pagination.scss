@@ -60,13 +60,13 @@
 .c-data-selection-pagination-link--first {
   @extend %icon--border-hover;
   @include icon-label-right("first", "", "white");
-  margin-right: $base-whitespace * 2;
+  margin-right: $base-whitespace;
 }
 
 .c-data-selection-pagination-link--last {
   @extend %icon--border-hover;
   @include icon-label-left("last", "", "white");
-  margin-left: $base-whitespace * 2;
+  margin-left: $base-whitespace;
 }
 
 .c-data-selection-pagination-link--previous {

@@ -1,29 +1,46 @@
 .c-video {
-  height: 100%; // Required by polyfill to correctly position video element
-}
-
-.c-video__element {
   width: 100%;
-  height: 100%;
-  padding-bottom: $base-whitespace * 5;
-  object-fit: cover; // not yet supported IE & Edge, polyfilled
+  height: 100%; // Required by polyfill to correctly position video element
 
-  // turn off play controls in iOS: needs vendor prefixes
+  // Fix for object-fit in IE10+ & Edge
   // sass-lint:disable no-vendor-prefixes
-  &::-webkit-media-controls-panel {
-    display: none !important;
-    -webkit-appearance: none;
-  }
-
-  &::-webkit-media-controls-play-button {
-    display: none !important;
-    -webkit-appearance: none;
-  }
-
-  &::-webkit-media-controls-start-playback-button {
-    display: none !important;
-    -webkit-appearance: none;
+  &:-ms-lang(x),
+  video {
+    width: auto;
+    height: auto;
   }
   // sass-lint:enable no-vendor-prefixes
-}
 
+  // Fix for object-fit in IE9
+  &:root {
+    video {
+      width: auto;
+      height: auto;
+    }
+  }
+
+  &__element {
+    width: 100%;
+    height: 100%;
+    padding-bottom: $base-whitespace * 5;
+    object-fit: cover; // not yet supported IE & Edge
+
+    // turn off play controls in iOS: needs vendor prefixes
+    // sass-lint:disable no-vendor-prefixes
+    &::-webkit-media-controls-panel {
+      display: none !important;
+      -webkit-appearance: none;
+    }
+
+    &::-webkit-media-controls-play-button {
+      display: none !important;
+      -webkit-appearance: none;
+    }
+
+    &::-webkit-media-controls-start-playback-button {
+      display: none !important;
+      -webkit-appearance: none;
+    }
+    // sass-lint:enable no-vendor-prefixes
+  }
+}

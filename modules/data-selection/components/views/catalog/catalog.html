@@ -6,16 +6,16 @@
                 <h2>
                     {{row.header}}
                 </h2>
-                <div>Metadata {{row.modification | modificationDate}}</div>
+                <div>{{row.modified | modificationDate}}</div>
             </div>
 
             <span class="c-data-selection-catalog__formats">
                 <div ng-repeat="format in row.formats" class="c-data-selection-file-type">
-                    <span class="c-data-selection-file-type__name c-data-selection-file-type__format-{{format.name | optionLabel:vm.catalogFilters.formatTypes| lowercase }}">
-                        {{format.name | optionLabel:vm.catalogFilters.formatTypes| lowercase }}
+                    <span class="c-data-selection-file-type__name c-data-selection-file-type__format-{{format.name | lowercase }}">
+                        {{format.name}}
                     </span>
                     <span class="c-data-selection-file-type__x">x</span>
-                    <span class="c-data-selection-file-type__count ng-binding">{{format.count}}</span>
+                    <span class="c-data-selection-file-type__count">{{format.count}}</span>
                 </div>
             </span>
 

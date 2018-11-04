@@ -99,6 +99,7 @@ $link-offset: 3px;
 %link--inline {
   @extend %link;
   @include font-weight($normal-weight);
+  color: $primary-contrast-blue;
   display: inline;
   text-decoration: underline;
 }

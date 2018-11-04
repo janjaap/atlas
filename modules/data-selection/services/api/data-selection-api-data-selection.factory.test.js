@@ -374,9 +374,9 @@ describe('The dataSelectionApiDataSelection factory', function () {
 
             expect(output).toEqual({
                 clusterMarkers: [
-                    [52.1, 4.1],
-                    [52.2, 4.2],
-                    [52.3, 4.3]
+                    {position: [52.1, 4.1]},
+                    {position: [52.2, 4.2]},
+                    {position: [52.3, 4.3]}
                 ]
             });
         });

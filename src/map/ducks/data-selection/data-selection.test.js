@@ -6,9 +6,9 @@ describe('Data selection selectors', () => {
       dataset: 'bag',
       markers: {
         clusterMarkers: [
-          [50000, 50000],
-          [60000, 60000],
-          [70000, 70000]
+          { position: [50000, 50000] },
+          { position: [60000, 60000] },
+          { position: [70000, 70000] }
         ],
         markers: [
           [50000, 50000],
@@ -44,11 +44,7 @@ describe('Data selection selectors', () => {
       const selected = getClusterMarkers(mockParameters);
       expect(Array.isArray(selected)).toBe(true);
       selected.forEach((item, index) => {
-        expect(item).toEqual({
-          index,
-          position: mockParameters.dataSelection.markers.clusterMarkers[index],
-          type: 'detailPointType'
-        });
+        expect(item).toEqual(mockParameters.dataSelection.markers.clusterMarkers[index]);
       });
     });
 

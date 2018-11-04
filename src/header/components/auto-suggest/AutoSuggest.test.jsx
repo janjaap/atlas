@@ -26,7 +26,8 @@ const mockFilledState = {
           category: 'Straatnamen'
         }
       ],
-      label: 'Straatnamen'
+      label: 'Straatnamen',
+      total_results: 6
     },
     {
       content: [
@@ -49,7 +50,8 @@ const mockFilledState = {
           category: 'Monumenten'
         }
       ],
-      label: 'Monumenten'
+      label: 'Monumenten',
+      total_results: 5
     }
   ],
   typedQuery: 'dam',
@@ -167,6 +169,20 @@ describe('The AutoSuggest component', () => {
         uri: 'monumenten/monumenten/7b892a93-37c6-402c-b009-43b021af92bc/'
       });
     });
+  });
+
+  it('shows a legend if a title is provided', () => {
+    const legendTitle = 'title';
+    const autoSuggestComponent = mount(<AutoSuggest
+      activeSuggestion={{ index: -1 }}
+      onSubmit={onSubmit}
+      onSuggestionActivate={onSuggestionActivate}
+      onSuggestionSelection={onSuggestionSelection}
+      onTextInput={onTextInput}
+      legendTitle={legendTitle}
+    />);
+    const legend = autoSuggestComponent.find('legend');
+    expect(legend.text()).toBe(legendTitle);
   });
 
   it('optionally fills the searchbox with a query', () => {
@@ -321,6 +337,25 @@ describe('The AutoSuggest component', () => {
 
       expect(onSubmit).toHaveBeenCalled();
     });
+
+    it('should be triggered when an ellipsis list item is selected', () => {
+      const autoSuggestComponent = shallow(<AutoSuggest
+        activeSuggestion={mockFilledState.activeSuggestion}
+        onSubmit={onSubmit}
+        onSuggestionActivate={onSuggestionActivate}
+        onSuggestionSelection={onSuggestionSelection}
+        onTextInput={onTextInput}
+      />);
+
+      const suggestion = { index: -1 };
+      const event = {
+        preventDefault: jest.fn(),
+        stopPropagation: jest.fn()
+      };
+      autoSuggestComponent.instance().onFormSubmit = jest.fn();
+      autoSuggestComponent.instance().onSuggestionSelection(suggestion, event);
+      expect(autoSuggestComponent.instance().onFormSubmit).toHaveBeenCalledWith(event);
+    });
   });
 
   describe('resetActiveSuggestion', () => {
@@ -344,15 +379,19 @@ describe('The AutoSuggest component', () => {
   });
 
   describe('when selecting a suggestion', () => {
-    it('should request to open in new window when CTRL key is pressed.', () => {
-      const autoSuggestComponent = mount(<AutoSuggest
-        activeSuggestion={{ index: -1 }}
-        onSubmit={onSubmit}
-        onSuggestionActivate={onSuggestionActivate}
-        onSuggestionSelection={onSuggestionSelection}
-        onTextInput={onTextInput}
-      />);
+    const autoSuggestComponent = mount(<AutoSuggest
+      activeSuggestion={{ index: 0 }}
+      onSubmit={onSubmit}
+      onSuggestionActivate={onSuggestionActivate}
+      onSuggestionSelection={onSuggestionSelection}
+      onTextInput={onTextInput}
+      numberOfSuggestions={1}
+    />);
 
+    beforeEach(() => {
+    });
+
+    it('should request to open in new window when CTRL key is pressed.', () => {
       const mockEvent = {
         preventDefault: jest.fn(),
         stopPropagation: jest.fn(),
@@ -369,14 +408,6 @@ describe('The AutoSuggest component', () => {
     });
 
     it('should not request to open in new window when no CTRL key is pressed.', () => {
-      const autoSuggestComponent = mount(<AutoSuggest
-        activeSuggestion={{ index: -1 }}
-        onSubmit={onSubmit}
-        onSuggestionActivate={onSuggestionActivate}
-        onSuggestionSelection={onSuggestionSelection}
-        onTextInput={onTextInput}
-      />);
-
       const mockEvent = {
         preventDefault: jest.fn(),
         stopPropagation: jest.fn(),
@@ -471,6 +502,18 @@ describe('The AutoSuggest component', () => {
 
       expect(preventDefaultMock).not.toHaveBeenCalled();
       expect(autoSuggestComponent.instance().onSuggestionSelection).toHaveBeenCalled();
+    });
+
+    it('should not handle enter key when index for suggestions is below 0', () => {
+      const preventDefaultMock = jest.fn();
+      autoSuggestComponent.setProps({ activeSuggestion: { index: -1 } });
+      autoSuggestComponent.instance().navigateSuggestions({
+        keyCode: 13,
+        preventDefault: preventDefaultMock
+      });
+
+      expect(preventDefaultMock).not.toHaveBeenCalled();
+      expect(autoSuggestComponent.instance().onSuggestionSelection).not.toHaveBeenCalled();
     });
 
     it('should handle any other key and do nothing', () => {

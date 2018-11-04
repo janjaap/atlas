@@ -5,7 +5,7 @@ const table = '.c-table';
 
 describe('parcel-ownership (eigendommen) module', () => {
   describe('user should be able to navigate to the parcel-ownership from the homepage', () => {
-    it('should open the parcel-ownership page', () => {
+    it('should open the parcel-ownership page', () => { // TODO reactivate when feature switch is removed
       // go to the homepage
       cy.visit('/');
       // the homepage should be visible
@@ -33,7 +33,7 @@ describe('parcel-ownership (eigendommen) module', () => {
       cy.get('.homepage-block__link').contains('Kadaster-tabel').click();
     });
 
-    describe('user should not be able to view the kadaster data', () => {
+    describe('user should not be able to view the kadaster data', () => { // TODO reactivate when feature switch is removed
       it('should show a notification that the user must authenticate', () => {
         // a warning notification should be shown that the user must authenticate
         cy.get(notification).should('exist').and('be.visible');
@@ -64,7 +64,7 @@ describe('parcel-ownership (eigendommen) module', () => {
     });
 
     describe('user should be able to view the eigendommen', () => {
-      describe('should navigate from the homepage', () => {
+      describe('should navigate from the homepage', () => { // TODO reactivate when feature switch is removed
         beforeEach(() => {
           // go to the homepage
           cy.visit('/');

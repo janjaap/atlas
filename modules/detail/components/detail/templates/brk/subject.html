@@ -41,7 +41,7 @@
                 </dd>
                 <dt>Postadres postbus</dt>
                 <dd>
-                  {{ vm.apiData.results.postadres.postbus_nummer }} {{ vm.apiData.results.postadres.postbus_postcode }} {{ vm.apiData.results.postadres.postbus_woonplaats }}
+                  <span ng-if="vm.apiData.results.postadres.postbus_nummer">Postbus {{ vm.apiData.results.postadres.postbus_nummer }}</span> {{ vm.apiData.results.postadres.postbus_postcode }} {{ vm.apiData.results.postadres.postbus_woonplaats }}
                 </dd>
             </dl>
 
@@ -81,7 +81,7 @@
                 </dd>
                 <dt>Postadres postbus</dt>
                 <dd>
-                    {{ vm.apiData.results.postadres.postbus_nummer }} {{ vm.apiData.results.postadres.postbus_postcode }} {{ vm.apiData.results.postadres.postbus_woonplaats }}
+                    <span ng-if="vm.apiData.results.postadres.postbus_nummer">Postbus {{ vm.apiData.results.postadres.postbus_nummer }}</span> {{ vm.apiData.results.postadres.postbus_postcode }} {{ vm.apiData.results.postadres.postbus_woonplaats }}
                 </dd>
             </dl>
         </div>

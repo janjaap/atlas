@@ -55,6 +55,7 @@ exports[`The AutoSuggest component should allow the user to navigate with the ke
           },
         ],
         "label": "Straatnamen",
+        "total_results": 6,
       },
       Object {
         "content": Array [
@@ -78,6 +79,7 @@ exports[`The AutoSuggest component should allow the user to navigate with the ke
           },
         ],
         "label": "Monumenten",
+        "total_results": 5,
       },
     ]
   }
@@ -165,6 +167,7 @@ exports[`The AutoSuggest component should allow the user to navigate with the ke
                 },
               ],
               "label": "Straatnamen",
+              "total_results": 6,
             }
           }
           key="Straatnamen"
@@ -187,29 +190,33 @@ exports[`The AutoSuggest component should allow the user to navigate with the ke
                 onSuggestionSelection={[Function]}
                 query=""
               >
-                <li>
+                <li
+                  className=""
+                >
                   <button
                     className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                     onClick={[Function]}
                     type="button"
                   >
-                    <span
-                      className="icon"
-                    >
-                      <Component>
-                        mock-svg
-                      </Component>
-                    </span>
-                    <span
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "<span class=\\"auto-suggest__dropdown__highlight\\"></span>D<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>m<span class=\\"auto-suggest__dropdown__highlight\\"></span>",
+                    <div>
+                      <span
+                        className="icon"
+                      >
+                        <Component>
+                          mock-svg
+                        </Component>
+                      </span>
+                      <span
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "<span class=\\"auto-suggest__dropdown__highlight\\"></span>D<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>m<span class=\\"auto-suggest__dropdown__highlight\\"></span>",
+                          }
                         }
-                      }
-                    />
+                      />
+                    </div>
                   </button>
                 </li>
               </AutoSuggestItem>
@@ -220,29 +227,33 @@ exports[`The AutoSuggest component should allow the user to navigate with the ke
                 onSuggestionSelection={[Function]}
                 query=""
               >
-                <li>
+                <li
+                  className=""
+                >
                   <button
                     className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                     onClick={[Function]}
                     type="button"
                   >
-                    <span
-                      className="icon"
-                    >
-                      <Component>
-                        mock-svg
-                      </Component>
-                    </span>
-                    <span
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "<span class=\\"auto-suggest__dropdown__highlight\\"></span>D<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>m<span class=\\"auto-suggest__dropdown__highlight\\"></span>l<span class=\\"auto-suggest__dropdown__highlight\\"></span>o<span class=\\"auto-suggest__dropdown__highlight\\"></span>p<span class=\\"auto-suggest__dropdown__highlight\\"></span>e<span class=\\"auto-suggest__dropdown__highlight\\"></span>r<span class=\\"auto-suggest__dropdown__highlight\\"></span>s<span class=\\"auto-suggest__dropdown__highlight\\"></span>p<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>d<span class=\\"auto-suggest__dropdown__highlight\\"></span>",
+                    <div>
+                      <span
+                        className="icon"
+                      >
+                        <Component>
+                          mock-svg
+                        </Component>
+                      </span>
+                      <span
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "<span class=\\"auto-suggest__dropdown__highlight\\"></span>D<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>m<span class=\\"auto-suggest__dropdown__highlight\\"></span>l<span class=\\"auto-suggest__dropdown__highlight\\"></span>o<span class=\\"auto-suggest__dropdown__highlight\\"></span>p<span class=\\"auto-suggest__dropdown__highlight\\"></span>e<span class=\\"auto-suggest__dropdown__highlight\\"></span>r<span class=\\"auto-suggest__dropdown__highlight\\"></span>s<span class=\\"auto-suggest__dropdown__highlight\\"></span>p<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>d<span class=\\"auto-suggest__dropdown__highlight\\"></span>",
+                          }
                         }
-                      }
-                    />
+                      />
+                    </div>
                   </button>
                 </li>
               </AutoSuggestItem>
@@ -253,29 +264,54 @@ exports[`The AutoSuggest component should allow the user to navigate with the ke
                 onSuggestionSelection={[Function]}
                 query=""
               >
-                <li>
+                <li
+                  className=""
+                >
                   <button
                     className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                     onClick={[Function]}
                     type="button"
                   >
-                    <span
-                      className="icon"
-                    >
-                      <Component>
-                        mock-svg
-                      </Component>
-                    </span>
-                    <span
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "<span class=\\"auto-suggest__dropdown__highlight\\"></span>D<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>m<span class=\\"auto-suggest__dropdown__highlight\\"></span>r<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>k<span class=\\"auto-suggest__dropdown__highlight\\"></span>",
+                    <div>
+                      <span
+                        className="icon"
+                      >
+                        <Component>
+                          mock-svg
+                        </Component>
+                      </span>
+                      <span
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "<span class=\\"auto-suggest__dropdown__highlight\\"></span>D<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>m<span class=\\"auto-suggest__dropdown__highlight\\"></span>r<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>k<span class=\\"auto-suggest__dropdown__highlight\\"></span>",
+                          }
                         }
-                      }
-                    />
+                      />
+                    </div>
+                  </button>
+                </li>
+              </AutoSuggestItem>
+              <AutoSuggestItem
+                content="..."
+                isActive={false}
+                key="Straatnamen..."
+                onSuggestionSelection={[Function]}
+                query=""
+              >
+                <li
+                  className="auto-suggest__dropdown-item--row-height"
+                >
+                  <button
+                    className="auto-suggest__dropdown-item-button"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <div>
+                      ...
+                    </div>
                   </button>
                 </li>
               </AutoSuggestItem>
@@ -311,6 +347,7 @@ exports[`The AutoSuggest component should allow the user to navigate with the ke
                 },
               ],
               "label": "Monumenten",
+              "total_results": 5,
             }
           }
           key="Monumenten"
@@ -333,29 +370,33 @@ exports[`The AutoSuggest component should allow the user to navigate with the ke
                 onSuggestionSelection={[Function]}
                 query=""
               >
-                <li>
+                <li
+                  className=""
+                >
                   <button
                     className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                     onClick={[Function]}
                     type="button"
                   >
-                    <span
-                      className="icon"
-                    >
-                      <Component>
-                        mock-svg
-                      </Component>
-                    </span>
-                    <span
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "<span class=\\"auto-suggest__dropdown__highlight\\"></span>D<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>m<span class=\\"auto-suggest__dropdown__highlight\\"></span>r<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>k<span class=\\"auto-suggest__dropdown__highlight\\"></span> <span class=\\"auto-suggest__dropdown__highlight\\"></span>1<span class=\\"auto-suggest__dropdown__highlight\\"></span>",
+                    <div>
+                      <span
+                        className="icon"
+                      >
+                        <Component>
+                          mock-svg
+                        </Component>
+                      </span>
+                      <span
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "<span class=\\"auto-suggest__dropdown__highlight\\"></span>D<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>m<span class=\\"auto-suggest__dropdown__highlight\\"></span>r<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>k<span class=\\"auto-suggest__dropdown__highlight\\"></span> <span class=\\"auto-suggest__dropdown__highlight\\"></span>1<span class=\\"auto-suggest__dropdown__highlight\\"></span>",
+                          }
                         }
-                      }
-                    />
+                      />
+                    </div>
                   </button>
                 </li>
               </AutoSuggestItem>
@@ -366,29 +407,33 @@ exports[`The AutoSuggest component should allow the user to navigate with the ke
                 onSuggestionSelection={[Function]}
                 query=""
               >
-                <li>
+                <li
+                  className=""
+                >
                   <button
                     className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                     onClick={[Function]}
                     type="button"
                   >
-                    <span
-                      className="icon"
-                    >
-                      <Component>
-                        mock-svg
-                      </Component>
-                    </span>
-                    <span
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "<span class=\\"auto-suggest__dropdown__highlight\\"></span>D<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>m<span class=\\"auto-suggest__dropdown__highlight\\"></span> <span class=\\"auto-suggest__dropdown__highlight\\"></span>1<span class=\\"auto-suggest__dropdown__highlight\\"></span>0<span class=\\"auto-suggest__dropdown__highlight\\"></span>",
+                    <div>
+                      <span
+                        className="icon"
+                      >
+                        <Component>
+                          mock-svg
+                        </Component>
+                      </span>
+                      <span
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "<span class=\\"auto-suggest__dropdown__highlight\\"></span>D<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>m<span class=\\"auto-suggest__dropdown__highlight\\"></span> <span class=\\"auto-suggest__dropdown__highlight\\"></span>1<span class=\\"auto-suggest__dropdown__highlight\\"></span>0<span class=\\"auto-suggest__dropdown__highlight\\"></span>",
+                          }
                         }
-                      }
-                    />
+                      />
+                    </div>
                   </button>
                 </li>
               </AutoSuggestItem>
@@ -399,29 +444,54 @@ exports[`The AutoSuggest component should allow the user to navigate with the ke
                 onSuggestionSelection={[Function]}
                 query=""
               >
-                <li>
+                <li
+                  className=""
+                >
                   <button
                     className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                     onClick={[Function]}
                     type="button"
                   >
-                    <span
-                      className="icon"
-                    >
-                      <Component>
-                        mock-svg
-                      </Component>
-                    </span>
-                    <span
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "<span class=\\"auto-suggest__dropdown__highlight\\"></span>D<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>m<span class=\\"auto-suggest__dropdown__highlight\\"></span>r<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>k<span class=\\"auto-suggest__dropdown__highlight\\"></span> <span class=\\"auto-suggest__dropdown__highlight\\"></span>1<span class=\\"auto-suggest__dropdown__highlight\\"></span>5<span class=\\"auto-suggest__dropdown__highlight\\"></span>",
+                    <div>
+                      <span
+                        className="icon"
+                      >
+                        <Component>
+                          mock-svg
+                        </Component>
+                      </span>
+                      <span
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "<span class=\\"auto-suggest__dropdown__highlight\\"></span>D<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>m<span class=\\"auto-suggest__dropdown__highlight\\"></span>r<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>k<span class=\\"auto-suggest__dropdown__highlight\\"></span> <span class=\\"auto-suggest__dropdown__highlight\\"></span>1<span class=\\"auto-suggest__dropdown__highlight\\"></span>5<span class=\\"auto-suggest__dropdown__highlight\\"></span>",
+                          }
                         }
-                      }
-                    />
+                      />
+                    </div>
+                  </button>
+                </li>
+              </AutoSuggestItem>
+              <AutoSuggestItem
+                content="..."
+                isActive={false}
+                key="Monumenten..."
+                onSuggestionSelection={[Function]}
+                query=""
+              >
+                <li
+                  className="auto-suggest__dropdown-item--row-height"
+                >
+                  <button
+                    className="auto-suggest__dropdown-item-button"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <div>
+                      ...
+                    </div>
                   </button>
                 </li>
               </AutoSuggestItem>
@@ -507,6 +577,7 @@ exports[`The AutoSuggest component should allow the user to navigate with the ke
           },
         ],
         "label": "Straatnamen",
+        "total_results": 6,
       },
       Object {
         "content": Array [
@@ -530,6 +601,7 @@ exports[`The AutoSuggest component should allow the user to navigate with the ke
           },
         ],
         "label": "Monumenten",
+        "total_results": 5,
       },
     ]
   }
@@ -620,6 +692,7 @@ exports[`The AutoSuggest component should allow the user to navigate with the ke
                 },
               ],
               "label": "Straatnamen",
+              "total_results": 6,
             }
           }
           key="Straatnamen"
@@ -642,29 +715,33 @@ exports[`The AutoSuggest component should allow the user to navigate with the ke
                 onSuggestionSelection={[Function]}
                 query="dam"
               >
-                <li>
+                <li
+                  className=""
+                >
                   <button
                     className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                     onClick={[Function]}
                     type="button"
                   >
-                    <span
-                      className="icon"
-                    >
-                      <Component>
-                        mock-svg
-                      </Component>
-                    </span>
-                    <span
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">Dam</span>",
+                    <div>
+                      <span
+                        className="icon"
+                      >
+                        <Component>
+                          mock-svg
+                        </Component>
+                      </span>
+                      <span
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">Dam</span>",
+                          }
                         }
-                      }
-                    />
+                      />
+                    </div>
                   </button>
                 </li>
               </AutoSuggestItem>
@@ -675,29 +752,33 @@ exports[`The AutoSuggest component should allow the user to navigate with the ke
                 onSuggestionSelection={[Function]}
                 query="dam"
               >
-                <li>
+                <li
+                  className=""
+                >
                   <button
                     className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                     onClick={[Function]}
                     type="button"
                   >
-                    <span
-                      className="icon"
-                    >
-                      <Component>
-                        mock-svg
-                      </Component>
-                    </span>
-                    <span
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">Dam</span>loperspad",
+                    <div>
+                      <span
+                        className="icon"
+                      >
+                        <Component>
+                          mock-svg
+                        </Component>
+                      </span>
+                      <span
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">Dam</span>loperspad",
+                          }
                         }
-                      }
-                    />
+                      />
+                    </div>
                   </button>
                 </li>
               </AutoSuggestItem>
@@ -708,29 +789,54 @@ exports[`The AutoSuggest component should allow the user to navigate with the ke
                 onSuggestionSelection={[Function]}
                 query="dam"
               >
-                <li>
+                <li
+                  className=""
+                >
                   <button
                     className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                     onClick={[Function]}
                     type="button"
                   >
-                    <span
-                      className="icon"
-                    >
-                      <Component>
-                        mock-svg
-                      </Component>
-                    </span>
-                    <span
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">Dam</span>rak",
+                    <div>
+                      <span
+                        className="icon"
+                      >
+                        <Component>
+                          mock-svg
+                        </Component>
+                      </span>
+                      <span
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">Dam</span>rak",
+                          }
                         }
-                      }
-                    />
+                      />
+                    </div>
+                  </button>
+                </li>
+              </AutoSuggestItem>
+              <AutoSuggestItem
+                content="..."
+                isActive={false}
+                key="Straatnamen..."
+                onSuggestionSelection={[Function]}
+                query="dam"
+              >
+                <li
+                  className="auto-suggest__dropdown-item--row-height"
+                >
+                  <button
+                    className="auto-suggest__dropdown-item-button"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <div>
+                      ...
+                    </div>
                   </button>
                 </li>
               </AutoSuggestItem>
@@ -769,6 +875,7 @@ exports[`The AutoSuggest component should allow the user to navigate with the ke
                 },
               ],
               "label": "Monumenten",
+              "total_results": 5,
             }
           }
           key="Monumenten"
@@ -791,29 +898,33 @@ exports[`The AutoSuggest component should allow the user to navigate with the ke
                 onSuggestionSelection={[Function]}
                 query="dam"
               >
-                <li>
+                <li
+                  className=""
+                >
                   <button
                     className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--active
         "
                     onClick={[Function]}
                     type="button"
                   >
-                    <span
-                      className="icon"
-                    >
-                      <Component>
-                        mock-svg
-                      </Component>
-                    </span>
-                    <span
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">Dam</span>rak 1",
+                    <div>
+                      <span
+                        className="icon"
+                      >
+                        <Component>
+                          mock-svg
+                        </Component>
+                      </span>
+                      <span
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">Dam</span>rak 1",
+                          }
                         }
-                      }
-                    />
+                      />
+                    </div>
                   </button>
                 </li>
               </AutoSuggestItem>
@@ -824,29 +935,33 @@ exports[`The AutoSuggest component should allow the user to navigate with the ke
                 onSuggestionSelection={[Function]}
                 query="dam"
               >
-                <li>
+                <li
+                  className=""
+                >
                   <button
                     className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                     onClick={[Function]}
                     type="button"
                   >
-                    <span
-                      className="icon"
-                    >
-                      <Component>
-                        mock-svg
-                      </Component>
-                    </span>
-                    <span
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">Dam</span> 10",
+                    <div>
+                      <span
+                        className="icon"
+                      >
+                        <Component>
+                          mock-svg
+                        </Component>
+                      </span>
+                      <span
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">Dam</span> 10",
+                          }
                         }
-                      }
-                    />
+                      />
+                    </div>
                   </button>
                 </li>
               </AutoSuggestItem>
@@ -857,29 +972,54 @@ exports[`The AutoSuggest component should allow the user to navigate with the ke
                 onSuggestionSelection={[Function]}
                 query="dam"
               >
-                <li>
+                <li
+                  className=""
+                >
                   <button
                     className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                     onClick={[Function]}
                     type="button"
                   >
-                    <span
-                      className="icon"
-                    >
-                      <Component>
-                        mock-svg
-                      </Component>
-                    </span>
-                    <span
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">Dam</span>rak 15",
+                    <div>
+                      <span
+                        className="icon"
+                      >
+                        <Component>
+                          mock-svg
+                        </Component>
+                      </span>
+                      <span
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">Dam</span>rak 15",
+                          }
                         }
-                      }
-                    />
+                      />
+                    </div>
+                  </button>
+                </li>
+              </AutoSuggestItem>
+              <AutoSuggestItem
+                content="..."
+                isActive={false}
+                key="Monumenten..."
+                onSuggestionSelection={[Function]}
+                query="dam"
+              >
+                <li
+                  className="auto-suggest__dropdown-item--row-height"
+                >
+                  <button
+                    className="auto-suggest__dropdown-item-button"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <div>
+                      ...
+                    </div>
                   </button>
                 </li>
               </AutoSuggestItem>
@@ -962,6 +1102,7 @@ exports[`The AutoSuggest component should toggle the "showsuggestions" state on 
           },
         ],
         "label": "Straatnamen",
+        "total_results": 6,
       },
       Object {
         "content": Array [
@@ -985,6 +1126,7 @@ exports[`The AutoSuggest component should toggle the "showsuggestions" state on 
           },
         ],
         "label": "Monumenten",
+        "total_results": 5,
       },
     ]
   }
@@ -1110,6 +1252,7 @@ exports[`The AutoSuggest component should toggle the "showsuggestions" state on 
           },
         ],
         "label": "Straatnamen",
+        "total_results": 6,
       },
       Object {
         "content": Array [
@@ -1133,6 +1276,7 @@ exports[`The AutoSuggest component should toggle the "showsuggestions" state on 
           },
         ],
         "label": "Monumenten",
+        "total_results": 5,
       },
     ]
   }
@@ -1220,6 +1364,7 @@ exports[`The AutoSuggest component should toggle the "showsuggestions" state on 
                 },
               ],
               "label": "Straatnamen",
+              "total_results": 6,
             }
           }
           key="Straatnamen"
@@ -1242,29 +1387,33 @@ exports[`The AutoSuggest component should toggle the "showsuggestions" state on 
                 onSuggestionSelection={[Function]}
                 query=""
               >
-                <li>
+                <li
+                  className=""
+                >
                   <button
                     className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                     onClick={[Function]}
                     type="button"
                   >
-                    <span
-                      className="icon"
-                    >
-                      <Component>
-                        mock-svg
-                      </Component>
-                    </span>
-                    <span
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "<span class=\\"auto-suggest__dropdown__highlight\\"></span>D<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>m<span class=\\"auto-suggest__dropdown__highlight\\"></span>",
+                    <div>
+                      <span
+                        className="icon"
+                      >
+                        <Component>
+                          mock-svg
+                        </Component>
+                      </span>
+                      <span
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "<span class=\\"auto-suggest__dropdown__highlight\\"></span>D<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>m<span class=\\"auto-suggest__dropdown__highlight\\"></span>",
+                          }
                         }
-                      }
-                    />
+                      />
+                    </div>
                   </button>
                 </li>
               </AutoSuggestItem>
@@ -1275,29 +1424,33 @@ exports[`The AutoSuggest component should toggle the "showsuggestions" state on 
                 onSuggestionSelection={[Function]}
                 query=""
               >
-                <li>
+                <li
+                  className=""
+                >
                   <button
                     className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                     onClick={[Function]}
                     type="button"
                   >
-                    <span
-                      className="icon"
-                    >
-                      <Component>
-                        mock-svg
-                      </Component>
-                    </span>
-                    <span
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "<span class=\\"auto-suggest__dropdown__highlight\\"></span>D<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>m<span class=\\"auto-suggest__dropdown__highlight\\"></span>l<span class=\\"auto-suggest__dropdown__highlight\\"></span>o<span class=\\"auto-suggest__dropdown__highlight\\"></span>p<span class=\\"auto-suggest__dropdown__highlight\\"></span>e<span class=\\"auto-suggest__dropdown__highlight\\"></span>r<span class=\\"auto-suggest__dropdown__highlight\\"></span>s<span class=\\"auto-suggest__dropdown__highlight\\"></span>p<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>d<span class=\\"auto-suggest__dropdown__highlight\\"></span>",
+                    <div>
+                      <span
+                        className="icon"
+                      >
+                        <Component>
+                          mock-svg
+                        </Component>
+                      </span>
+                      <span
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "<span class=\\"auto-suggest__dropdown__highlight\\"></span>D<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>m<span class=\\"auto-suggest__dropdown__highlight\\"></span>l<span class=\\"auto-suggest__dropdown__highlight\\"></span>o<span class=\\"auto-suggest__dropdown__highlight\\"></span>p<span class=\\"auto-suggest__dropdown__highlight\\"></span>e<span class=\\"auto-suggest__dropdown__highlight\\"></span>r<span class=\\"auto-suggest__dropdown__highlight\\"></span>s<span class=\\"auto-suggest__dropdown__highlight\\"></span>p<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>d<span class=\\"auto-suggest__dropdown__highlight\\"></span>",
+                          }
                         }
-                      }
-                    />
+                      />
+                    </div>
                   </button>
                 </li>
               </AutoSuggestItem>
@@ -1308,29 +1461,54 @@ exports[`The AutoSuggest component should toggle the "showsuggestions" state on 
                 onSuggestionSelection={[Function]}
                 query=""
               >
-                <li>
+                <li
+                  className=""
+                >
                   <button
                     className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                     onClick={[Function]}
                     type="button"
                   >
-                    <span
-                      className="icon"
-                    >
-                      <Component>
-                        mock-svg
-                      </Component>
-                    </span>
-                    <span
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "<span class=\\"auto-suggest__dropdown__highlight\\"></span>D<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>m<span class=\\"auto-suggest__dropdown__highlight\\"></span>r<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>k<span class=\\"auto-suggest__dropdown__highlight\\"></span>",
+                    <div>
+                      <span
+                        className="icon"
+                      >
+                        <Component>
+                          mock-svg
+                        </Component>
+                      </span>
+                      <span
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "<span class=\\"auto-suggest__dropdown__highlight\\"></span>D<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>m<span class=\\"auto-suggest__dropdown__highlight\\"></span>r<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>k<span class=\\"auto-suggest__dropdown__highlight\\"></span>",
+                          }
                         }
-                      }
-                    />
+                      />
+                    </div>
+                  </button>
+                </li>
+              </AutoSuggestItem>
+              <AutoSuggestItem
+                content="..."
+                isActive={false}
+                key="Straatnamen..."
+                onSuggestionSelection={[Function]}
+                query=""
+              >
+                <li
+                  className="auto-suggest__dropdown-item--row-height"
+                >
+                  <button
+                    className="auto-suggest__dropdown-item-button"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <div>
+                      ...
+                    </div>
                   </button>
                 </li>
               </AutoSuggestItem>
@@ -1366,6 +1544,7 @@ exports[`The AutoSuggest component should toggle the "showsuggestions" state on 
                 },
               ],
               "label": "Monumenten",
+              "total_results": 5,
             }
           }
           key="Monumenten"
@@ -1388,29 +1567,33 @@ exports[`The AutoSuggest component should toggle the "showsuggestions" state on 
                 onSuggestionSelection={[Function]}
                 query=""
               >
-                <li>
+                <li
+                  className=""
+                >
                   <button
                     className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                     onClick={[Function]}
                     type="button"
                   >
-                    <span
-                      className="icon"
-                    >
-                      <Component>
-                        mock-svg
-                      </Component>
-                    </span>
-                    <span
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "<span class=\\"auto-suggest__dropdown__highlight\\"></span>D<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>m<span class=\\"auto-suggest__dropdown__highlight\\"></span>r<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>k<span class=\\"auto-suggest__dropdown__highlight\\"></span> <span class=\\"auto-suggest__dropdown__highlight\\"></span>1<span class=\\"auto-suggest__dropdown__highlight\\"></span>",
+                    <div>
+                      <span
+                        className="icon"
+                      >
+                        <Component>
+                          mock-svg
+                        </Component>
+                      </span>
+                      <span
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "<span class=\\"auto-suggest__dropdown__highlight\\"></span>D<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>m<span class=\\"auto-suggest__dropdown__highlight\\"></span>r<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>k<span class=\\"auto-suggest__dropdown__highlight\\"></span> <span class=\\"auto-suggest__dropdown__highlight\\"></span>1<span class=\\"auto-suggest__dropdown__highlight\\"></span>",
+                          }
                         }
-                      }
-                    />
+                      />
+                    </div>
                   </button>
                 </li>
               </AutoSuggestItem>
@@ -1421,29 +1604,33 @@ exports[`The AutoSuggest component should toggle the "showsuggestions" state on 
                 onSuggestionSelection={[Function]}
                 query=""
               >
-                <li>
+                <li
+                  className=""
+                >
                   <button
                     className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                     onClick={[Function]}
                     type="button"
                   >
-                    <span
-                      className="icon"
-                    >
-                      <Component>
-                        mock-svg
-                      </Component>
-                    </span>
-                    <span
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "<span class=\\"auto-suggest__dropdown__highlight\\"></span>D<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>m<span class=\\"auto-suggest__dropdown__highlight\\"></span> <span class=\\"auto-suggest__dropdown__highlight\\"></span>1<span class=\\"auto-suggest__dropdown__highlight\\"></span>0<span class=\\"auto-suggest__dropdown__highlight\\"></span>",
+                    <div>
+                      <span
+                        className="icon"
+                      >
+                        <Component>
+                          mock-svg
+                        </Component>
+                      </span>
+                      <span
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "<span class=\\"auto-suggest__dropdown__highlight\\"></span>D<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>m<span class=\\"auto-suggest__dropdown__highlight\\"></span> <span class=\\"auto-suggest__dropdown__highlight\\"></span>1<span class=\\"auto-suggest__dropdown__highlight\\"></span>0<span class=\\"auto-suggest__dropdown__highlight\\"></span>",
+                          }
                         }
-                      }
-                    />
+                      />
+                    </div>
                   </button>
                 </li>
               </AutoSuggestItem>
@@ -1454,29 +1641,54 @@ exports[`The AutoSuggest component should toggle the "showsuggestions" state on 
                 onSuggestionSelection={[Function]}
                 query=""
               >
-                <li>
+                <li
+                  className=""
+                >
                   <button
                     className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                     onClick={[Function]}
                     type="button"
                   >
-                    <span
-                      className="icon"
-                    >
-                      <Component>
-                        mock-svg
-                      </Component>
-                    </span>
-                    <span
-                      dangerouslySetInnerHTML={
-                        Object {
-                          "__html": "<span class=\\"auto-suggest__dropdown__highlight\\"></span>D<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>m<span class=\\"auto-suggest__dropdown__highlight\\"></span>r<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>k<span class=\\"auto-suggest__dropdown__highlight\\"></span> <span class=\\"auto-suggest__dropdown__highlight\\"></span>1<span class=\\"auto-suggest__dropdown__highlight\\"></span>5<span class=\\"auto-suggest__dropdown__highlight\\"></span>",
+                    <div>
+                      <span
+                        className="icon"
+                      >
+                        <Component>
+                          mock-svg
+                        </Component>
+                      </span>
+                      <span
+                        dangerouslySetInnerHTML={
+                          Object {
+                            "__html": "<span class=\\"auto-suggest__dropdown__highlight\\"></span>D<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>m<span class=\\"auto-suggest__dropdown__highlight\\"></span>r<span class=\\"auto-suggest__dropdown__highlight\\"></span>a<span class=\\"auto-suggest__dropdown__highlight\\"></span>k<span class=\\"auto-suggest__dropdown__highlight\\"></span> <span class=\\"auto-suggest__dropdown__highlight\\"></span>1<span class=\\"auto-suggest__dropdown__highlight\\"></span>5<span class=\\"auto-suggest__dropdown__highlight\\"></span>",
+                          }
                         }
-                      }
-                    />
+                      />
+                    </div>
+                  </button>
+                </li>
+              </AutoSuggestItem>
+              <AutoSuggestItem
+                content="..."
+                isActive={false}
+                key="Monumenten..."
+                onSuggestionSelection={[Function]}
+                query=""
+              >
+                <li
+                  className="auto-suggest__dropdown-item--row-height"
+                >
+                  <button
+                    className="auto-suggest__dropdown-item-button"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <div>
+                      ...
+                    </div>
                   </button>
                 </li>
               </AutoSuggestItem>
@@ -1559,6 +1771,7 @@ exports[`The AutoSuggest component should toggle the "showsuggestions" state on 
           },
         ],
         "label": "Straatnamen",
+        "total_results": 6,
       },
       Object {
         "content": Array [
@@ -1582,6 +1795,7 @@ exports[`The AutoSuggest component should toggle the "showsuggestions" state on 
           },
         ],
         "label": "Monumenten",
+        "total_results": 5,
       },
     ]
   }

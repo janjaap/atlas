@@ -12,14 +12,15 @@ import reducer, {
   toggleMapOverlayVisibility,
   updateBoundingBox,
   updatePan,
-  updateZoom
+  updateZoom,
+  mapLoadingAction
 } from './map';
 
 describe('Map Reducer', () => {
   const initialState = {
     baseLayer: 'topografie',
     drawingMode: 'none',
-    isLoading: false,
+    loading: false,
     overlays: [],
     shapeAreaTxt: '',
     shapeDistanceTxt: '',
@@ -71,8 +72,7 @@ describe('Map Reducer', () => {
     }))).toEqual({
       ...initialState,
       drawingMode: 'none',
-      geometry: undefined,
-      isLoading: false
+      geometry: undefined
     });
 
     expect(reducer(initialState, mapEndDrawing({
@@ -82,8 +82,7 @@ describe('Map Reducer', () => {
     }))).toEqual({
       ...initialState,
       drawingMode: 'none',
-      geometry: [],
-      isLoading: true
+      geometry: []
     });
 
     expect(reducer(initialState, mapEndDrawing({
@@ -93,8 +92,7 @@ describe('Map Reducer', () => {
     }))).toEqual({
       ...initialState,
       drawingMode: 'none',
-      geometry: [{}, {}],
-      isLoading: false
+      geometry: [{}, {}]
     });
   });
 
@@ -288,6 +286,12 @@ describe('Map Reducer', () => {
       }
     })).toEqual({
       overlays: [{ id: 'notpano' }]
+    });
+  });
+
+  it('should set the loading flag when dispatching the mapLoadingAction', () => {
+    expect(reducer({ }, mapLoadingAction(true))).toEqual({
+      loading: true
     });
   });
 });

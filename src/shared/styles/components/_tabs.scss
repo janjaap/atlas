@@ -32,18 +32,15 @@ $tab-v-padding: 8px;
   li {
     border-right: 1px solid $secondary-gray20;
     border-top: 1px solid $secondary-gray20;
-    border-top-left-radius: $tab-border-radius;
-    border-top-right-radius: $tab-border-radius;
     display: block;
     float: left;
     height: $tab-height;
 
     &:not(.is-active) {
-      background-image: linear-gradient(to bottom, $primary-light, $secondary-gray10);
+      background-color: $secondary-gray4;
 
       &:hover {
         background-color: $secondary-gray10;
-        background-image: none;
       }
     }
 

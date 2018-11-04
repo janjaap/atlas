@@ -7,31 +7,21 @@
 
     function modificationDateFilter () {
         return function (input) {
-            if (angular.isObject(input)) {
-                const created = input.metadata_created;
-
-                const last = new Date(created);
+            if (angular.isString(input)) {
+                const last = new Date(input);
                 const now = new Date();
-                if (now < last) {
-                    return 'is in de toekomst gemaakt';
-                }
-                let ago = now - last,
-                    agoCount = ago,
-                    agoDuration = 'milliseconden';
-                [
-                    { duration: 'seconden', length: 1000 },
-                    { duration: 'minuten', length: 60 },
-                    { duration: 'uren', length: 60 },
-                    { duration: 'dagen', length: 24 }
-                ].forEach(({duration, length}) => {
-                    if (ago >= 2 * length) {
-                        ago = Math.ceil(ago / length);
-                        agoCount = ago;
-                        agoDuration = duration;
-                    }
-                });
 
-                return `${agoCount} ${agoDuration} geleden gemaakt`;
+                let ago = now - last;
+                const daysToMiliseconds = 1000 * 60 * 60 * 24;
+
+                if (ago >= 2 * length) {
+                    ago = Math.floor(ago / daysToMiliseconds);
+                    ago = (ago === 0) ? 'vandaag' : (ago === 1) ? 'gisteren' : `${ago} dagen geleden`;
+                } else {
+                    ago = 'in de toekomst';
+                }
+
+                return `${ago} gewijzigd`;
             }
         };
     }

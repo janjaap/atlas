@@ -42,12 +42,14 @@ export const SET_MAP_BASE_LAYER = 'SET_MAP_BASE_LAYER';
 export const TOGGLE_MAP_OVERLAY = 'TOGGLE_MAP_OVERLAY';
 export const TOGGLE_MAP_OVERLAY_VISIBILITY = 'TOGGLE_MAP_OVERLAY_VISIBILITY';
 
+const MAP_LOADING = 'MAP_LOADING';
+
 const initialState = {
   viewCenter: [52.3731081, 4.8932945],
   baseLayer: 'topografie',
   zoom: 11,
   overlays: [],
-  isLoading: false,
+  loading: false,
   drawingMode: 'none',
   shapeMarkers: 0,
   shapeDistanceTxt: '',
@@ -128,8 +130,7 @@ export default function MapReducer(state = initialState, action) {
       return {
         ...state,
         drawingMode: 'none',
-        geometry: has2Markers ? polygon.markers : moreThan2Markers ? [] : state.geometry,
-        isLoading: moreThan2Markers ? true : state.isLoading
+        geometry: has2Markers ? polygon.markers : moreThan2Markers ? [] : state.geometry
       };
 
     case SET_MAP_BASE_LAYER:
@@ -181,6 +182,13 @@ export default function MapReducer(state = initialState, action) {
     case MAP_CLEAR:
       return initialState;
 
+    case MAP_LOADING:
+      return {
+        ...state,
+        loading: action.payload
+      };
+
+
     default:
       return state;
   }
@@ -222,3 +230,4 @@ export const updateBoundingBox = (payload, isDrawingActive) =>
     payload
   });
 
+export const mapLoadingAction = (loading) => ({ type: MAP_LOADING, payload: loading });

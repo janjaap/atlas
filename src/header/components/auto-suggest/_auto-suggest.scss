@@ -39,23 +39,22 @@ $clear-button-margin: 3px;
       color: $secondary-gray60;
     }
 
-    &:-ms-input-placeholder { /* IE11 */ //sass-lint:disable-line no-vendor-prefixes no-css-comments
+    &:-ms-input-placeholder {/* IE11 */ //sass-lint:disable-line no-vendor-prefixes no-css-comments
       @include font-weight($normal-weight);
       color: $secondary-gray60;
     }
 
-    &::-ms-input-placeholder { /* Edge */ // sass-lint:disable-line no-vendor-prefixes no-css-comments
+    &::-ms-input-placeholder {/* Edge */ // sass-lint:disable-line no-vendor-prefixes no-css-comments
       // cannot change font attributes in edge here, so we have a lighter text color
       color: $secondary-gray40;
     }
 
-    &::-ms-clear { //sass-lint:disable-line no-vendor-prefixes
+    &::-ms-clear {//sass-lint:disable-line no-vendor-prefixes
       display: none;
     }
 
     &:focus {
-      border: 2px solid $primary-dark;
-      // to compensate for the thick border, pull padding to left by 1px
+      border: 2px solid $primary-dark; // to compensate for the thick border, pull padding to left by 1px
       padding-left: $base-whitespace - 1px;
     }
   }
@@ -130,6 +129,7 @@ $clear-button-margin: 3px;
     border: 2px solid $primary-dark;
     border-top: 1px solid $primary-dark;
     left: 0;
+    padding-bottom: $base-whitespace * .5;
     position: absolute;
     right: $site-header-search-form-height + $base-whitespace * .5;
     top: $site-header-search-form-height - 1px;
@@ -170,14 +170,28 @@ $clear-button-margin: 3px;
         font-weight: inherit;
       }
 
+
+      &--row-height {
+        height: 10px;
+      }
+
+      &-button {
+        outline: none;
+        padding-left: 27px;
+        position: relative;
+        text-align: left;
+        top: -10px;
+        width: 100%;
+      }
+
       .icon {
         display: inline-block;
-        height: 22px;
+        height: 2 * $base-whitespace + 2px;
         margin-left: $base-whitespace / 2;
         position: relative;
         top: 2px;
         vertical-align: sub;
-        width: 22px;
+        width: 2 * $base-whitespace + 2px;
       }
     }
 
@@ -186,4 +200,3 @@ $clear-button-margin: 3px;
     }
   }
 }
-

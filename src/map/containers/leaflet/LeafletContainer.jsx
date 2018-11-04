@@ -38,7 +38,8 @@ const mapStateToProps = (state) => ({
   markers: getMarkers(state),
   layers: getLayers(state),
   drawingMode: state.map.drawingMode,
-  zoom: state.map.zoom
+  zoom: state.map.zoom,
+  loading: state.map.loading ? state.map.loading : false
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
@@ -76,9 +77,6 @@ class LeafletContainer extends React.Component {
       this.props.onFetchMapBaseLayers();
       this.props.onFetchMapLayers();
       this.props.onFetchPanelLayers();
-      // this.context.store.dispatch(fetchMapBaseLayers());
-      // this.context.store.dispatch(fetchMapLayers());
-      // this.context.store.dispatch(fetchPanelLayers());
     }
   }
 
@@ -128,7 +126,8 @@ class LeafletContainer extends React.Component {
       getLeafletInstance,
       layers,
       markers,
-      zoom
+      zoom,
+      loading
     } = this.props;
     return baseLayer.urlTemplate && (
       <MapLeaflet
@@ -148,6 +147,7 @@ class LeafletContainer extends React.Component {
         ref={this.setMapLeaflet}
         scaleControlOptions={scaleControlOptions}
         zoom={zoom}
+        loading={loading}
       />
     );
   }
@@ -188,11 +188,14 @@ LeafletContainer.propTypes = {
     transparent: PropTypes.bool,
     url: PropTypes.string.isRequired
   })),
+  zoom: PropTypes.number.isRequired,
+  loading: PropTypes.bool.isRequired,
+
   onUpdateClick: PropTypes.func.isRequired,
   onUpdatePan: PropTypes.func.isRequired,
   onUpdateZoom: PropTypes.func.isRequired,
   onUpdateBoundingBox: PropTypes.func.isRequired,
-  zoom: PropTypes.number.isRequired,
+
 
   onFetchMapBaseLayers: PropTypes.func.isRequired,
   onFetchMapLayers: PropTypes.func.isRequired,

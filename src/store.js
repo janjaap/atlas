@@ -39,12 +39,7 @@ try {
 
 const returnPath = auth.getReturnPath();
 if (returnPath) {
-  // Timeout needed because the change is otherwise not being handled in
-  // Firefox browsers. This is possibly due to AngularJS changing the
-  // `location.hash` at the same time.
-  window.setTimeout(() => {
-    location.hash = returnPath;
-  });
+  location.hash = returnPath;
 }
 
 const accessToken = auth.getAccessToken();

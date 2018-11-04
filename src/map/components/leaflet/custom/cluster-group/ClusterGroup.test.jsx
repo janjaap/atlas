@@ -15,6 +15,7 @@ describe('ClusterGroup', () => {
 
     const wrapper = shallow(
       <ClusterGroup
+        markers={[]}
         getMarkerGroupBounds={getMarkerGroupBoundsMock}
       />, {
         context: {
@@ -40,6 +41,7 @@ describe('ClusterGroup', () => {
 
     const wrapper = shallow(
       <ClusterGroup
+        markers={[]}
         getMarkerGroupBounds={getMarkerGroupBoundsMock}
       />, {
         context: {

@@ -589,5 +589,103 @@ export default [
     id: 'pano2020',
     url: 'maps/panorama',
     layers: ['panorama_recent_2020']
+  },
+  // Eigenaren
+  {
+    id: 'egga',
+    url: 'maps/eigendommen?categorie=1',
+    layers: ['eigendommen'],
+    detailUrl: 'geosearch/search/',
+    detailItem: 'kadastraal_object',
+    detailIsShape: true
+  },
+  {
+    id: 'egog',
+    url: 'maps/eigendommen?categorie=2',
+    layers: ['eigendommen'],
+    detailUrl: 'geosearch/search/',
+    detailItem: 'kadastraal_object',
+    detailIsShape: true
+  },
+  {
+    id: 'egst',
+    url: 'maps/eigendommen?categorie=3',
+    layers: ['eigendommen'],
+    detailUrl: 'geosearch/search/',
+    detailItem: 'kadastraal_object',
+    detailIsShape: true
+  },
+  {
+    id: 'egpr',
+    url: 'maps/eigendommen?categorie=4',
+    layers: ['eigendommen'],
+    detailUrl: 'geosearch/search/',
+    detailItem: 'kadastraal_object',
+    detailIsShape: true
+  },
+  {
+    id: 'egwa',
+    url: 'maps/eigendommen?categorie=5',
+    layers: ['eigendommen'],
+    detailUrl: 'geosearch/search/',
+    detailItem: 'kadastraal_object',
+    detailIsShape: true
+  },
+  {
+    id: 'egwo',
+    url: 'maps/eigendommen?categorie=6',
+    layers: ['eigendommen'],
+    detailUrl: 'geosearch/search/',
+    detailItem: 'kadastraal_object',
+    detailIsShape: true
+  },
+  {
+    id: 'egve',
+    url: 'maps/eigendommen?categorie=7',
+    layers: ['eigendommen'],
+    detailUrl: 'geosearch/search/',
+    detailItem: 'kadastraal_object',
+    detailIsShape: true
+  },
+  {
+    id: 'egsp',
+    url: 'maps/eigendommen?categorie=8',
+    layers: ['eigendommen'],
+    detailUrl: 'geosearch/search/',
+    detailItem: 'kadastraal_object',
+    detailIsShape: true
+  },
+  {
+    id: 'egnnp',
+    url: 'maps/eigendommen?categorie=9',
+    layers: ['eigendommen'],
+    detailUrl: 'geosearch/search/',
+    detailItem: 'kadastraal_object',
+    detailIsShape: true
+  },
+  {
+    id: 'egnp',
+    url: 'maps/eigendommen?categorie=10',
+    layers: ['eigendommen'],
+    detailUrl: 'geosearch/search/',
+    detailItem: 'kadastraal_object',
+    detailIsShape: true
+  },
+  // Erfpachtuitgevers
+  {
+    id: 'efga',
+    url: 'maps/erfpacht?categorie=1',
+    layers: ['erfpacht'],
+    detailUrl: 'geosearch/search/',
+    detailItem: 'kadastraal_object',
+    detailIsShape: true
+  },
+  {
+    id: 'efov',
+    url: 'maps/erfpacht?categorie=2',
+    layers: ['erfpacht'],
+    detailUrl: 'geosearch/search/',
+    detailItem: 'kadastraal_object',
+    detailIsShape: true
   }
 ];

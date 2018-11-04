@@ -9,7 +9,7 @@ describe('The dp-data-selection-pagination component', function () {
             'dpDataSelection',
             {
                 store: {
-                    dispatch: function () {}
+                    dispatch: function () { }
                 }
             }
         );
@@ -183,5 +183,14 @@ describe('The dp-data-selection-pagination component', function () {
         component.find('form').trigger('submit');
 
         expect(store.dispatch).not.toHaveBeenCalled();
+    });
+
+    it('should navigate to the first page when the current page is larger than the page count', () => {
+        getComponent(5, 2);
+
+        expect(store.dispatch).toHaveBeenCalledWith({
+            type: ACTIONS.NAVIGATE_DATA_SELECTION,
+            payload: 1
+        });
     });
 });

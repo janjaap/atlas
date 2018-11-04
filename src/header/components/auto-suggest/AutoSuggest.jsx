@@ -75,23 +75,25 @@ class AutoSuggest extends React.Component {
     const {
       onSuggestionSelection
     } = this.props;
-
     event.preventDefault();
     event.stopPropagation();
-    const shouldOpenInNewWindow = event.ctrlKey || event.metaKey;
 
-    onSuggestionSelection(suggestion, shouldOpenInNewWindow);
+    if (suggestion.index === -1) {
+      this.resetActiveSuggestion();
+      this.onFormSubmit(event);
+    } else {
+      const shouldOpenInNewWindow = event.ctrlKey || event.metaKey;
+      onSuggestionSelection(suggestion, shouldOpenInNewWindow);
 
-    if (!shouldOpenInNewWindow) {
-      this.clearQuery();
-      this.textInput.blur();
+      if (!shouldOpenInNewWindow) {
+        this.clearQuery();
+        this.textInput.blur();
+      }
     }
   }
 
   onFormSubmit(event) {
-    const {
-      onSubmit
-    } = this.props;
+    const { onSubmit } = this.props;
 
     event.preventDefault();
     event.stopPropagation();
@@ -162,14 +164,12 @@ class AutoSuggest extends React.Component {
     }
   }
 
-  clearQuery(shouldFocus = true) {
+  clearQuery() {
     const {
       onTextInput
     } = this.props;
 
-    if (shouldFocus) {
-      this.textInput.focus();
-    }
+    this.textInput.focus();
     this.resetActiveSuggestion();
     this.setState({
       showSuggestions: false
@@ -208,7 +208,7 @@ class AutoSuggest extends React.Component {
         }
       >
         <fieldset>
-          {legendTitle && <legend className="u-sr-only">legendTitle</legend>}
+          {legendTitle && <legend className="u-sr-only">{legendTitle}</legend>}
           <div className="auto-suggest-container">
             <label htmlFor="auto-suggest__input" className="u-sr-only">zoektekst</label>
             <input
@@ -231,30 +231,30 @@ class AutoSuggest extends React.Component {
             />
 
             {query &&
-            <button
-              type="button"
-              className="qa-search-form__clear auto-suggest__clear"
-              onClick={this.clearQuery}
-              title="Wis zoektekst"
-            >
-              <ClearIcon />
-              <span className="u-sr-only">Wis zoektekst</span>
-            </button>
+              <button
+                type="button"
+                className="qa-search-form__clear auto-suggest__clear"
+                onClick={this.clearQuery}
+                title="Wis zoektekst"
+              >
+                <ClearIcon />
+                <span className="u-sr-only">Wis zoektekst</span>
+              </button>
             }
           </div>
           {suggestions.length > 0 && showSuggestions &&
-          <div className="auto-suggest__dropdown">
-            <h3 className="auto-suggest__tip">Enkele suggesties</h3>
-            {suggestions.map((category) => (
-              <AutoSuggestCategory
-                activeSuggestion={activeSuggestion}
-                category={category}
-                key={category.label}
-                onSuggestionSelection={this.onSuggestionSelection}
-                query={highlightQuery}
-              />
-            ))}
-          </div>
+            <div className="auto-suggest__dropdown">
+              <h3 className="auto-suggest__tip">Enkele suggesties</h3>
+              {suggestions.map((category) => (
+                <AutoSuggestCategory
+                  activeSuggestion={activeSuggestion}
+                  category={category}
+                  key={category.label}
+                  onSuggestionSelection={this.onSuggestionSelection}
+                  query={highlightQuery}
+                />
+              ))}
+            </div>
           }
           <button
             className="auto-suggest__submit qa-search-form-submit"

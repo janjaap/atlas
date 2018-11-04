@@ -1,7 +1,6 @@
 {
   "baseUrl": "http://localhost:8080",
   "fixturesFolder": "test/cypress/fixtures",
-  "integrationFolder": "test/cypress/integration",
   "pluginsFile": "test/cypress/plugins/index.js",
   "requestTimeout": 15000,
   "screenshotsFolder": "test/cypress/screenshots",

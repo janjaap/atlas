@@ -53,18 +53,10 @@
     margin: 10px;
     padding: 10px;
     text-align: center;
-
-    .map-legend__map-layer--hidden & {
-      display: none;
-    }
   }
 
   &__items {
     padding: 10px;
-
-    .map-legend__map-layer--hidden & {
-      display: none;
-    }
   }
 
   &__item {
@@ -156,10 +148,6 @@
       .checkbox {
         display: none;
       }
-    }
-
-    &__map-layer--hidden {
-      display: none;
     }
   }
 }

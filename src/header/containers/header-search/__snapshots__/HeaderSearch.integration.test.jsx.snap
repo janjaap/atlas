@@ -192,7 +192,7 @@ exports[`HeaderSearchContainer allows the user to clear the query and suggestion
           <legend
             className="u-sr-only"
           >
-            legendTitle
+            Data zoeken
           </legend>
           <div
             className="auto-suggest-container"
@@ -293,29 +293,33 @@ exports[`HeaderSearchContainer allows the user to clear the query and suggestion
                     onSuggestionSelection={[Function]}
                     query="dijk"
                   >
-                    <li>
+                    <li
+                      className=""
+                    >
                       <button
                         className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                         onClick={[Function]}
                         type="button"
                       >
-                        <span
-                          className="icon"
-                        >
-                          <Component>
-                            mock-svg
-                          </Component>
-                        </span>
-                        <span
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">Dijk</span>braak",
+                        <div>
+                          <span
+                            className="icon"
+                          >
+                            <Component>
+                              mock-svg
+                            </Component>
+                          </span>
+                          <span
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">Dijk</span>braak",
+                              }
                             }
-                          }
-                        />
+                          />
+                        </div>
                       </button>
                     </li>
                   </AutoSuggestItem>
@@ -326,29 +330,33 @@ exports[`HeaderSearchContainer allows the user to clear the query and suggestion
                     onSuggestionSelection={[Function]}
                     query="dijk"
                   >
-                    <li>
+                    <li
+                      className=""
+                    >
                       <button
                         className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                         onClick={[Function]}
                         type="button"
                       >
-                        <span
-                          className="icon"
-                        >
-                          <Component>
-                            mock-svg
-                          </Component>
-                        </span>
-                        <span
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">Dijk</span>dwarsstraat",
+                        <div>
+                          <span
+                            className="icon"
+                          >
+                            <Component>
+                              mock-svg
+                            </Component>
+                          </span>
+                          <span
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">Dijk</span>dwarsstraat",
+                              }
                             }
-                          }
-                        />
+                          />
+                        </div>
                       </button>
                     </li>
                   </AutoSuggestItem>
@@ -359,29 +367,33 @@ exports[`HeaderSearchContainer allows the user to clear the query and suggestion
                     onSuggestionSelection={[Function]}
                     query="dijk"
                   >
-                    <li>
+                    <li
+                      className=""
+                    >
                       <button
                         className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                         onClick={[Function]}
                         type="button"
                       >
-                        <span
-                          className="icon"
-                        >
-                          <Component>
-                            mock-svg
-                          </Component>
-                        </span>
-                        <span
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">Dijk</span>graafplein",
+                        <div>
+                          <span
+                            className="icon"
+                          >
+                            <Component>
+                              mock-svg
+                            </Component>
+                          </span>
+                          <span
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">Dijk</span>graafplein",
+                              }
                             }
-                          }
-                        />
+                          />
+                        </div>
                       </button>
                     </li>
                   </AutoSuggestItem>
@@ -427,29 +439,33 @@ exports[`HeaderSearchContainer allows the user to clear the query and suggestion
                     onSuggestionSelection={[Function]}
                     query="dijk"
                   >
-                    <li>
+                    <li
+                      className=""
+                    >
                       <button
                         className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                         onClick={[Function]}
                         type="button"
                       >
-                        <span
-                          className="icon"
-                        >
-                          <Component>
-                            mock-svg
-                          </Component>
-                        </span>
-                        <span
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "Hoge <span class=\\"auto-suggest__dropdown__highlight\\">Dijk</span> (buurt)",
+                        <div>
+                          <span
+                            className="icon"
+                          >
+                            <Component>
+                              mock-svg
+                            </Component>
+                          </span>
+                          <span
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "Hoge <span class=\\"auto-suggest__dropdown__highlight\\">Dijk</span> (buurt)",
+                              }
                             }
-                          }
-                        />
+                          />
+                        </div>
                       </button>
                     </li>
                   </AutoSuggestItem>
@@ -507,29 +523,33 @@ exports[`HeaderSearchContainer allows the user to clear the query and suggestion
                     onSuggestionSelection={[Function]}
                     query="dijk"
                   >
-                    <li>
+                    <li
+                      className=""
+                    >
                       <button
                         className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                         onClick={[Function]}
                         type="button"
                       >
-                        <span
-                          className="icon"
-                        >
-                          <Component>
-                            mock-svg
-                          </Component>
-                        </span>
-                        <span
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">DIJK</span>LICHAAM SPAARNDAMMER<span class=\\"auto-suggest__dropdown__highlight\\">DIJK</span>",
+                        <div>
+                          <span
+                            className="icon"
+                          >
+                            <Component>
+                              mock-svg
+                            </Component>
+                          </span>
+                          <span
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">DIJK</span>LICHAAM SPAARNDAMMER<span class=\\"auto-suggest__dropdown__highlight\\">DIJK</span>",
+                              }
                             }
-                          }
-                        />
+                          />
+                        </div>
                       </button>
                     </li>
                   </AutoSuggestItem>
@@ -540,29 +560,33 @@ exports[`HeaderSearchContainer allows the user to clear the query and suggestion
                     onSuggestionSelection={[Function]}
                     query="dijk"
                   >
-                    <li>
+                    <li
+                      className=""
+                    >
                       <button
                         className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                         onClick={[Function]}
                         type="button"
                       >
-                        <span
-                          className="icon"
-                        >
-                          <Component>
-                            mock-svg
-                          </Component>
-                        </span>
-                        <span
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">Dijk</span>straat 49",
+                        <div>
+                          <span
+                            className="icon"
+                          >
+                            <Component>
+                              mock-svg
+                            </Component>
+                          </span>
+                          <span
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">Dijk</span>straat 49",
+                              }
                             }
-                          }
-                        />
+                          />
+                        </div>
                       </button>
                     </li>
                   </AutoSuggestItem>
@@ -573,29 +597,33 @@ exports[`HeaderSearchContainer allows the user to clear the query and suggestion
                     onSuggestionSelection={[Function]}
                     query="dijk"
                   >
-                    <li>
+                    <li
+                      className=""
+                    >
                       <button
                         className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                         onClick={[Function]}
                         type="button"
                       >
-                        <span
-                          className="icon"
-                        >
-                          <Component>
-                            mock-svg
-                          </Component>
-                        </span>
-                        <span
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">DIJK</span>LICHAAM SPAARNDAMMER<span class=\\"auto-suggest__dropdown__highlight\\">DIJK</span>",
+                        <div>
+                          <span
+                            className="icon"
+                          >
+                            <Component>
+                              mock-svg
+                            </Component>
+                          </span>
+                          <span
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">DIJK</span>LICHAAM SPAARNDAMMER<span class=\\"auto-suggest__dropdown__highlight\\">DIJK</span>",
+                              }
                             }
-                          }
-                        />
+                          />
+                        </div>
                       </button>
                     </li>
                   </AutoSuggestItem>
@@ -641,29 +669,33 @@ exports[`HeaderSearchContainer allows the user to clear the query and suggestion
                     onSuggestionSelection={[Function]}
                     query="dijk"
                   >
-                    <li>
+                    <li
+                      className=""
+                    >
                       <button
                         className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                         onClick={[Function]}
                         type="button"
                       >
-                        <span
-                          className="icon"
-                        >
-                          <Component>
-                            mock-svg
-                          </Component>
-                        </span>
-                        <span
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "Registratie actueel hoogtebestand Nederland (AHN)",
+                        <div>
+                          <span
+                            className="icon"
+                          >
+                            <Component>
+                              mock-svg
+                            </Component>
+                          </span>
+                          <span
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "Registratie actueel hoogtebestand Nederland (AHN)",
+                              }
                             }
-                          }
-                        />
+                          />
+                        </div>
                       </button>
                     </li>
                   </AutoSuggestItem>
@@ -795,78 +827,7 @@ exports[`HeaderSearchContainer allows the user to clear the query and suggestion
     onSuggestionActivate={[Function]}
     pageName=""
     prefillQuery=""
-    suggestions={
-      Array [
-        Object {
-          "content": Array [
-            Object {
-              "category": "Straatnamen",
-              "index": 0,
-              "label": "Dijkbraak",
-              "uri": "bag/openbareruimte/03630000001528/",
-            },
-            Object {
-              "category": "Straatnamen",
-              "index": 1,
-              "label": "Dijkdwarsstraat",
-              "uri": "bag/openbareruimte/03630000001970/",
-            },
-            Object {
-              "category": "Straatnamen",
-              "index": 2,
-              "label": "Dijkgraafplein",
-              "uri": "bag/openbareruimte/03630000003257/",
-            },
-          ],
-          "label": "Straatnamen",
-        },
-        Object {
-          "content": Array [
-            Object {
-              "category": "Gebieden",
-              "index": 3,
-              "label": "Hoge Dijk (buurt)",
-              "uri": "gebieden/buurt/03630000000491/",
-            },
-          ],
-          "label": "Gebieden",
-        },
-        Object {
-          "content": Array [
-            Object {
-              "category": "Monumenten",
-              "index": 4,
-              "label": "DIJKLICHAAM SPAARNDAMMERDIJK",
-              "uri": "monumenten/monumenten/1871732e-783e-4890-8759-793c1c1927af/",
-            },
-            Object {
-              "category": "Monumenten",
-              "index": 5,
-              "label": "Dijkstraat 49",
-              "uri": "monumenten/monumenten/6eaa9645-0564-4df1-82a5-4ed8659945ae/",
-            },
-            Object {
-              "category": "Monumenten",
-              "index": 6,
-              "label": "DIJKLICHAAM SPAARNDAMMERDIJK",
-              "uri": "monumenten/monumenten/e56dd328-0db8-4b26-be54-a51b4e752a1a/",
-            },
-          ],
-          "label": "Monumenten",
-        },
-        Object {
-          "content": Array [
-            Object {
-              "category": "Datasets",
-              "index": 7,
-              "label": "Registratie actueel hoogtebestand Nederland (AHN)",
-              "uri": "dcatd/datasets/registratie-actueel-hoogtebestand-nederland-ahn",
-            },
-          ],
-          "label": "Datasets",
-        },
-      ]
-    }
+    suggestions={Array []}
     typedQuery=""
   >
     <AutoSuggest
@@ -885,78 +846,7 @@ exports[`HeaderSearchContainer allows the user to clear the query and suggestion
       placeHolder="Zoek data op adres, postcode, kadastrale aanduiding, etc. Of datasets op trefwoord."
       query=""
       queryFromUrl=""
-      suggestions={
-        Array [
-          Object {
-            "content": Array [
-              Object {
-                "category": "Straatnamen",
-                "index": 0,
-                "label": "Dijkbraak",
-                "uri": "bag/openbareruimte/03630000001528/",
-              },
-              Object {
-                "category": "Straatnamen",
-                "index": 1,
-                "label": "Dijkdwarsstraat",
-                "uri": "bag/openbareruimte/03630000001970/",
-              },
-              Object {
-                "category": "Straatnamen",
-                "index": 2,
-                "label": "Dijkgraafplein",
-                "uri": "bag/openbareruimte/03630000003257/",
-              },
-            ],
-            "label": "Straatnamen",
-          },
-          Object {
-            "content": Array [
-              Object {
-                "category": "Gebieden",
-                "index": 3,
-                "label": "Hoge Dijk (buurt)",
-                "uri": "gebieden/buurt/03630000000491/",
-              },
-            ],
-            "label": "Gebieden",
-          },
-          Object {
-            "content": Array [
-              Object {
-                "category": "Monumenten",
-                "index": 4,
-                "label": "DIJKLICHAAM SPAARNDAMMERDIJK",
-                "uri": "monumenten/monumenten/1871732e-783e-4890-8759-793c1c1927af/",
-              },
-              Object {
-                "category": "Monumenten",
-                "index": 5,
-                "label": "Dijkstraat 49",
-                "uri": "monumenten/monumenten/6eaa9645-0564-4df1-82a5-4ed8659945ae/",
-              },
-              Object {
-                "category": "Monumenten",
-                "index": 6,
-                "label": "DIJKLICHAAM SPAARNDAMMERDIJK",
-                "uri": "monumenten/monumenten/e56dd328-0db8-4b26-be54-a51b4e752a1a/",
-              },
-            ],
-            "label": "Monumenten",
-          },
-          Object {
-            "content": Array [
-              Object {
-                "category": "Datasets",
-                "index": 7,
-                "label": "Registratie actueel hoogtebestand Nederland (AHN)",
-                "uri": "dcatd/datasets/registratie-actueel-hoogtebestand-nederland-ahn",
-              },
-            ],
-            "label": "Datasets",
-          },
-        ]
-      }
+      suggestions={Array []}
     >
       <form
         className="auto-suggest
@@ -967,7 +857,7 @@ exports[`HeaderSearchContainer allows the user to clear the query and suggestion
           <legend
             className="u-sr-only"
           >
-            legendTitle
+            Data zoeken
           </legend>
           <div
             className="auto-suggest-container"
@@ -1022,80 +912,11 @@ Object {
     "activeSuggestion": Object {
       "index": -1,
     },
-    "count": 0,
+    "count": undefined,
     "displayQuery": "",
     "error": "",
-    "isLoading": true,
-    "suggestions": Array [
-      Object {
-        "content": Array [
-          Object {
-            "category": "Straatnamen",
-            "index": 0,
-            "label": "Dijkbraak",
-            "uri": "bag/openbareruimte/03630000001528/",
-          },
-          Object {
-            "category": "Straatnamen",
-            "index": 1,
-            "label": "Dijkdwarsstraat",
-            "uri": "bag/openbareruimte/03630000001970/",
-          },
-          Object {
-            "category": "Straatnamen",
-            "index": 2,
-            "label": "Dijkgraafplein",
-            "uri": "bag/openbareruimte/03630000003257/",
-          },
-        ],
-        "label": "Straatnamen",
-      },
-      Object {
-        "content": Array [
-          Object {
-            "category": "Gebieden",
-            "index": 3,
-            "label": "Hoge Dijk (buurt)",
-            "uri": "gebieden/buurt/03630000000491/",
-          },
-        ],
-        "label": "Gebieden",
-      },
-      Object {
-        "content": Array [
-          Object {
-            "category": "Monumenten",
-            "index": 4,
-            "label": "DIJKLICHAAM SPAARNDAMMERDIJK",
-            "uri": "monumenten/monumenten/1871732e-783e-4890-8759-793c1c1927af/",
-          },
-          Object {
-            "category": "Monumenten",
-            "index": 5,
-            "label": "Dijkstraat 49",
-            "uri": "monumenten/monumenten/6eaa9645-0564-4df1-82a5-4ed8659945ae/",
-          },
-          Object {
-            "category": "Monumenten",
-            "index": 6,
-            "label": "DIJKLICHAAM SPAARNDAMMERDIJK",
-            "uri": "monumenten/monumenten/e56dd328-0db8-4b26-be54-a51b4e752a1a/",
-          },
-        ],
-        "label": "Monumenten",
-      },
-      Object {
-        "content": Array [
-          Object {
-            "category": "Datasets",
-            "index": 7,
-            "label": "Registratie actueel hoogtebestand Nederland (AHN)",
-            "uri": "dcatd/datasets/registratie-actueel-hoogtebestand-nederland-ahn",
-          },
-        ],
-        "label": "Datasets",
-      },
-    ],
+    "isLoading": false,
+    "suggestions": undefined,
     "typedQuery": "",
   },
 }
@@ -1121,78 +942,7 @@ exports[`HeaderSearchContainer auto-suggest dropdown allows the user click on a 
     onSuggestionActivate={[Function]}
     pageName=""
     prefillQuery=""
-    suggestions={
-      Array [
-        Object {
-          "content": Array [
-            Object {
-              "category": "Straatnamen",
-              "index": 0,
-              "label": "Dijkbraak",
-              "uri": "bag/openbareruimte/03630000001528/",
-            },
-            Object {
-              "category": "Straatnamen",
-              "index": 1,
-              "label": "Dijkdwarsstraat",
-              "uri": "bag/openbareruimte/03630000001970/",
-            },
-            Object {
-              "category": "Straatnamen",
-              "index": 2,
-              "label": "Dijkgraafplein",
-              "uri": "bag/openbareruimte/03630000003257/",
-            },
-          ],
-          "label": "Straatnamen",
-        },
-        Object {
-          "content": Array [
-            Object {
-              "category": "Gebieden",
-              "index": 3,
-              "label": "Hoge Dijk (buurt)",
-              "uri": "gebieden/buurt/03630000000491/",
-            },
-          ],
-          "label": "Gebieden",
-        },
-        Object {
-          "content": Array [
-            Object {
-              "category": "Monumenten",
-              "index": 4,
-              "label": "DIJKLICHAAM SPAARNDAMMERDIJK",
-              "uri": "monumenten/monumenten/1871732e-783e-4890-8759-793c1c1927af/",
-            },
-            Object {
-              "category": "Monumenten",
-              "index": 5,
-              "label": "Dijkstraat 49",
-              "uri": "monumenten/monumenten/6eaa9645-0564-4df1-82a5-4ed8659945ae/",
-            },
-            Object {
-              "category": "Monumenten",
-              "index": 6,
-              "label": "DIJKLICHAAM SPAARNDAMMERDIJK",
-              "uri": "monumenten/monumenten/e56dd328-0db8-4b26-be54-a51b4e752a1a/",
-            },
-          ],
-          "label": "Monumenten",
-        },
-        Object {
-          "content": Array [
-            Object {
-              "category": "Datasets",
-              "index": 7,
-              "label": "Registratie actueel hoogtebestand Nederland (AHN)",
-              "uri": "dcatd/datasets/registratie-actueel-hoogtebestand-nederland-ahn",
-            },
-          ],
-          "label": "Datasets",
-        },
-      ]
-    }
+    suggestions={Array []}
     typedQuery=""
   >
     <AutoSuggest
@@ -1211,78 +961,7 @@ exports[`HeaderSearchContainer auto-suggest dropdown allows the user click on a 
       placeHolder="Zoek data op adres, postcode, kadastrale aanduiding, etc. Of datasets op trefwoord."
       query=""
       queryFromUrl=""
-      suggestions={
-        Array [
-          Object {
-            "content": Array [
-              Object {
-                "category": "Straatnamen",
-                "index": 0,
-                "label": "Dijkbraak",
-                "uri": "bag/openbareruimte/03630000001528/",
-              },
-              Object {
-                "category": "Straatnamen",
-                "index": 1,
-                "label": "Dijkdwarsstraat",
-                "uri": "bag/openbareruimte/03630000001970/",
-              },
-              Object {
-                "category": "Straatnamen",
-                "index": 2,
-                "label": "Dijkgraafplein",
-                "uri": "bag/openbareruimte/03630000003257/",
-              },
-            ],
-            "label": "Straatnamen",
-          },
-          Object {
-            "content": Array [
-              Object {
-                "category": "Gebieden",
-                "index": 3,
-                "label": "Hoge Dijk (buurt)",
-                "uri": "gebieden/buurt/03630000000491/",
-              },
-            ],
-            "label": "Gebieden",
-          },
-          Object {
-            "content": Array [
-              Object {
-                "category": "Monumenten",
-                "index": 4,
-                "label": "DIJKLICHAAM SPAARNDAMMERDIJK",
-                "uri": "monumenten/monumenten/1871732e-783e-4890-8759-793c1c1927af/",
-              },
-              Object {
-                "category": "Monumenten",
-                "index": 5,
-                "label": "Dijkstraat 49",
-                "uri": "monumenten/monumenten/6eaa9645-0564-4df1-82a5-4ed8659945ae/",
-              },
-              Object {
-                "category": "Monumenten",
-                "index": 6,
-                "label": "DIJKLICHAAM SPAARNDAMMERDIJK",
-                "uri": "monumenten/monumenten/e56dd328-0db8-4b26-be54-a51b4e752a1a/",
-              },
-            ],
-            "label": "Monumenten",
-          },
-          Object {
-            "content": Array [
-              Object {
-                "category": "Datasets",
-                "index": 7,
-                "label": "Registratie actueel hoogtebestand Nederland (AHN)",
-                "uri": "dcatd/datasets/registratie-actueel-hoogtebestand-nederland-ahn",
-              },
-            ],
-            "label": "Datasets",
-          },
-        ]
-      }
+      suggestions={Array []}
     >
       <form
         className="auto-suggest
@@ -1293,7 +972,7 @@ exports[`HeaderSearchContainer auto-suggest dropdown allows the user click on a 
           <legend
             className="u-sr-only"
           >
-            legendTitle
+            Data zoeken
           </legend>
           <div
             className="auto-suggest-container"
@@ -1534,7 +1213,7 @@ exports[`HeaderSearchContainer auto-suggest dropdown allows the user to dismiss 
           <legend
             className="u-sr-only"
           >
-            legendTitle
+            Data zoeken
           </legend>
           <div
             className="auto-suggest-container"
@@ -1609,7 +1288,7 @@ exports[`HeaderSearchContainer auto-suggest dropdown allows the user to use the 
     displayQuery=""
     isDatasetView={false}
     isMapFullscreen={false}
-    numberOfSuggestions={0}
+    numberOfSuggestions={8}
     onCleanDatasetOverview={[Function]}
     onDatasetSearch={[Function]}
     onDetailLoad={[Function]}
@@ -1700,7 +1379,7 @@ exports[`HeaderSearchContainer auto-suggest dropdown allows the user to use the 
       }
       highlightQuery="dijk"
       legendTitle="Data zoeken"
-      numberOfSuggestions={0}
+      numberOfSuggestions={8}
       onSubmit={[Function]}
       onSuggestionActivate={[Function]}
       onSuggestionSelection={[Function]}
@@ -1790,7 +1469,7 @@ exports[`HeaderSearchContainer auto-suggest dropdown allows the user to use the 
           <legend
             className="u-sr-only"
           >
-            legendTitle
+            Data zoeken
           </legend>
           <div
             className="auto-suggest-container"
@@ -2052,7 +1731,7 @@ exports[`HeaderSearchContainer auto-suggest dropdown allows the user to use the 
           <legend
             className="u-sr-only"
           >
-            legendTitle
+            Data zoeken
           </legend>
           <div
             className="auto-suggest-container"
@@ -2156,29 +1835,33 @@ exports[`HeaderSearchContainer auto-suggest dropdown allows the user to use the 
                     onSuggestionSelection={[Function]}
                     query="dijk"
                   >
-                    <li>
+                    <li
+                      className=""
+                    >
                       <button
                         className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--active
         "
                         onClick={[Function]}
                         type="button"
                       >
-                        <span
-                          className="icon"
-                        >
-                          <Component>
-                            mock-svg
-                          </Component>
-                        </span>
-                        <span
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">Dijk</span>braak",
+                        <div>
+                          <span
+                            className="icon"
+                          >
+                            <Component>
+                              mock-svg
+                            </Component>
+                          </span>
+                          <span
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">Dijk</span>braak",
+                              }
                             }
-                          }
-                        />
+                          />
+                        </div>
                       </button>
                     </li>
                   </AutoSuggestItem>
@@ -2189,29 +1872,33 @@ exports[`HeaderSearchContainer auto-suggest dropdown allows the user to use the 
                     onSuggestionSelection={[Function]}
                     query="dijk"
                   >
-                    <li>
+                    <li
+                      className=""
+                    >
                       <button
                         className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                         onClick={[Function]}
                         type="button"
                       >
-                        <span
-                          className="icon"
-                        >
-                          <Component>
-                            mock-svg
-                          </Component>
-                        </span>
-                        <span
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">Dijk</span>dwarsstraat",
+                        <div>
+                          <span
+                            className="icon"
+                          >
+                            <Component>
+                              mock-svg
+                            </Component>
+                          </span>
+                          <span
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">Dijk</span>dwarsstraat",
+                              }
                             }
-                          }
-                        />
+                          />
+                        </div>
                       </button>
                     </li>
                   </AutoSuggestItem>
@@ -2222,29 +1909,33 @@ exports[`HeaderSearchContainer auto-suggest dropdown allows the user to use the 
                     onSuggestionSelection={[Function]}
                     query="dijk"
                   >
-                    <li>
+                    <li
+                      className=""
+                    >
                       <button
                         className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                         onClick={[Function]}
                         type="button"
                       >
-                        <span
-                          className="icon"
-                        >
-                          <Component>
-                            mock-svg
-                          </Component>
-                        </span>
-                        <span
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">Dijk</span>graafplein",
+                        <div>
+                          <span
+                            className="icon"
+                          >
+                            <Component>
+                              mock-svg
+                            </Component>
+                          </span>
+                          <span
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">Dijk</span>graafplein",
+                              }
                             }
-                          }
-                        />
+                          />
+                        </div>
                       </button>
                     </li>
                   </AutoSuggestItem>
@@ -2293,29 +1984,33 @@ exports[`HeaderSearchContainer auto-suggest dropdown allows the user to use the 
                     onSuggestionSelection={[Function]}
                     query="dijk"
                   >
-                    <li>
+                    <li
+                      className=""
+                    >
                       <button
                         className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                         onClick={[Function]}
                         type="button"
                       >
-                        <span
-                          className="icon"
-                        >
-                          <Component>
-                            mock-svg
-                          </Component>
-                        </span>
-                        <span
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "Hoge <span class=\\"auto-suggest__dropdown__highlight\\">Dijk</span> (buurt)",
+                        <div>
+                          <span
+                            className="icon"
+                          >
+                            <Component>
+                              mock-svg
+                            </Component>
+                          </span>
+                          <span
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "Hoge <span class=\\"auto-suggest__dropdown__highlight\\">Dijk</span> (buurt)",
+                              }
                             }
-                          }
-                        />
+                          />
+                        </div>
                       </button>
                     </li>
                   </AutoSuggestItem>
@@ -2376,29 +2071,33 @@ exports[`HeaderSearchContainer auto-suggest dropdown allows the user to use the 
                     onSuggestionSelection={[Function]}
                     query="dijk"
                   >
-                    <li>
+                    <li
+                      className=""
+                    >
                       <button
                         className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                         onClick={[Function]}
                         type="button"
                       >
-                        <span
-                          className="icon"
-                        >
-                          <Component>
-                            mock-svg
-                          </Component>
-                        </span>
-                        <span
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">DIJK</span>LICHAAM SPAARNDAMMER<span class=\\"auto-suggest__dropdown__highlight\\">DIJK</span>",
+                        <div>
+                          <span
+                            className="icon"
+                          >
+                            <Component>
+                              mock-svg
+                            </Component>
+                          </span>
+                          <span
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">DIJK</span>LICHAAM SPAARNDAMMER<span class=\\"auto-suggest__dropdown__highlight\\">DIJK</span>",
+                              }
                             }
-                          }
-                        />
+                          />
+                        </div>
                       </button>
                     </li>
                   </AutoSuggestItem>
@@ -2409,29 +2108,33 @@ exports[`HeaderSearchContainer auto-suggest dropdown allows the user to use the 
                     onSuggestionSelection={[Function]}
                     query="dijk"
                   >
-                    <li>
+                    <li
+                      className=""
+                    >
                       <button
                         className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                         onClick={[Function]}
                         type="button"
                       >
-                        <span
-                          className="icon"
-                        >
-                          <Component>
-                            mock-svg
-                          </Component>
-                        </span>
-                        <span
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">Dijk</span>straat 49",
+                        <div>
+                          <span
+                            className="icon"
+                          >
+                            <Component>
+                              mock-svg
+                            </Component>
+                          </span>
+                          <span
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">Dijk</span>straat 49",
+                              }
                             }
-                          }
-                        />
+                          />
+                        </div>
                       </button>
                     </li>
                   </AutoSuggestItem>
@@ -2442,29 +2145,33 @@ exports[`HeaderSearchContainer auto-suggest dropdown allows the user to use the 
                     onSuggestionSelection={[Function]}
                     query="dijk"
                   >
-                    <li>
+                    <li
+                      className=""
+                    >
                       <button
                         className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                         onClick={[Function]}
                         type="button"
                       >
-                        <span
-                          className="icon"
-                        >
-                          <Component>
-                            mock-svg
-                          </Component>
-                        </span>
-                        <span
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">DIJK</span>LICHAAM SPAARNDAMMER<span class=\\"auto-suggest__dropdown__highlight\\">DIJK</span>",
+                        <div>
+                          <span
+                            className="icon"
+                          >
+                            <Component>
+                              mock-svg
+                            </Component>
+                          </span>
+                          <span
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "<span class=\\"auto-suggest__dropdown__highlight\\">DIJK</span>LICHAAM SPAARNDAMMER<span class=\\"auto-suggest__dropdown__highlight\\">DIJK</span>",
+                              }
                             }
-                          }
-                        />
+                          />
+                        </div>
                       </button>
                     </li>
                   </AutoSuggestItem>
@@ -2513,29 +2220,33 @@ exports[`HeaderSearchContainer auto-suggest dropdown allows the user to use the 
                     onSuggestionSelection={[Function]}
                     query="dijk"
                   >
-                    <li>
+                    <li
+                      className=""
+                    >
                       <button
                         className="
-          auto-suggest__dropdown-item
+        auto-suggest__dropdown-item
           auto-suggest__dropdown-item--inactive
         "
                         onClick={[Function]}
                         type="button"
                       >
-                        <span
-                          className="icon"
-                        >
-                          <Component>
-                            mock-svg
-                          </Component>
-                        </span>
-                        <span
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "Registratie actueel hoogtebestand Nederland (AHN)",
+                        <div>
+                          <span
+                            className="icon"
+                          >
+                            <Component>
+                              mock-svg
+                            </Component>
+                          </span>
+                          <span
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "Registratie actueel hoogtebestand Nederland (AHN)",
+                              }
                             }
-                          }
-                        />
+                          />
+                        </div>
                       </button>
                     </li>
                   </AutoSuggestItem>
@@ -2585,78 +2296,7 @@ exports[`HeaderSearchContainer auto-suggest dropdown allows the user to use the 
     onSuggestionActivate={[Function]}
     pageName=""
     prefillQuery=""
-    suggestions={
-      Array [
-        Object {
-          "content": Array [
-            Object {
-              "category": "Straatnamen",
-              "index": 0,
-              "label": "Dijkbraak",
-              "uri": "bag/openbareruimte/03630000001528/",
-            },
-            Object {
-              "category": "Straatnamen",
-              "index": 1,
-              "label": "Dijkdwarsstraat",
-              "uri": "bag/openbareruimte/03630000001970/",
-            },
-            Object {
-              "category": "Straatnamen",
-              "index": 2,
-              "label": "Dijkgraafplein",
-              "uri": "bag/openbareruimte/03630000003257/",
-            },
-          ],
-          "label": "Straatnamen",
-        },
-        Object {
-          "content": Array [
-            Object {
-              "category": "Gebieden",
-              "index": 3,
-              "label": "Hoge Dijk (buurt)",
-              "uri": "gebieden/buurt/03630000000491/",
-            },
-          ],
-          "label": "Gebieden",
-        },
-        Object {
-          "content": Array [
-            Object {
-              "category": "Monumenten",
-              "index": 4,
-              "label": "DIJKLICHAAM SPAARNDAMMERDIJK",
-              "uri": "monumenten/monumenten/1871732e-783e-4890-8759-793c1c1927af/",
-            },
-            Object {
-              "category": "Monumenten",
-              "index": 5,
-              "label": "Dijkstraat 49",
-              "uri": "monumenten/monumenten/6eaa9645-0564-4df1-82a5-4ed8659945ae/",
-            },
-            Object {
-              "category": "Monumenten",
-              "index": 6,
-              "label": "DIJKLICHAAM SPAARNDAMMERDIJK",
-              "uri": "monumenten/monumenten/e56dd328-0db8-4b26-be54-a51b4e752a1a/",
-            },
-          ],
-          "label": "Monumenten",
-        },
-        Object {
-          "content": Array [
-            Object {
-              "category": "Datasets",
-              "index": 7,
-              "label": "Registratie actueel hoogtebestand Nederland (AHN)",
-              "uri": "dcatd/datasets/registratie-actueel-hoogtebestand-nederland-ahn",
-            },
-          ],
-          "label": "Datasets",
-        },
-      ]
-    }
+    suggestions={Array []}
     typedQuery=""
   >
     <AutoSuggest
@@ -2675,78 +2315,7 @@ exports[`HeaderSearchContainer auto-suggest dropdown allows the user to use the 
       placeHolder="Zoek data op adres, postcode, kadastrale aanduiding, etc. Of datasets op trefwoord."
       query=""
       queryFromUrl=""
-      suggestions={
-        Array [
-          Object {
-            "content": Array [
-              Object {
-                "category": "Straatnamen",
-                "index": 0,
-                "label": "Dijkbraak",
-                "uri": "bag/openbareruimte/03630000001528/",
-              },
-              Object {
-                "category": "Straatnamen",
-                "index": 1,
-                "label": "Dijkdwarsstraat",
-                "uri": "bag/openbareruimte/03630000001970/",
-              },
-              Object {
-                "category": "Straatnamen",
-                "index": 2,
-                "label": "Dijkgraafplein",
-                "uri": "bag/openbareruimte/03630000003257/",
-              },
-            ],
-            "label": "Straatnamen",
-          },
-          Object {
-            "content": Array [
-              Object {
-                "category": "Gebieden",
-                "index": 3,
-                "label": "Hoge Dijk (buurt)",
-                "uri": "gebieden/buurt/03630000000491/",
-              },
-            ],
-            "label": "Gebieden",
-          },
-          Object {
-            "content": Array [
-              Object {
-                "category": "Monumenten",
-                "index": 4,
-                "label": "DIJKLICHAAM SPAARNDAMMERDIJK",
-                "uri": "monumenten/monumenten/1871732e-783e-4890-8759-793c1c1927af/",
-              },
-              Object {
-                "category": "Monumenten",
-                "index": 5,
-                "label": "Dijkstraat 49",
-                "uri": "monumenten/monumenten/6eaa9645-0564-4df1-82a5-4ed8659945ae/",
-              },
-              Object {
-                "category": "Monumenten",
-                "index": 6,
-                "label": "DIJKLICHAAM SPAARNDAMMERDIJK",
-                "uri": "monumenten/monumenten/e56dd328-0db8-4b26-be54-a51b4e752a1a/",
-              },
-            ],
-            "label": "Monumenten",
-          },
-          Object {
-            "content": Array [
-              Object {
-                "category": "Datasets",
-                "index": 7,
-                "label": "Registratie actueel hoogtebestand Nederland (AHN)",
-                "uri": "dcatd/datasets/registratie-actueel-hoogtebestand-nederland-ahn",
-              },
-            ],
-            "label": "Datasets",
-          },
-        ]
-      }
+      suggestions={Array []}
     >
       <form
         className="auto-suggest
@@ -2757,7 +2326,7 @@ exports[`HeaderSearchContainer auto-suggest dropdown allows the user to use the 
           <legend
             className="u-sr-only"
           >
-            legendTitle
+            Data zoeken
           </legend>
           <div
             className="auto-suggest-container"

@@ -12,10 +12,10 @@
   background-color: $secondary-gray40;
   color: $primary-dark;
   line-height: 1;
-  text-transform: lowercase;
 }
 
-.c-data-selection-file-type__format-xls {
+.c-data-selection-file-type__format-xls,
+.c-data-selection-file-type__format-xlsx {
   background-color: $thema-6;
 }
 

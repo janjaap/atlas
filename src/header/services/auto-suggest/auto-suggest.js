@@ -24,10 +24,15 @@ function formatData(categories) {
 }
 
 function search(query) {
-  const uri = `${SHARED_CONFIG.API_ROOT}typeahead?q=${query}`;
-  return fetch(uri, { headers: getAuthHeaders() })
-    .then((response) => response.json())
-    .then((response) => formatData(response));
+  // Minimun length for typeahead query in backend is 3 characters
+  const uri = (query && query.length >= 3) && `${SHARED_CONFIG.API_ROOT}typeahead?q=${query}`;
+
+  if (uri) {
+    return fetch(uri, { headers: getAuthHeaders() })
+      .then((response) => response.json())
+      .then((response) => formatData(response));
+  }
+  return {};
 }
 
 export default search;
