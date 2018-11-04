@@ -31,7 +31,7 @@ services:
 
   test-e2e:
     build:
-      dockerfile: Dockerfile-e2e
+      dockerfile: Dockerfile
       context: ./test/e2e/
     links:
       - atlas:acc.data.amsterdam.nl
@@ -43,6 +43,7 @@ services:
       - USERNAME_EMPLOYEE_PLUS
       - PASSWORD_EMPLOYEE
       - PASSWORD_EMPLOYEE_PLUS
+    ipc: host
     command: npm run test-e2e
 
   test-e2e-aria:
