@@ -6,11 +6,11 @@ RUN apt-get update && \
 
 WORKDIR /home
 
-COPY package.json  /home/
+COPY package.json package-lock.json  /home/
 
 # Install selected package (faster).
 # Use versions defined in package-lock.json.
 # `npm install` with `CI=true` is to stop cypress install progress from flooding the CI log
-RUN CI=true npm install
+RUN CI=true npm ci
 
 COPY . /home/

@@ -43,7 +43,7 @@ services:
       - USERNAME_EMPLOYEE_PLUS
       - PASSWORD_EMPLOYEE
       - PASSWORD_EMPLOYEE_PLUS
-    command: ./test-e2e.sh
+    command: npm run test-e2e
 
   test-e2e-aria:
     build:
