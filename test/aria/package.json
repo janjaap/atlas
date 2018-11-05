@@ -1,13 +1,19 @@
 {
-  "name": "e2e-aria",
+  "name": "atlas-e2e-aria",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amsterdam/atlas.git"
+  },
+  "engines": {
+    "npm": ">=3",
+    "node": ">=5"
+  },
+  "author": "Datapunt Amsterdam",
+  "license": "MPL-2.0",
   "scripts": {
     "test-e2e-aria": "babel-node ./pa11y.js"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-loader": "^8.0.4",

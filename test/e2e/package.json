@@ -1,14 +1,20 @@
 {
-  "name": "e2e",
+  "name": "atlas-e2e-aria",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amsterdam/atlas.git"
+  },
+  "engines": {
+    "npm": ">=3",
+    "node": ">=5"
+  },
+  "author": "Datapunt Amsterdam",
+  "license": "MPL-2.0",
   "scripts": {
     "test-e2e": "cross-env API_ROOT=https://acc.api.data.amsterdam.nl node ./cypress-run.js",
     "test-e2e-watch": "cross-env API_ROOT=https://acc.api.data.amsterdam.nl node ./cypress-watch.js"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "bluebird": "3.5.2",
     "cross-env": "^5.2.0",

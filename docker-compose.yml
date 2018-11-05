@@ -7,13 +7,6 @@ services:
       context: .
     ipc: host
 
-  atlas_aria: # NGINX
-    build:
-      args:
-        - BUILD_ENV=acc
-      context: .
-    ipc: host
-
   test-lint:
     build:
       context: .
@@ -51,14 +44,14 @@ services:
       dockerfile: Dockerfile
       context: ./test/aria/
     links:
-      - atlas_aria:atlas
+      - atlas:atlas
     environment:
       - BASE_URL=http://atlas:80
       - USERNAME_EMPLOYEE
       - USERNAME_EMPLOYEE_PLUS
       - PASSWORD_EMPLOYEE
       - PASSWORD_EMPLOYEE_PLUS
-    command: npm run test-e2e-aria
+    command: ./test-e2e-aria.sh
 
   test-health-checks:
     image: build.datapunt.amsterdam.nl:5000/datapunt/atlas-health-checks:latest
