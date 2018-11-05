@@ -45,8 +45,8 @@ pipeline {
     //   }
     // }
 
-    // stage ('Run Tests') {
-      // parallel {
+    stage ('Run Tests') {
+      parallel {
         // stage('Unit tests') {
         //   options {
         //     timeout(time: 30, unit: 'MINUTES')
@@ -102,24 +102,24 @@ pipeline {
           }
         }
 
-      //   stage('E2E tests (Aria)') {
-      //     options {
-      //       timeout(time: 30, unit: 'MINUTES')
-      //     }
-      //     environment {
-      //       PROJECT = "${PROJECT_PREFIX}e2e-aria"
-      //     }
-      //     steps {
-      //       sh "docker-compose -p ${PROJECT} up --build --exit-code-from test-e2e-aria test-e2e-aria"
-      //     }
-      //     post {
-      //       always {
-      //         sh "docker-compose -p ${PROJECT} down -v || true"
-      //       }
-      //     }
-      //   }
-      //}
-    //}
+        stage('E2E tests (Aria)') {
+          options {
+            timeout(time: 30, unit: 'MINUTES')
+          }
+          environment {
+            PROJECT = "${PROJECT_PREFIX}e2e-aria"
+          }
+          steps {
+            sh "docker-compose -p ${PROJECT} up --build --exit-code-from test-e2e-aria test-e2e-aria"
+          }
+          post {
+            always {
+              sh "docker-compose -p ${PROJECT} down -v || true"
+            }
+          }
+        }
+      }
+    }
 
     stage('Build A') {
       when { branch 'master' }
