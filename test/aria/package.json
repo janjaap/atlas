@@ -1,0 +1,21 @@
+{
+  "name": "e2e-aria",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test-e2e-aria": "babel-node ./pa11y.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/node": "^7.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "chalk": "2.3.0",
+    "p-all": "1.0.0",
+    "pa11y": "5.0.4",
+    "pa11y-reporter-cli": "^1.0.0"
+  }
+}
