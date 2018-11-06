@@ -51,7 +51,6 @@ services:
       - USERNAME_EMPLOYEE_PLUS
       - PASSWORD_EMPLOYEE
       - PASSWORD_EMPLOYEE_PLUS
-    ipc: host
     command: ./test-e2e-aria.sh
 
   test-health-checks:
