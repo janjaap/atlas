@@ -41,8 +41,8 @@ services:
 
   test-e2e-aria:
     build:
-      dockerfile: Dockerfile
-      context: ./test/aria/
+      dockerfile: Dockerfile-e2e-aria
+      context: .
     links:
       - atlas:atlas
     environment:
@@ -52,7 +52,7 @@ services:
       - PASSWORD_EMPLOYEE
       - PASSWORD_EMPLOYEE_PLUS
     ipc: host
-    command: ./test-e2e-aria.sh
+    command: ./test/aria/test-e2e-aria.sh
 
   test-health-checks:
     image: build.datapunt.amsterdam.nl:5000/datapunt/atlas-health-checks:latest
