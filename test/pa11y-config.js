@@ -23,7 +23,8 @@ export default {
       args: [
         '--no-sandbox',
         '--disable-setuid-sandbox'
-      ]
+      ],
+      "ignoreHTTPSErrors": false
     },
     timeout: 30000
   },
