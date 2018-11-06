@@ -15,7 +15,7 @@ RUN apt-get update && \
 
 WORKDIR /home
 
-COPY .babelrc package.json package-lock.json /home/
+COPY ./test/aria/.babelrc ./test/aria/package.json ./test/aria/package-lock.json /home/
 
 # Install all NPM dependencies. Also:
 #  * Changing git URL because network is blocking git protocol...
@@ -27,6 +27,6 @@ RUN git config --global url."https://".insteadOf git:// && \
         install && \
     npm cache clean --force
 
-COPY pa11y-config.js pa11y.js test-e2e-aria.sh /home/
+COPY ./test/aria/pa11y-config.js ./test/aria/pa11y.js ./test/aria/test-e2e-aria.sh /home/
 
 ENV NODE_ENV=production
