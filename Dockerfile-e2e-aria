@@ -15,7 +15,7 @@ RUN apt-get update && \
 
 WORKDIR /home
 
-COPY ./test/aria/.babelrc ./test/aria/package.json ./test/aria/package-lock.json /home/
+COPY .babelrc package.json package-lock.json /home/
 
 # Install all NPM dependencies. Also:
 #  * Changing git URL because network is blocking git protocol...
