@@ -27,6 +27,8 @@ RUN git config --global url."https://".insteadOf git:// && \
         install && \
     npm cache clean --force
 
-COPY ./test/aria/pa11y-config.js ./test/aria/pa11y.js ./test/aria/test-e2e-aria.sh /home/
+COPY src /home/src
+COPY test /home/test
+COPY scripts /home/scripts
 
 ENV NODE_ENV=production
