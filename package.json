@@ -28,7 +28,7 @@
     "start": "grunt && webpack-dev-server --config webpack.dev.js",
     "start-prod": "grunt && webpack-dev-server --config webpack.prod-api-dev.js",
     "test": "cross-env karma start && jest --config=./test/jest.unit.config.js",
-    "test-e2e-aria": "babel-node ./test/aria/pa11y.js",
+    "test-e2e-aria": "babel-node ./pa11y.js",
     "test-e2e-api-health-watch": "cross-env API_ROOT=https://acc.api.data.amsterdam.nl SCRIPTS_FOLDER='test/cypress/health' node ./scripts/cypress/cypress-watch.js",
     "test-e2e": "cross-env API_ROOT=https://acc.api.data.amsterdam.nl node ./scripts/cypress/cypress-run.js",
     "test-e2e-prod": "cross-env API_ROOT=https://api.data.amsterdam.nl node ./scripts/cypress/cypress-run.js",
