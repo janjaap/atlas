@@ -19,6 +19,7 @@ OUTDIR=/var/www/html/atlas/builds/$1
 if [ ! -d ${OUTDIR} ];
 	then mkdir -p ${OUTDIR};
 fi
+rm -rf ${OUTDIR}/*
 cp -r dist/* ${OUTDIR}
 
 echo Generate new index.html for all branches
