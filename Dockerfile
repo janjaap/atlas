@@ -51,4 +51,5 @@ COPY test /app/test
 FROM nginx:1.12.2-alpine
 ARG BUILD_ENV=prod
 COPY nginx-${BUILD_ENV}.conf /etc/nginx/nginx.conf
+COPY default.conf /etc/nginx/conf.d/
 COPY --from=build-deps /app/dist /usr/share/nginx/html
