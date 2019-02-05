@@ -620,6 +620,22 @@ export default [
     url: '/maps/meetbouten?version=1.3.0&service=WMS'
   },
   {
+    category: 'Topografie: historisch',
+    disabled: true,
+    legendItems: [
+      {
+        id: 'pw1943',
+        notClickable: false,
+        layer: 'burgerlijke_gemeente',
+        selectable: false,
+        title: '1943 (Dienst der Publieke Werken)'
+      }
+    ],
+    maxZoom: 16,
+    minZoom: 8,
+    title: '1943 (Dienst der Publieke Werken)'
+  },
+  {
     category: 'Verkeer en infrastructuur',
     legendItems: [
       {
@@ -910,23 +926,24 @@ export default [
     title: 'Omgeving taxi-standplaatsen',
     url: '/maps/overlastgebieden?version=1.3.0&service=WMS'
   },
-  {
-    category: 'Openbare orde en veiligheid',
-    id: 'oovvz',
-    layers: ['vuurwerkvrijezone'],
-    legendItems: [
-      {
-        selectable: false,
-        title: 'Vuurwerkvrije zone',
-        imageRule: 'vuurwerkvrijezone'
-      }
-    ],
-    maxZoom: 16,
-    minZoom: 8,
-    notClickable: true,
-    title: 'Vuurwerkvrije zones',
-    url: '/maps/overlastgebieden?version=1.3.0&service=WMS'
-  },
+  // to revive end of 2019
+  // {
+  //   category: 'Openbare orde en veiligheid',
+  //   id: 'oovvz',
+  //   layers: ['vuurwerkvrijezone'],
+  //   legendItems: [
+  //     {
+  //       selectable: false,
+  //       title: 'Vuurwerkvrije zone',
+  //       imageRule: 'vuurwerkvrijezone'
+  //     }
+  //   ],
+  //   maxZoom: 16,
+  //   minZoom: 8,
+  //   notClickable: true,
+  //   title: 'Vuurwerkvrije zones',
+  //   url: '/maps/overlastgebieden?version=1.3.0&service=WMS'
+  // },
   {
     category: 'Toerisme en cultuur',
     id: 'tcmnmt',

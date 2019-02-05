@@ -1,5 +1,4 @@
 @import "../../../shared/styles/config";
-
 @import "assets/styles/map";
 @import "assets/styles/clusterer";
 @import "assets/styles/data-selection";
@@ -22,4 +21,8 @@
 
 .test-cx {
   height: 100%;
+}
+
+.leaflet-layer {
+  transition: opacity .3s ease-in-out;
 }

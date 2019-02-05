@@ -13,7 +13,7 @@ export const mapDocumentTitle = (action, defaultTitle) => {
   if (view === VIEW_MODE.MAP) {
     pageTitle = 'Grote kaart';
     if (embed === 'true') {
-      pageTitle = `${pageTitle} | Embeded`;
+      pageTitle = `${pageTitle} | Embedded`;
     }
   }
 

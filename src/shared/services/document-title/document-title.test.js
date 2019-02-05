@@ -18,9 +18,9 @@ describe('The Detail DocumentTitle service', () => {
       expect(mapDocumentTitle(action, 'Home')).toBe('Grote kaart');
     });
 
-    it('should return the map embeded name when the map is embeded', () => {
+    it('should return the map embedded name when the map is embedded', () => {
       const action = { meta: { query: { modus: 'kaart', embed: 'true' } } };
-      expect(mapDocumentTitle(action, 'Home')).toBe('Grote kaart | Embeded');
+      expect(mapDocumentTitle(action, 'Home')).toBe('Grote kaart | Embedded');
     });
   });
 

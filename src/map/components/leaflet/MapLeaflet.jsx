@@ -14,6 +14,7 @@ import { boundsToString, getBounds, isBoundsAPoint, isValidBounds } from './serv
 import MapBusyIndicator from './custom/map-busy-indicator/MapBusyIndicator';
 import { DEFAULT_LAT, DEFAULT_LNG } from '../../ducks/map/map';
 import RdGeoJson from './custom/geo-json/RdGeoJson';
+import mapLayerTypes from '../../services/map-layer-types.config';
 
 const visibleToOpacity = ((isVisible) => (isVisible ? 100 : 0));
 
@@ -167,6 +168,9 @@ class MapLeaflet extends React.Component {
       brkMarkers,
       isLoading
     } = this.props;
+
+    const tmsLayers = layers.filter((layer) => (layer.type === mapLayerTypes.TMS));
+    const nonTmsLayers = layers.filter((layer) => (layer.type !== mapLayerTypes.TMS));
     return (
       <ResizeAware
         style={{
@@ -194,17 +198,30 @@ class MapLeaflet extends React.Component {
             {...baseLayer.baseLayerOptions}
             url={baseLayer.urlTemplate}
           />
-          {
-            layers.map((layer) => (
-              <NonTiledLayer
-                key={layer.id}
-                {...layer.overlayOptions}
-                url={layer.url}
-                params={layer.params}
-                opacity={visibleToOpacity(layer.isVisible)}
-              />
-            ))
-          }
+          {tmsLayers.map(({ id: key, isVisible, url, bounds }) => (
+            <TileLayer
+              {...{
+                key,
+                url,
+                bounds
+              }}
+              tms
+              subdomains={baseLayer.baseLayerOptions.subdomains}
+              opacity={visibleToOpacity(isVisible)}
+            />
+          ))}
+
+          {nonTmsLayers.map(({ id: key, isVisible, url, params, overlayOptions }) => (
+            <NonTiledLayer
+              {...{
+                key,
+                url,
+                params
+              }}
+              {...overlayOptions}
+              opacity={visibleToOpacity(isVisible)}
+            />
+          ))}
           {
             Boolean(clusterMarkers.length) && (
               <ClusterGroup

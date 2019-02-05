@@ -13,6 +13,7 @@ const PAGE_TYPES = {
   bediening: 'snelwegwijs',
   gegevens: 'info',
   over_api: 'apis',
+  inloggen: 'inloggen',
   beleid: 'beleid',
   statistieken: 'statistieken',
   verplaatst: 'verplaatst',
@@ -72,6 +73,10 @@ export const CMS_PAGE_MAPPING = {
   [PAGES.STATISTICS]: {
     template: PAGE_TEMPLATE.contentOverview,
     type: PAGE_TYPES.statistieken
+  },
+  [PAGES.LOGIN]: {
+    template: PAGE_TEMPLATE.contentOverview,
+    type: PAGE_TYPES.inloggen
   },
   [PAGES.MOVED]: {
     template: PAGE_TEMPLATE.contentOverview,

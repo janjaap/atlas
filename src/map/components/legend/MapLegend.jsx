@@ -100,7 +100,9 @@ class MapLegend extends React.Component {
                     <span>Zichtbaar bij verder {zoomLevel < mapLayer.minZoom ? 'inzoomen' : 'uitzoomen'}</span>
                   </div>
                 )}
-                {isAuthorised(mapLayer, user) && isInsideZoomLevel(mapLayer, zoomLevel) && (
+                {isAuthorised(mapLayer, user) &&
+                isInsideZoomLevel(mapLayer, zoomLevel) &&
+                !mapLayer.disabled && (
                   <ul className="map-legend__items">
                     {mapLayer.legendItems.map((legendItem, legendItemIndex) => {
                       const legendItemIsVisible = this.determineLegendItemVisibility(legendItem);

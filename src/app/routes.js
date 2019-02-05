@@ -147,6 +147,12 @@ export const routing = {
     type: `${ROUTER_NAMESPACE}/${PAGES.STATISTICS}`,
     page: PAGES.STATISTICS
   },
+  inloggen: {
+    title: 'Inloggen',
+    path: `/${MAIN_PATHS.CONTENT}/inloggen/`,
+    type: `${ROUTER_NAMESPACE}/${PAGES.LOGIN}`,
+    page: PAGES.LOGIN
+  },
   verplaatst: {
     title: 'Pagina verplaatst',
     path: '/verplaatst/',

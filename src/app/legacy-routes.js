@@ -67,7 +67,7 @@ const routesDictionary = [
 const resolveLegacyRoutes = () => {
   if (window.location.hash.match(/#\?/g)) {
     const routePath = routesDictionary.filter((r) => r.old === window.location.hash);
-    window.location = routePath.length && routePath[0].new ? routePath[0].new : '/verplaatst';
+    window.location = routePath.length && routePath[0].new ? routePath[0].new : '/verplaatst/';
   }
 };
 
