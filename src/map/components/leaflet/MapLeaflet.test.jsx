@@ -558,14 +558,14 @@ describe('MapLeaflet component', () => {
       contains: jest.fn()
     };
     const convertedBounds = {
-      northEast: {
-        latitude: 1,
-        longitude: 2
-      },
-      southWest: {
-        latitude: 3,
-        longitude: 4
-      }
+      northEast: [
+        1,
+        2
+      ],
+      southWest: [
+        3,
+        4
+      ]
     };
 
     beforeEach(() => {

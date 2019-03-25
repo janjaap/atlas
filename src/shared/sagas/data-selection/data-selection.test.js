@@ -58,6 +58,7 @@ describe('data-selection sagas', () => {
           select(getGeomarkersShape)
         ])
         .next([[], 'bag', {}])
+        .next(BOUNDING_BOX.COORDINATES)
         .select(getMapZoom)
         .next(10)
         .call(getMarkers, 'bag', { shape: {} }, 10, BOUNDING_BOX.COORDINATES)
