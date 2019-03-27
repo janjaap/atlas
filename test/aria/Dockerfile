@@ -21,7 +21,7 @@ COPY .babelrc package.json package-lock.json ./
 #  * Changing git URL because network is blocking git protocol...
 RUN git config --global url."https://".insteadOf git:// && \
     git config --global url."https://github.com/".insteadOf git@github.com: && \
-#    npm config set registry https://repo.datapunt.amsterdam.nl/repository/npm-group/ && \
+    npm config set registry https://nexus.data.amsterdam.nl/repository/npm-group/ && \
     npm --production=false \
         --unsafe-perm \
         --no-audit \

@@ -46,7 +46,7 @@ services:
     command: ./test-e2e-aria.sh
 
   test-health-checks:
-    image: build.datapunt.amsterdam.nl:5000/datapunt/atlas-health-checks:latest
+    image: repo.data.amsterdam.nl/datapunt/atlas-health-checks:latest
     environment:
       - API_ROOT=https://acc.api.data.amsterdam.nl
       - USERNAME_EMPLOYEE_PLUS
