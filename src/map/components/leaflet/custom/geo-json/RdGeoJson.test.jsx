@@ -46,6 +46,7 @@ function shallowRenderComponent() {
     />, {
       context: {
         layerContainer: {
+          addLayer: jest.fn(),
           removeLayer: jest.fn()
         }
       },

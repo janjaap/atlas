@@ -12,7 +12,8 @@ describe('CustomMarker', () => {
       />, {
         context: {
           layerContainer: {
-            addLayer: jest.fn()
+            addLayer: jest.fn(),
+            removeLayer: jest.fn()
           }
         }
       }

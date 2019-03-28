@@ -90,7 +90,7 @@ exports[`MapLeaflet component should render brkMarkers 1`] = `
           "_proj": Object {
             "forward": [Function],
             "inverse": [Function],
-            "oProj": Projection$1 {
+            "oProj": Projection {
               "C": 1.0004758566842447,
               "K": 1.0037810841627226,
               "R2": 2.001645629371303,
@@ -139,6 +139,7 @@ exports[`MapLeaflet component should render brkMarkers 1`] = `
                 "Polar_Stereographic",
                 "sterea",
                 "Oblique Stereographic Alternative",
+                "Double_Stereographic",
               ],
               "no_defs": true,
               "phic0": 0.9096847567446857,
@@ -366,7 +367,7 @@ exports[`MapLeaflet component should render clusters 1`] = `
           "_proj": Object {
             "forward": [Function],
             "inverse": [Function],
-            "oProj": Projection$1 {
+            "oProj": Projection {
               "C": 1.0004758566842447,
               "K": 1.0037810841627226,
               "R2": 2.001645629371303,
@@ -415,6 +416,7 @@ exports[`MapLeaflet component should render clusters 1`] = `
                 "Polar_Stereographic",
                 "sterea",
                 "Oblique Stereographic Alternative",
+                "Double_Stereographic",
               ],
               "no_defs": true,
               "phic0": 0.9096847567446857,
@@ -673,7 +675,7 @@ exports[`MapLeaflet component should render clusters 2`] = `
           "_proj": Object {
             "forward": [Function],
             "inverse": [Function],
-            "oProj": Projection$1 {
+            "oProj": Projection {
               "C": 1.0004758566842447,
               "K": 1.0037810841627226,
               "R2": 2.001645629371303,
@@ -722,6 +724,7 @@ exports[`MapLeaflet component should render clusters 2`] = `
                 "Polar_Stereographic",
                 "sterea",
                 "Oblique Stereographic Alternative",
+                "Double_Stereographic",
               ],
               "no_defs": true,
               "phic0": 0.9096847567446857,
@@ -980,7 +983,7 @@ exports[`MapLeaflet component should render map with base layer and update base 
           "_proj": Object {
             "forward": [Function],
             "inverse": [Function],
-            "oProj": Projection$1 {
+            "oProj": Projection {
               "C": 1.0004758566842447,
               "K": 1.0037810841627226,
               "R2": 2.001645629371303,
@@ -1029,6 +1032,7 @@ exports[`MapLeaflet component should render map with base layer and update base 
                 "Polar_Stereographic",
                 "sterea",
                 "Oblique Stereographic Alternative",
+                "Double_Stereographic",
               ],
               "no_defs": true,
               "phic0": 0.9096847567446857,
@@ -1218,7 +1222,7 @@ exports[`MapLeaflet component should render map with base layer and update base 
           "_proj": Object {
             "forward": [Function],
             "inverse": [Function],
-            "oProj": Projection$1 {
+            "oProj": Projection {
               "C": 1.0004758566842447,
               "K": 1.0037810841627226,
               "R2": 2.001645629371303,
@@ -1267,6 +1271,7 @@ exports[`MapLeaflet component should render map with base layer and update base 
                 "Polar_Stereographic",
                 "sterea",
                 "Oblique Stereographic Alternative",
+                "Double_Stereographic",
               ],
               "no_defs": true,
               "phic0": 0.9096847567446857,
@@ -1456,7 +1461,7 @@ exports[`MapLeaflet component should render map with coordinates in lat/lon 1`] 
           "_proj": Object {
             "forward": [Function],
             "inverse": [Function],
-            "oProj": Projection$1 {
+            "oProj": Projection {
               "C": 1.0004758566842447,
               "K": 1.0037810841627226,
               "R2": 2.001645629371303,
@@ -1505,6 +1510,7 @@ exports[`MapLeaflet component should render map with coordinates in lat/lon 1`] 
                 "Polar_Stereographic",
                 "sterea",
                 "Oblique Stereographic Alternative",
+                "Double_Stereographic",
               ],
               "no_defs": true,
               "phic0": 0.9096847567446857,
@@ -1694,7 +1700,7 @@ exports[`MapLeaflet component should render map with coordinates in lat/lon 2`] 
           "_proj": Object {
             "forward": [Function],
             "inverse": [Function],
-            "oProj": Projection$1 {
+            "oProj": Projection {
               "C": 1.0004758566842447,
               "K": 1.0037810841627226,
               "R2": 2.001645629371303,
@@ -1743,6 +1749,7 @@ exports[`MapLeaflet component should render map with coordinates in lat/lon 2`] 
                 "Polar_Stereographic",
                 "sterea",
                 "Oblique Stereographic Alternative",
+                "Double_Stereographic",
               ],
               "no_defs": true,
               "phic0": 0.9096847567446857,
@@ -2075,7 +2082,7 @@ exports[`MapLeaflet component should render map with coordinates in lat/lon 3`] 
           "_proj": Object {
             "forward": [Function],
             "inverse": [Function],
-            "oProj": Projection$1 {
+            "oProj": Projection {
               "C": 1.0004758566842447,
               "K": 1.0037810841627226,
               "R2": 2.001645629371303,
@@ -2124,6 +2131,7 @@ exports[`MapLeaflet component should render map with coordinates in lat/lon 3`] 
                 "Polar_Stereographic",
                 "sterea",
                 "Oblique Stereographic Alternative",
+                "Double_Stereographic",
               ],
               "no_defs": true,
               "phic0": 0.9096847567446857,
@@ -2421,7 +2429,7 @@ exports[`MapLeaflet component should render map with geoJSON with RD coordinates
           "_proj": Object {
             "forward": [Function],
             "inverse": [Function],
-            "oProj": Projection$1 {
+            "oProj": Projection {
               "C": 1.0004758566842447,
               "K": 1.0037810841627226,
               "R2": 2.001645629371303,
@@ -2470,6 +2478,7 @@ exports[`MapLeaflet component should render map with geoJSON with RD coordinates
                 "Polar_Stereographic",
                 "sterea",
                 "Oblique Stereographic Alternative",
+                "Double_Stereographic",
               ],
               "no_defs": true,
               "phic0": 0.9096847567446857,
@@ -2659,7 +2668,7 @@ exports[`MapLeaflet component should render map with geoJSON with RD coordinates
           "_proj": Object {
             "forward": [Function],
             "inverse": [Function],
-            "oProj": Projection$1 {
+            "oProj": Projection {
               "C": 1.0004758566842447,
               "K": 1.0037810841627226,
               "R2": 2.001645629371303,
@@ -2708,6 +2717,7 @@ exports[`MapLeaflet component should render map with geoJSON with RD coordinates
                 "Polar_Stereographic",
                 "sterea",
                 "Oblique Stereographic Alternative",
+                "Double_Stereographic",
               ],
               "no_defs": true,
               "phic0": 0.9096847567446857,
@@ -2925,7 +2935,7 @@ exports[`MapLeaflet component should render map with geoJSON with RD coordinates
           "_proj": Object {
             "forward": [Function],
             "inverse": [Function],
-            "oProj": Projection$1 {
+            "oProj": Projection {
               "C": 1.0004758566842447,
               "K": 1.0037810841627226,
               "R2": 2.001645629371303,
@@ -2974,6 +2984,7 @@ exports[`MapLeaflet component should render map with geoJSON with RD coordinates
                 "Polar_Stereographic",
                 "sterea",
                 "Oblique Stereographic Alternative",
+                "Double_Stereographic",
               ],
               "no_defs": true,
               "phic0": 0.9096847567446857,
@@ -3192,7 +3203,7 @@ exports[`MapLeaflet component should render map with geoJSON with RD coordinates
           "_proj": Object {
             "forward": [Function],
             "inverse": [Function],
-            "oProj": Projection$1 {
+            "oProj": Projection {
               "C": 1.0004758566842447,
               "K": 1.0037810841627226,
               "R2": 2.001645629371303,
@@ -3241,6 +3252,7 @@ exports[`MapLeaflet component should render map with geoJSON with RD coordinates
                 "Polar_Stereographic",
                 "sterea",
                 "Oblique Stereographic Alternative",
+                "Double_Stereographic",
               ],
               "no_defs": true,
               "phic0": 0.9096847567446857,
@@ -3534,7 +3546,7 @@ exports[`MapLeaflet component should render map with without layers and add/remo
           "_proj": Object {
             "forward": [Function],
             "inverse": [Function],
-            "oProj": Projection$1 {
+            "oProj": Projection {
               "C": 1.0004758566842447,
               "K": 1.0037810841627226,
               "R2": 2.001645629371303,
@@ -3583,6 +3595,7 @@ exports[`MapLeaflet component should render map with without layers and add/remo
                 "Polar_Stereographic",
                 "sterea",
                 "Oblique Stereographic Alternative",
+                "Double_Stereographic",
               ],
               "no_defs": true,
               "phic0": 0.9096847567446857,
@@ -3772,7 +3785,7 @@ exports[`MapLeaflet component should render map with without layers and add/remo
           "_proj": Object {
             "forward": [Function],
             "inverse": [Function],
-            "oProj": Projection$1 {
+            "oProj": Projection {
               "C": 1.0004758566842447,
               "K": 1.0037810841627226,
               "R2": 2.001645629371303,
@@ -3821,6 +3834,7 @@ exports[`MapLeaflet component should render map with without layers and add/remo
                 "Polar_Stereographic",
                 "sterea",
                 "Oblique Stereographic Alternative",
+                "Double_Stereographic",
               ],
               "no_defs": true,
               "phic0": 0.9096847567446857,
@@ -4024,7 +4038,7 @@ exports[`MapLeaflet component should render map with without layers and add/remo
           "_proj": Object {
             "forward": [Function],
             "inverse": [Function],
-            "oProj": Projection$1 {
+            "oProj": Projection {
               "C": 1.0004758566842447,
               "K": 1.0037810841627226,
               "R2": 2.001645629371303,
@@ -4073,6 +4087,7 @@ exports[`MapLeaflet component should render map with without layers and add/remo
                 "Polar_Stereographic",
                 "sterea",
                 "Oblique Stereographic Alternative",
+                "Double_Stereographic",
               ],
               "no_defs": true,
               "phic0": 0.9096847567446857,
@@ -4262,7 +4277,7 @@ exports[`MapLeaflet component should render markers 1`] = `
           "_proj": Object {
             "forward": [Function],
             "inverse": [Function],
-            "oProj": Projection$1 {
+            "oProj": Projection {
               "C": 1.0004758566842447,
               "K": 1.0037810841627226,
               "R2": 2.001645629371303,
@@ -4311,6 +4326,7 @@ exports[`MapLeaflet component should render markers 1`] = `
                 "Polar_Stereographic",
                 "sterea",
                 "Oblique Stereographic Alternative",
+                "Double_Stereographic",
               ],
               "no_defs": true,
               "phic0": 0.9096847567446857,
@@ -4932,7 +4948,7 @@ exports[`MapLeaflet component should render markers 2`] = `
           "_proj": Object {
             "forward": [Function],
             "inverse": [Function],
-            "oProj": Projection$1 {
+            "oProj": Projection {
               "C": 1.0004758566842447,
               "K": 1.0037810841627226,
               "R2": 2.001645629371303,
@@ -4981,6 +4997,7 @@ exports[`MapLeaflet component should render markers 2`] = `
                 "Polar_Stereographic",
                 "sterea",
                 "Oblique Stereographic Alternative",
+                "Double_Stereographic",
               ],
               "no_defs": true,
               "phic0": 0.9096847567446857,

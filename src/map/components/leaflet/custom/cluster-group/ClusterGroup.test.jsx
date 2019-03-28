@@ -20,7 +20,8 @@ describe('ClusterGroup', () => {
       />, {
         context: {
           layerContainer: {
-            addLayer: jest.fn()
+            addLayer: jest.fn(),
+            removeLayer: jest.fn()
           }
         }
       }
@@ -46,7 +47,8 @@ describe('ClusterGroup', () => {
       />, {
         context: {
           layerContainer: {
-            addLayer: jest.fn()
+            addLayer: jest.fn(),
+            removeLayer: jest.fn()
           }
         }
       }

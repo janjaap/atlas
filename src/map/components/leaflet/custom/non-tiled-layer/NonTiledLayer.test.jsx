@@ -26,7 +26,8 @@ describe('NonTiledLayer', () => {
       />, {
         context: {
           layerContainer: {
-            addLayer: jest.fn()
+            addLayer: jest.fn(),
+            removeLayer: jest.fn()
           }
         }
       }
@@ -92,7 +93,8 @@ function renderComponent() {
     />, {
       context: {
         layerContainer: {
-          addLayer: jest.fn()
+          addLayer: jest.fn(),
+          removeLayer: jest.fn()
         }
       }
     }
