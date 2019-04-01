@@ -48,7 +48,7 @@ services:
   test-health-checks:
     image: repo.data.amsterdam.nl/datapunt/atlas-health-checks:latest
     environment:
-      - API_ROOT=https://acc.api.data.amsterdam.nl/
+      - API_ROOT=https://acc.api.data.amsterdam.nl
       - USERNAME_EMPLOYEE_PLUS
       - PASSWORD_EMPLOYEE_PLUS
 
