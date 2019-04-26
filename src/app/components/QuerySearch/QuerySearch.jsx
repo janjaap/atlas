@@ -20,16 +20,15 @@ const QuerySearch = ({
   toDatasetPage,
   filters,
   user
-}) => (<div className="c-data-selection c-dashboard__content">
-  {(isLoading) && <LoadingIndicator />}
-  {!isLoading && (
-    <div className="qa-data-selection-content">
-      <TabBar
-        totalNumberOfResults={numberOfDataResults + numberOfDatasetResults}
-        showDatasetsButton={currentPage === PAGES.SEARCH_DATASETS}
-      >
-        <Tabs
-          currentTab={(currentPage === PAGES.DATA_QUERY_SEARCH) ? 'Data' : 'Datasets'}
+}) => (
+  <div className="c-data-selection c-dashboard__content">
+    {(isLoading) && <LoadingIndicator />}
+    {!isLoading && (
+      <div className="qa-data-selection-content">
+        <TabBar
+          numberOfDataResults={numberOfDataResults}
+          numberOfDatasetResults={numberOfDatasetResults}
+          showDatasetsButton={currentPage === PAGES.SEARCH_DATASETS}
         >
           <Tab
             label="Data"
@@ -72,7 +71,7 @@ QuerySearch.defaultProps = {
 };
 
 QuerySearch.propTypes = {
-  user: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+  user: PropTypes.shape({}).isRequired,
   filters: PropTypes.shape({}).isRequired,
   isLoading: PropTypes.bool,
   query: PropTypes.string,

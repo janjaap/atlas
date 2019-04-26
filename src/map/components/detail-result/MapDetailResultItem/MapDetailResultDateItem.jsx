@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import formatDate from '../../../shared/services/date-formatter/date-formatter';
+import formatDate from '../../../../shared/services/date-formatter/date-formatter';
 
 const MapDetailResultDateItem = ({ label, date }) => {
   const dateString = date && formatDate(date);

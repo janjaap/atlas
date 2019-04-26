@@ -47,7 +47,7 @@ DatasetDetail.propTypes = {
   user: PropTypes.shape({}).isRequired,
   endpoint: PropTypes.string.isRequired,
   detailTemplateUrl: PropTypes.string,
-  detailData: PropTypes.object // eslint-disable-line react/forbid-prop-types
+  detailData: PropTypes.shape({})
 };
 
 export default DatasetDetail;

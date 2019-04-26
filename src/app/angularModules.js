@@ -52,8 +52,6 @@ import '../../modules/header/components/menu/menu.component';
 import '../../modules/header/components/print-button/print-button.component';
 import '../../modules/header/components/print-header/print-header.component';
 import '../../modules/header/components/site-header/site-header.component';
-import '../../modules/header/header-config.constant';
-import '../../modules/header/header.constant';
 import '../../modules/page/page.module';
 import '../../modules/page/components/catalogus-themes/catalogus-themes-config.constant';
 import '../../modules/page/components/catalogus-themes/catalogus-themes.component';
@@ -102,6 +100,3 @@ import '../../modules/shared/services/user-settings/user-settings.factory';
 import '../../modules/shared/shared-config.factory';
 import '../../modules/shared/shared.vendor';
 import '../../modules/shared/services/combined-document-title/combined-document-title.factory';
-// Components from deprecated dashboard
-import '../../modules/header/components/header.controller';
-import '../../modules/header/components/header/header.component';

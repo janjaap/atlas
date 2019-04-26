@@ -9,6 +9,7 @@ import explosievenGevrijwaardGebied from '../../shared/services/explosieven/expl
 import explosievenInslag from '../../shared/services/explosieven/explosieven-inslag';
 import explosievenUitgevoerdOnderzoek from '../../shared/services/explosieven/explosieven-uitgevoerd-onderzoek';
 import explosievenVerdachtGebied from '../../shared/services/explosieven/explosieven-verdacht-gebied';
+import evenementen from '../../shared/services/evenementen/evenementen';
 import gebiedenBouwblok from '../../shared/services/gebieden/gebieden-bouwblok';
 import gebiedenBuurt from '../../shared/services/gebieden/gebieden-buurt';
 import gebiedenGebiedsgerichtWerken from '../../shared/services/gebieden/gebieden-gebiedsgericht-werken';
@@ -53,6 +54,7 @@ export const endpointTypes = {
   explosievenInslag: 'milieuthemas/explosieven/inslagen/',
   explosievenUitgevoerdOnderzoek: 'milieuthemas/explosieven/uitgevoerdonderzoek/',
   explosievenVerdachtGebied: 'milieuthemas/explosieven/verdachtgebied/',
+  evenementen: 'vsd/evenementen/',
   gebiedenBouwblok: 'gebieden/bouwblok/',
   gebiedenBuurt: 'gebieden/buurt/',
   gebiedenGebiedsgerichtWerken: 'gebieden/gebiedsgerichtwerken/',
@@ -83,6 +85,7 @@ const servicesByEndpointType = {
   [endpointTypes.explosievenInslag]: { fetch: explosievenInslag },
   [endpointTypes.explosievenUitgevoerdOnderzoek]: { fetch: explosievenUitgevoerdOnderzoek },
   [endpointTypes.explosievenVerdachtGebied]: { fetch: explosievenVerdachtGebied },
+  [endpointTypes.evenementen]: { fetch: evenementen },
   [endpointTypes.gebiedenBouwblok]: { fetch: gebiedenBouwblok },
   [endpointTypes.gebiedenBuurt]: { fetch: gebiedenBuurt },
   [endpointTypes.gebiedenGebiedsgerichtWerken]: { fetch: gebiedenGebiedsgerichtWerken },

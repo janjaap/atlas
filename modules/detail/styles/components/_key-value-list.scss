@@ -54,24 +54,24 @@
     @extend %description-list-value;
   }
 
-  &__key--full-width {
+  .c-key-value-list__key--full-width {
     width: 100%;
   }
 
-  &__value--full-width {
+  .c-key-value-list__value--full-width {
     width: 100%;
     padding: 0 20px;
     float: none;
     border-top: none;
   }
 
-  &__value--ellipsis {
+  .c-key-value-list__value--ellipsis {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
   }
 
-  &__value-inline {
+  .c-key-value-list__value-inline {
     display: inline;
   }
 

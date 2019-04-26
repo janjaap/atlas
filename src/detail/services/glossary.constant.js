@@ -116,6 +116,16 @@ const GLOSSARY = {
       url: null,
       meta: []
     },
+    EVENEMENTEN: {
+      label_singular: 'Evenement',
+      label_plural: 'Evenementen',
+      description: 'Activiteiten en evenementen op het gebied van sport, recreatie, ' +
+        'kunst en cultuur in Amsterdam. Veel activiteiten worden door externe organisaties ' +
+        'aangeleverd. De Gemeente Amsterdam is niet verantwoordelijk voor de inhoud ' +
+        'van deze evenementen.',
+      url: null,
+      meta: []
+    },
     FUNCTIEVERVULLING: {
       label_singular: 'Functievervulling',
       label_plural: 'Functievervullingen',
@@ -296,7 +306,7 @@ const GLOSSARY = {
       ]
     },
     OPLAADPUNTEN: {
-      label_singular: 'Oplaadpunt',
+      label_singular: 'Oplaadpuntaaa',
       label_plural: 'Oplaadpunten',
       description: null,
       url: null,

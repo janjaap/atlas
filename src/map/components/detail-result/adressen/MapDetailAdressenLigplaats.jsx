@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import MapDetailResultStatusItem from '../MapDetailResultStatusItem';
+import { MapDetailResultStatusItem } from '../MapDetailResultItem';
 import MapDetailResultWrapper from '../MapDetailResultWrapper';
 import Notification from '../../../../shared/components/notification/Notification';
 

@@ -1,0 +1,25 @@
+<div>
+    <div class="c-detail__block">
+        <dp-glossary-header heading="{{vm.apiData.results.label}}" definition="EN">
+        </dp-glossary-header>
+
+        <dl class="c-key-value-list">
+            <dt>Titel</dt>
+            <dd>{{ vm.apiData.results.titel }}</dd>
+            <dt>Startdatum</dt>
+            <dd>{{ vm.apiData.results.startdatum }}</dd>
+            <dt>Einddatum</dt>
+            <dd>{{ vm.apiData.results.einddatum }}</dd>
+
+            <dt class="c-key-value-list__key--full-width">Omschrijving</dt>
+            <dd class="c-key-value-list__value--full-width">
+                <p class="c-key-value-list__content" dp-expand-collapse>{{ vm.apiData.results.omschrijving }}</p>
+            </dd>
+            <dt>Meer informatie</dt>
+            <dd class="c-key-value-list__value--ellipsis">
+                <a class='o-btn o-btn--link c-key-value-list__value-inline' target="_blank"
+                    ng-href="{{vm.apiData.results.url}}">{{vm.apiData.results.url}}</a>
+            </dd>
+        </dl>
+    </div>
+</div>

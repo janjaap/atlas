@@ -6,6 +6,10 @@
 .c-user-content-overview__right {
   margin-right: $page-right-pane-margin;
   font-size: $s-font-size;
+
+  .o-btn--link {
+    white-space: normal;
+  }
 }
 
 .c-user-content-overview__toc-header {

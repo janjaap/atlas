@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import MapDetailAddressItem from './MapDetailAddressItem';
-import MapDetailResultItem from './MapDetailResultItem';
-import MapDetailResultStatusItem from './MapDetailResultStatusItem';
+import MapDetailResultItem, { MapDetailResultStatusItem } from './MapDetailResultItem';
 import MapDetailResultWrapper from './MapDetailResultWrapper';
 import MapDetailVestigingActiviteitenItem from './MapDetailVestigingActiviteitenItem';
 import Notification from '../../../shared/components/notification/Notification';

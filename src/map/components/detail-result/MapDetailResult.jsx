@@ -12,6 +12,7 @@ import MapDetailExplosievenGevrijwaardGebied from './explosieven/MapDetailExplos
 import MapDetailExplosievenInslag from './explosieven/MapDetailExplosievenInslag';
 import MapDetailExplosievenUitgevoerdOnderzoek from './explosieven/MapDetailExplosievenUitgevoerdOnderzoek';
 import MapDetailExplosievenVerdachtGebied from './explosieven/MapDetailExplosievenVerdachtGebied';
+import MapDetailEvenement from './MapDetailEvenement';
 import MapDetailGebiedenBouwblok from './gebieden/MapDetailGebiedenBouwblok';
 import MapDetailGebiedenBuurt from './gebieden/MapDetailGebiedenBuurt';
 import MapDetailGebiedenGebiedsgerichtWerken from './gebieden/MapDetailGebiedenGebiedsgerichtWerken';
@@ -120,6 +121,15 @@ const MapDetailResult = ({ panoUrl, result, onMaximize, onPanoPreviewClick }) =>
           onPanoPreviewClick={onPanoPreviewClick}
           panoUrl={panoUrl}
           verdachtGebied={result}
+        />
+      );
+    case endpointTypes.evenementen:
+      return (
+        <MapDetailEvenement
+          onMaximize={onMaximize}
+          onPanoPreviewClick={onPanoPreviewClick}
+          panoUrl={panoUrl}
+          item={result}
         />
       );
     case endpointTypes.gebiedenBouwblok:
@@ -279,7 +289,7 @@ MapDetailResult.propTypes = {
   panoUrl: PropTypes.string,
   onMaximize: PropTypes.func.isRequired,
   onPanoPreviewClick: PropTypes.func.isRequired,
-  result: PropTypes.object // eslint-disable-line react/forbid-prop-types
+  result: PropTypes.shape({})
 };
 
 export default MapDetailResult;

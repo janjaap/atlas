@@ -95,7 +95,8 @@ export default {
     { uri: 'geosearch/biz/' },
     { uri: 'geosearch/winkgeb/' },
     { uri: 'parkeervakken/geosearch/' },
-    { uri: 'geosearch/oplaadpunten/' }
+    { uri: 'geosearch/oplaadpunten/' },
+    { uri: 'geosearch/evenementen/', radius: 25 }
   ],
   COORDINATES_HIERARCHY: [
     {
@@ -204,6 +205,11 @@ export default {
       label_singular: 'Parkeervak',
       label_plural: 'Parkeervakken',
       features: ['parkeervakken/parkeervakken']
+    }, {
+      slug: 'evenementen',
+      label_singular: 'Evenement',
+      label_plural: 'Evenementen',
+      features: ['vsd/evenementen']
     }
   ]
 };

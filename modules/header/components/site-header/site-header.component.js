@@ -1,3 +1,5 @@
+import HEADER_SIZE from '../../../../src/header/services/header-size/header-size.constant';
+
 (function () {
     'use strict';
 
@@ -16,9 +18,9 @@
             controllerAs: 'vm'
         });
 
-    DpSiteHeaderController.$inject = ['$scope', 'HEADER', '$window', '$timeout'];
+    DpSiteHeaderController.$inject = ['$scope', '$window', '$timeout'];
 
-    function DpSiteHeaderController ($scope, HEADER, $window, $timeout) {
+    function DpSiteHeaderController ($scope, $window, $timeout) {
         const vm = this;
         const React = $window.React;
         const render = $window.render;
@@ -27,9 +29,9 @@
         $scope.$watch('vm.size', updateSize);
 
         function updateSize (size) {
-            vm.menuSize = vm.size === HEADER.SIZE.TALL ? HEADER.SIZE.SHORT : HEADER.SIZE.TALL;
-            vm.isTall = vm.size === HEADER.SIZE.TALL;
-            vm.isShort = vm.size === HEADER.SIZE.SHORT;
+            vm.menuSize = vm.size === HEADER_SIZE.SIZE.TALL ? HEADER_SIZE.SIZE.SHORT : HEADER_SIZE.SIZE.TALL;
+            vm.isTall = vm.size === HEADER_SIZE.SIZE.TALL;
+            vm.isShort = vm.size === HEADER_SIZE.SIZE.SHORT;
             $timeout(setSearchComponent);
         }
 

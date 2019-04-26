@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import formatDate from '../../../shared/services/date-formatter/date-formatter';
 
 import MapDetailResultDateItem
   from './MapDetailResultDateItem';
+import formatDate from '../../../../shared/services/date-formatter/date-formatter';
 
-jest.mock('../../../shared/services/date-formatter/date-formatter');
+jest.mock('../../../../shared/services/date-formatter/date-formatter');
 
 describe('MapDetailResultDateItem', () => {
   it('should render label and date', () => {

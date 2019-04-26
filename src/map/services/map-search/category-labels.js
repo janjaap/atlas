@@ -11,6 +11,10 @@ const categoryLabels = {
     singular: 'Explosief',
     plural: 'Explosieven'
   },
+  evenement: {
+    singular: 'Evenement',
+    plural: 'Evenementen'
+  },
   gebied: {
     singular: 'Gebied',
     plural: 'Gebieden'
