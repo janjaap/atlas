@@ -7,7 +7,7 @@ $spinner-height: 36px;
   justify-content: center;
   width: 100%;
 
-  & > span.icon {
+  & > .icon {
     @include icon-sprite("icon-spinner", $secondary-gray60, $secondary-gray60, $spinner-height);
     animation: rotating-spinner 1s linear infinite;
     height: $spinner-height;
