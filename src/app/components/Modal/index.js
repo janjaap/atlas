@@ -1,5 +1,5 @@
 import FeedbackModal from './FeedbackModalContainer';
-import InfoModal from './InfoModal';
+import InfoModal from './InfoModalContainer';
 
 export {
   FeedbackModal,
