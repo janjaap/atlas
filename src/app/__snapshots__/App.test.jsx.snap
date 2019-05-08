@@ -42,7 +42,14 @@ exports[`App should render the homepage 1`] = `
             className="u-row u-full-height"
           >
             <React.Lazy />
-            <Connect(ModalComponent) />
+            <Connect(Modal)
+              id="feedbackModal"
+            />
+            <Modal
+              closeModalAction={[Function]}
+              id="infoModal"
+              open={true}
+            />
           </div>
         </div>
       </div>
@@ -93,7 +100,14 @@ exports[`App should render the mapview 1`] = `
             className="u-row u-full-height"
           >
             <React.Lazy />
-            <Connect(ModalComponent) />
+            <Connect(Modal)
+              id="feedbackModal"
+            />
+            <Modal
+              closeModalAction={[Function]}
+              id="infoModal"
+              open={true}
+            />
           </div>
         </div>
       </div>

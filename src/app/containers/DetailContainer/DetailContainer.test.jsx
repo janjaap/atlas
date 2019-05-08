@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
 import DetailContainer from './DetailContainer';
-import { isDetailLoading, getDetailEndpoint } from '../../../shared/ducks/detail/selectors';
+import { getDetailEndpoint, isDetailLoading } from '../../../shared/ducks/detail/selectors';
 import { getUser } from '../../../shared/ducks/user/user';
 import {
   getPanoramaPreview,

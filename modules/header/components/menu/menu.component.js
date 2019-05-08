@@ -25,7 +25,7 @@ import { routing } from '../../../../src/app/routes';
 
         vm.helpAction = { type: routing.help.type };
 
-        const openFeedbackFormEvent = new CustomEvent('openFeedbackForm');
+        const openFeedbackFormEvent = new CustomEvent('openForm_feedbackModal');
 
         vm.openFeedbackForm = () => {
             $window.dispatchEvent(openFeedbackFormEvent);

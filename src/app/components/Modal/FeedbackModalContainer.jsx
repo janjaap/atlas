@@ -1,7 +1,11 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import Modal from './Modal';
-import { closeModalAction, reportFeedbackAction, reportProblemAction } from '../../../header/ducks/actions';
+import FeedbackModal from './FeedbackModal';
+import {
+  closeModalAction,
+  reportFeedbackAction,
+  reportProblemAction
+} from '../../../header/ducks/actions';
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
   closeModalAction,
@@ -9,4 +13,4 @@ const mapDispatchToProps = (dispatch) => bindActionCreators({
   reportProblemAction
 }, dispatch);
 
-export default connect(null, mapDispatchToProps)(Modal);
+export default connect(null, mapDispatchToProps)(FeedbackModal);
