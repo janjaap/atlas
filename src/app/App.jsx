@@ -6,22 +6,22 @@ import { ThemeProvider } from '@datapunt/asc-ui';
 import PAGES, { isCmsPage as pageIsCmsPage } from './pages';
 import './_app.scss';
 import {
-  isEmbedded,
-  isEmbedPreview,
-  isPrintMode,
-  isPrintModeLandscape,
-  isPrintOrEmbedMode,
   hasOverflowScroll,
   hasPrintMode,
-  isMapActive
+  isEmbedded,
+  isEmbedPreview,
+  isMapActive,
+  isPrintMode,
+  isPrintModeLandscape,
+  isPrintOrEmbedMode
 } from '../shared/ducks/ui/ui';
 import { hasGlobalError } from '../shared/ducks/error/error-message';
 import { getUser } from '../shared/ducks/user/user';
 import { getPage, isHomepage } from '../store/redux-first-router/selectors';
 import EmbedIframeComponent from './components/EmbedIframe/EmbedIframe';
 import GeneralErrorMessage from './components/PanelMessages/ErrorMessage/ErrorMessageContainer';
-import ModalComponent from './components/Modal';
 import Header from './components/Header/Header';
+import { FeedbackModal, InfoModal } from './components/Modal';
 
 const ContentPage = React.lazy(() => import('./pages/ContentPage'));
 const Home = React.lazy(() => import('./pages/Home'));
@@ -107,16 +107,16 @@ const App = ({
           className={`c-dashboard c-dashboard--page-type-${pageTypeClass} ${rootClasses}`}
         >
           {!embedMode &&
-            <Header
-              homePage={homePage}
-              hasMaxWidth={hasMaxWidth}
-              user={user}
-              printMode={printMode}
-              embedPreviewMode={embedPreviewMode}
-              printOrEmbedMode={printOrEmbedMode}
-              hasPrintButton={hasPrintButton}
-              hasEmbedButton={hasEmbedButton}
-            />
+          <Header
+            homePage={homePage}
+            hasMaxWidth={hasMaxWidth}
+            user={user}
+            printMode={printMode}
+            embedPreviewMode={embedPreviewMode}
+            printOrEmbedMode={printOrEmbedMode}
+            hasPrintButton={hasPrintButton}
+            hasEmbedButton={hasEmbedButton}
+          />
           }
           <div className={`c-dashboard__body ${bodyClasses}`}>
             {visibilityError && <GeneralErrorMessage {...{ hasMaxWidth, isHomePage: homePage }} />}
@@ -148,8 +148,8 @@ const App = ({
                     currentPage === PAGES.ESTABLISHMENTS ||
                     currentPage === PAGES.DATA_GEO_SEARCH ||
                     currentPage === PAGES.CADASTRAL_OBJECTS)
-                    &&
-                    <MapSplitPage />
+                  &&
+                  <MapSplitPage />
                   }
 
                   {currentPage === PAGES.DATASETS && <DatasetPage />}
@@ -162,7 +162,8 @@ const App = ({
                     <ContentPage />
                   )}
 
-                  <ModalComponent />
+                  <FeedbackModal id="feedbackModal" />
+                  <InfoModal id="infoModal" open />
                 </div>
               </div>
             }
