@@ -9,6 +9,7 @@ import {
 } from '@datapunt/asc-ui/lib/index';
 import { ReactComponent as Close } from '@datapunt/asc-assets/lib/Icons/Close.svg';
 import withModalBehaviour, { propTypes as modalPropTypes } from './withModalBehaviour';
+import './InfoModal.scss';
 
 const InfoModal = ({ open, handleClose }) => (
   <Modal
@@ -28,11 +29,12 @@ const InfoModal = ({ open, handleClose }) => (
     </TopBar>
     <Divider />
     <ListItem>
-      <Typography paragraph element="p">
+      <Typography paragraph element="p" className="infomodal__body">
         Er is momenteel een storing met de kaart. Hierdoor kunnen bepaalde vlakken van de kaart
         niet worden geladen. In het dataportaal verschijnt daardoor een rode
         foutmelding.<br /><br />
-        We werken hard aan een oplossing. Als je wilt, kun je onze voortgang volgen.
+        We werken hard aan een oplossing. Als je wilt, kun je onze&nbsp;
+        <a className="c-link" href="/" target="_blank">voortgang volgen</a>.
       </Typography>
     </ListItem>
   </Modal>

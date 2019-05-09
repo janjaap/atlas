@@ -45,8 +45,7 @@ exports[`App should render the homepage 1`] = `
             <Connect(Modal)
               id="feedbackModal"
             />
-            <Modal
-              closeModalAction={[Function]}
+            <Connect(InfoModalWrapper)
               id="infoModal"
               open={true}
             />
@@ -103,8 +102,7 @@ exports[`App should render the mapview 1`] = `
             <Connect(Modal)
               id="feedbackModal"
             />
-            <Modal
-              closeModalAction={[Function]}
+            <Connect(InfoModalWrapper)
               id="infoModal"
               open={true}
             />

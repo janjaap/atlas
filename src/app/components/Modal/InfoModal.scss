@@ -1,0 +1,8 @@
+@import "../../../shared/styles/config";
+
+.infomodal__body {
+  .c-link {
+    @include font-weight($normal-weight);
+    text-decoration: underline;
+  }
+}
