@@ -1,32 +1,52 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import get from 'lodash.get';
 import InfoModal from './InfoModal';
 import { createCookie, getCookie } from '../../utils/cookie';
+import getContents from '../../../shared/services/google-sheet/google-sheet';
 
 const COOKIE_NAME = 'showInfoModal';
 
-class InfoModalWrapper extends Component {
-  static setCookie() {
-    createCookie(COOKIE_NAME, '1');
-  }
+const InfoModalWrapper = ({ hide }) => {
+  const [open, toggle] = React.useState(false);
+  const [{ title, body }, setContent] = React.useState({
+    body: '',
+    title: ''
+  });
 
-  constructor(props) {
-    super(props);
+  React.useEffect(() => {
+    if (!hide && !getCookie(COOKIE_NAME)) {
+      (async () => {
+        const item = 'item0';
+        const type = 'melding';
+        try {
+          const contents = await getContents(type);
+          const entry = contents.entries.find((result) => result.id === item);
+          setContent({
+            title: get(entry, 'titel.value', ''),
+            body: get(entry, 'content.html', '')
+          });
+        } catch (e) {
+          // eslint-disable-next-line no-console
+          console.warn(e);
+        }
+      })();
+    }
+  }, []);
 
-    const openModal = (props.hide) ? false : !getCookie(COOKIE_NAME);
+  React.useEffect(() => {
+    toggle(!!(body.length && title.length));
+  }, [body, title]);
 
-    this.state = {
-      openModal
-    };
-  }
 
-  render() {
-    const { openModal } = this.state;
-    return (
-      <InfoModal id="infoModal" open={openModal} closeModalAction={InfoModalWrapper.setCookie} />
-    );
-  }
-}
+  return (
+    <InfoModal
+      id="infoModal"
+      {...{ open, title, body }}
+      closeModalAction={() => createCookie(COOKIE_NAME, '1')}
+    />
+  );
+};
 
 InfoModalWrapper.propTypes = {
   hide: PropTypes.bool.isRequired

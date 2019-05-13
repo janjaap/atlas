@@ -25,6 +25,13 @@ function withModalBehaviour(WrappedComponent) {
       window.addEventListener(`openForm_${this.props.id}`, this.handleOpen);
     }
 
+    componentDidUpdate(prevProps) {
+      const { open } = this.props;
+      if (prevProps.open !== open) {
+        this.handleOpen();
+      }
+    }
+
     componentWillUnmount() {
       window.removeEventListener(`openForm_${this.props.id}`, this.handleOpen);
     }

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Divider,
   IconButton,
@@ -11,7 +12,7 @@ import { ReactComponent as Close } from '@datapunt/asc-assets/lib/Icons/Close.sv
 import withModalBehaviour, { propTypes as modalPropTypes } from './withModalBehaviour';
 import './InfoModal.scss';
 
-const InfoModal = ({ open, handleClose }) => (
+const InfoModal = ({ open, handleClose, title, body }) => (
   <Modal
     aria-labelledby="feedback"
     aria-describedby="feedback"
@@ -21,7 +22,7 @@ const InfoModal = ({ open, handleClose }) => (
   >
     <TopBar>
       <Typography style={{ flexGrow: 1 }} element="h4">
-        Kaart kan niet worden geladen
+        {title}
         <IconButton onClick={handleClose}>
           <Close />
         </IconButton>
@@ -29,17 +30,20 @@ const InfoModal = ({ open, handleClose }) => (
     </TopBar>
     <Divider />
     <ListItem>
-      <Typography paragraph element="p" className="infomodal__body">
-        Er is momenteel een storing met de kaart. Hierdoor kunnen bepaalde vlakken van de kaart
-        niet worden geladen. In het dataportaal verschijnt daardoor een rode
-        foutmelding.<br /><br />
-        We werken hard aan een oplossing. Als je wilt, kun je onze&nbsp;
-        <a className="c-link" href="/" target="_blank">voortgang volgen</a>.
-      </Typography>
+      <Typography
+        paragraph
+        element="p"
+        className="infomodal__body"
+        dangerouslySetInnerHTML={({ __html: body })}
+      />
     </ListItem>
   </Modal>
 );
 
-InfoModal.propTypes = modalPropTypes;
+InfoModal.propTypes = {
+  title: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  ...modalPropTypes
+};
 
 export default withModalBehaviour(InfoModal);

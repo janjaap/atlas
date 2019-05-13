@@ -2,8 +2,10 @@
 
 exports[`InfoModalContainer should render 1`] = `
 <Modal
+  body=""
   closeModalAction={[Function]}
   id="infoModal"
-  open={true}
+  open={false}
+  title=""
 />
 `;

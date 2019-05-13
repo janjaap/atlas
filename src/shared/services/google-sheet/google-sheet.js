@@ -26,7 +26,8 @@ export const GOOGLE_SHEET_CMS = {
     inloggen: 8,
     statistieken: 9,
     verplaatst: 10,
-    nietgevonden: 11
+    nietgevonden: 11,
+    melding: 12
     // important when change/add index: don't forget to update the
     // jenkins import script: Imports/job/Imports/job/Import_CMS/
   }
