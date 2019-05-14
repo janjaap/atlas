@@ -456,7 +456,7 @@ const mapLayers = [
   {
     category: THEMES.GEOGRAPHY_HEIGHT,
     id: 'dtm',
-    layers: ['ahn3_05m_dtm'],
+    disabled: true,
     legendItems: [
       {
         iconUrl: '/assets/images/map-legend/icon-ahn-minus-10.svg',
@@ -505,9 +505,11 @@ const mapLayers = [
     ],
     minZoom: 10,
     title: 'Terreinmodel (DTM AHN)',
-    url: 'https://geodata.nationaalgeoregister.nl/ahn3/wms?',
-    external: true,
-    noDetail: true
+    type: mapLayerTypes.TMS,
+    layers: ['ahn3_05m_dtm'],
+    url: 'https://{s}.data.amsterdam.nl/ahn3/AHN3_Amsterdam_DTM/{z}/{x}/{y}.png',
+    noDetail: true,
+    external: true
   },
   {
     category: THEMES.GEOGRAPHY_HEIGHT,
